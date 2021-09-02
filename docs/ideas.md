@@ -1,0 +1,141 @@
+# SpelMUt Brainstorming
+
+## Custom tools
+- Git/LFS plugin to lock scenes
+- TDD with running test automation on pull request and merge with main
+- Commits to repo build playable artifact with version number/ git describe
+  - Will be useful for QA - all testing can be easily traced to a corresponding build artifact
+
+## Workflow
+- Weekly meeting/download
+  - Feels
+  - Week in review
+  - Upcoming week
+  - Supervisor prep
+- Demos and beverages (Friday or the day when all have little or no classes)
+- GitHub project board
+- Work from remote locations
+- Friday weekly meetings [13:00]
+
+## Game ideas
+- Multiplayer tactical top down sword combat game
+  - Slower
+  - Tactical
+  - Attacks are deliberate
+  - Local multiplayer? Requires physical meet ups
+  - Influences: Dark souls, Journey
+- Adventure game
+  - Darker theme/ art style
+  - Focus on movement and stealth
+  - Combat (everyday mom as a hero)
+  - 3rd person 3D game
+  - Slow deliberate or fast paced
+  - Influences: Solar Ash, A Plague Tale, Junji Ito
+- CS surf
+- Witch in Sweden
+  - Use potions
+  - Play as witch, be hunted
+- Hellblade: Senuas Sacrifice for tone and female empowerment
+- Boss fight in smaller open world against huge boss
+  - Influences:
+    - Shadow of the colossus (Boss interaction)
+      - https://www.youtube.com/watch?v=9GV-OmR1Vo8
+    - Solar Ash (Movement, Boss interaction)
+      - https://www.youtube.com/watch?v=7adguXJNliQ
+    - Nier: Automata (Pace and movement in boss battles)
+      - https://www.youtube.com/watch?v=wUil2ARK-8o
+    - God of War (Boss interaction, combat)
+  - Deliberate combat or fast paced
+  - post apocalyptic city ruins with overgrown vegetation
+  - Minions
+  - Smaller open world
+  - Procedurally generated terrain (can combine with pcg course?)
+  - Randomized/procedural AI behavior each "run"
+  - Procedural animation
+  - Instead of killing them, you save them
+  - Flipped "damsel in distress", save the prince as female knight
+  - Weak spots you have to find/ that moves over time
+  - Pre production list
+    - Animations
+    - 3-4 character models
+    - Player controller
+    - Minion AI
+    - Boss AI (Do we need to have procedural tool finished in pre production?)
+    - Terrain (Do we need to have procedural tool finished in pre production?)
+    - Structures (Do we need to have procedural tool finished in pre production?)
+  - Cutscenes
+  - (Companion creatures)
+- Casual building sim in space
+  - Player has a planet
+  - Build structures around planet
+  - Has to prepare and defend against random events
+    - Alien invasion
+    - Asteroid belt
+    - Orbit getting too close to the sun
+    - Neighboring planet attacks or trade
+    - Galactic relations
+    - Send expeditions
+  - Possible roguelite?
+  - Card based?
+- Card based roguelite space adventure
+  - Card correspond to crew
+    - Crew can be assigned to stations on ship
+  - Cards can equip items on crew
+  - Roguelite
+  - Procedural story/ floors
+- Gambling game where you have to cheat without getting caught
+  - Cheating your way to the top
+  - Different ways of cheating
+  - Strategy
+  - Roguelite
+  - Random events
+    - Western tavern - Robbbery or bar fight. Try to peak at other players cards
+  - Other players have personalities
+  - Bosses that also cheat
+    - Find out how and use it to your advantage
+  - Walk around the room during start phase and set up "advantages"
+    - Mirrors
+    - Bribe bartender for info
+    - Fixed deck
+Relaxing rythm based ice skating game
+- Influence:
+  - The Ramp (Simple, Style, Lots with less)
+  - Sound of skating on thin ice (Natures music)
+    - https://www.youtube.com/watch?v=v3O9vNi-dkA
+  - DorfRomantik (Simple, Style, Relaxing, "Mindless")
+  - TownScaper (Simple, Style, Relaxing, "Mindless")
+  - TOEM (Simple, Style, Relaxing, Puzzle)
+- Skating is done by controlling each leg to a simple beat
+- By skating to new rhythms, music can be created on the ice
+- Environment is a frozen ocean
+- Smaller open world
+- New rhythms can be found in nature
+- Storytelling under the ice
+- Animals interact and follow you under the ice when you skate well
+- Some colorful animals will lead you to puzzles or new rhythms from under the ice
+- Playing well fades in the bg music to accompany your "ice" instrument
+- Environments:
+  - Frozen ships
+  - Note in bottle stuck in ice
+  - Top of mountain frozen over, with flags at top
+  - Top of skyscrapers
+  - Can see through ice from top
+  - Music
+  - Skate to rhythm of game or song
+  - Have instruments
+
+## Game details
+- Unity vs Unreal
+  - Unity, more experience
+- Multiplayer?
+- Assets
+  - Handmade
+    - Particle effects
+    - Shaders
+    - Environments
+    - Textures
+    - Characters
+  - Free/Paid
+    - Animations
+    - Textures
+    - Characters
