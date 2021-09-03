@@ -123,6 +123,7 @@ Relaxing rythm based ice skating game
   - Music
   - Skate to rhythm of game or song
   - Have instruments
+- The world starts colourless and colours are added after encountering things
 
 ## Game details
 - Unity vs Unreal
