@@ -7,8 +7,12 @@ public class WASD_Controller : MonoBehaviour
     Rigidbody rb;
     Vector3 inputs;
 
-    [SerializeField, Range(0, 5000)]
-    float Force = 2500;
+    [SerializeField, Range(0, 15000)]
+    float Force = 5000;
+
+    // Acceleration, read about it. Possibly add.
+    // MaxVelocity, to cap velocity.
+    // Mass 55-67kg, is the avrage weight of an adult female woman 170cm
 
 
     void Start()
