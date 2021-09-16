@@ -10,6 +10,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] TMP_Dropdown resolutionDropdown;
    
     Resolution[] resolutions;
+
     private void Start()
     {
         AddResolutions();
@@ -38,6 +39,12 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     [SerializeField] AudioMixer audioMixer;
