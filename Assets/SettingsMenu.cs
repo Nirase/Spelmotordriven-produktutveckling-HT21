@@ -53,6 +53,19 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("volume", volume);
     }
 
+    public void SetVSync(bool isVSync)
+    {
+        Debug.Log("Toggle vSync");
+        int count = 0;
+
+        if (isVSync)
+            count = 1;
+        else
+            count = 0;
+        
+        QualitySettings.vSyncCount = count;
+    }
+
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
