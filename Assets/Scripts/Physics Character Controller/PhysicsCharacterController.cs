@@ -25,18 +25,24 @@ public class PhysicsCharacterController : MonoBehaviour
     private Transform groundChecker;
 
     // Acceleration:
-    private float accelerationValue = 0;
+    private float accelerationValue;
+
+    // Collision detection
+    float distance;
+    int collisionLayer;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         groundChecker = transform.GetChild(0);
+        controller.slopeLimit = 45f;
     }
 
     void Update()
     {
+
         // Input:
-        float horizontal = Input.GetAxisRaw("Horizontal");
+            float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         direction = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -46,11 +52,7 @@ public class PhysicsCharacterController : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-            // Acceleration
-         
         }
-  
 
         if (Input.GetKeyDown(KeyCode.Space))
             isJumping = true;
@@ -67,19 +69,6 @@ public class PhysicsCharacterController : MonoBehaviour
             controller.Move(velocity);
         }
 
-        // Gravity - Jumping works but is bugged...
-        velocity.y += Physics.gravity.y * Time.fixedDeltaTime;
-        isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
-        if (isGrounded) 
-            velocity.y = 0;
-        
-        if (isJumping)
-        {
-            velocity.y += Mathf.Sqrt(JumpHeight * -2 * Physics.gravity.y);
-            isJumping = false;
-            //isGrounded = false;
-        }
-
         // Gliding on ice
         if (direction.magnitude == 0 && velocity.magnitude != 0)
         {
@@ -89,5 +78,49 @@ public class PhysicsCharacterController : MonoBehaviour
 
             controller.Move(velocity);
         }
+
+        // Slightly bugged...
+        if (isJumping)
+        {
+            velocity.y += Mathf.Sqrt(JumpHeight * -2 * Physics.gravity.y);
+            isJumping = false;
+            isGrounded = false;
+        }
+
+        velocity.y += Physics.gravity.y * Time.fixedDeltaTime;
+        isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
+        if (isGrounded)
+            velocity.y = 0;
     }
+
+
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        float pushPower = 2.0f;
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        // no rigidbody
+        if (body == null || body.isKinematic)
+        {
+            return;
+        }
+
+        // We dont want to push objects below us
+        if (hit.moveDirection.y < -0.3)
+        {
+            return;
+        }
+
+        // Calculate push direction from move direction,
+        // we only push objects to the sides never up and down
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+        // If you know how fast your character is trying to move,
+        // then you can also multiply the push velocity by that.
+
+        // Apply the push
+        body.velocity = pushDir * pushPower;
+    }
+
 }
