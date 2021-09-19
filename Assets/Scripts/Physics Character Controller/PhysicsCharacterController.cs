@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PhysicsCharacterController : MonoBehaviour
 {
+    // Basic movement:
     CharacterController controller;
     [SerializeField, Range(0, 100)] float Speed = 15;
+    Vector3 velocity;
+    Vector3 direction;
 
     // Smooth rotation.
     float turnSmoothTime = 0.08f;
     float turnSmoothVelocity;
 
-    Vector3 velocity;
-    Vector3 direction;
+    // Slide
     float myS = 0.027f; // Friktionskoefficient för stål mot is enl wikipedia
     float myK = 0.014f;
 
@@ -27,9 +29,6 @@ public class PhysicsCharacterController : MonoBehaviour
     // Acceleration:
     private float accelerationValue;
 
-    // Collision detection
-    float distance;
-    int collisionLayer;
 
     void Start()
     {
@@ -94,7 +93,7 @@ public class PhysicsCharacterController : MonoBehaviour
     }
 
 
-
+    // Collision detection.
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         float pushPower = 2.0f;
