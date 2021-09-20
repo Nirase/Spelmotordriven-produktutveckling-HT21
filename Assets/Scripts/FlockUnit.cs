@@ -7,6 +7,8 @@ public class FlockUnit : MonoBehaviour
 {
     [SerializeField] float fOVAngle;
     [SerializeField] float smoothDamp;
+    [SerializeField] LayerMask obstacleMask;
+    [SerializeField] Vector3[] directionsToCheckForObstacles;
 
     List<FlockUnit> cohesionNeigbhours = new List<FlockUnit>();
     List<FlockUnit> avoidanceNeigbhours = new List<FlockUnit>();
@@ -14,6 +16,7 @@ public class FlockUnit : MonoBehaviour
 
     Flock assignedFlock;
     Vector3 currentVelocity;
+    Vector3 currentObstacleAvoidanceVector;
     float speed;
 
     public void AssignFlocked(Flock flock)
@@ -35,8 +38,9 @@ public class FlockUnit : MonoBehaviour
         var avoidanceVector = CalculateAvoidanceVector() * assignedFlock.avoidanceWeight;
         var alignmentVector = CalculateAlignmentVector() * assignedFlock.alignmentWeight;
         var boundsVector = CalculateBoundsVector() * assignedFlock.boundsWeight;
+        var obstacleVector = CalculateObstacleVector() * assignedFlock.obstacleWeight;
 
-        var moveVector = cohesionVector + avoidanceVector + alignmentVector + boundsVector;
+        var moveVector = cohesionVector + avoidanceVector + alignmentVector + boundsVector + obstacleVector;
         moveVector = Vector3.SmoothDamp(transform.forward, moveVector, ref currentVelocity, smoothDamp);
         moveVector = moveVector.normalized * speed;
         if (moveVector == Vector3.zero)
@@ -44,6 +48,57 @@ public class FlockUnit : MonoBehaviour
 
         transform.forward = moveVector;
         transform.position +=  moveVector * Time.deltaTime;
+    }
+
+    Vector3 CalculateObstacleVector()
+    {
+        var obstacleVector = Vector3.zero;
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.forward, out hit, assignedFlock.obstacleDistance, obstacleMask))
+        {
+            obstacleVector = FindBestDirectionToAvoidObstacle();
+        }
+        else
+        {
+            currentObstacleAvoidanceVector = Vector3.zero;
+        }
+        return obstacleVector;
+    }
+
+    Vector3 FindBestDirectionToAvoidObstacle()
+    {
+        if (currentObstacleAvoidanceVector != Vector3.zero)
+        {
+            RaycastHit hit;
+            if (!Physics.Raycast(transform.position, transform.forward, out hit, assignedFlock.obstacleDistance, obstacleMask))
+            {
+                return currentObstacleAvoidanceVector;
+            }
+        }
+
+        float maxDistance = int.MinValue;
+        var selectedDirection = Vector3.zero;
+        for (int i = 0; i < directionsToCheckForObstacles.Length; i++)
+        {
+            RaycastHit hit;
+            var currentDirection = transform.TransformDirection(directionsToCheckForObstacles[i].normalized);
+            if (Physics.Raycast(transform.position, currentDirection, out hit, assignedFlock.obstacleDistance, obstacleMask))
+            {
+                float currentDistance = hit.distance;
+                if(currentDistance > maxDistance)
+                {
+                    maxDistance = currentDistance;
+                    selectedDirection = currentDirection;
+                }
+            }
+            else
+            {
+                selectedDirection = currentDirection;
+                currentObstacleAvoidanceVector = currentDirection.normalized;
+                return selectedDirection.normalized;
+            }
+        }
+        return selectedDirection.normalized;
     }
 
     Vector3 CalculateBoundsVector()

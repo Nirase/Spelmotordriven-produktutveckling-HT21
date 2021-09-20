@@ -21,22 +21,26 @@ public class Flock : MonoBehaviour
     [SerializeField, Range(0, 10)] float _avoidanceDistance;
     [SerializeField, Range(0, 10)] float _alignmentDistance;
     [SerializeField, Range(0, 10)] float _boundsDistance;
+    [SerializeField, Range(0, 10)] float _obstacleDistance;
 
     public float cohesionDistance { get { return _cohesionDistance; } }
     public float avoidanceDistance { get { return _avoidanceDistance; } }
     public float alignmentDistance { get { return _alignmentDistance; } }
     public float boundsDistance { get { return _boundsDistance; } }
+    public float obstacleDistance { get { return _obstacleDistance; } }
 
     [Header("Behavoir Weights")]
-    [SerializeField, Range(0, 10)] float _cohesionWeight;
-    [SerializeField, Range(0, 10)] float _avoidanceWeight;
-    [SerializeField, Range(0, 10)] float _alignmentWeight;
-    [SerializeField, Range(0, 10)] float _boundsWeight;
+    [SerializeField, Range(0, 100)] float _cohesionWeight;
+    [SerializeField, Range(0, 100)] float _avoidanceWeight;
+    [SerializeField, Range(0, 100)] float _alignmentWeight;
+    [SerializeField, Range(0, 100)] float _boundsWeight;
+    [SerializeField, Range(0, 100)] float _obstacleWeight;
 
     public float cohesionWeight { get { return _cohesionWeight; } }
     public float avoidanceWeight { get { return _avoidanceWeight; } }
     public float alignmentWeight { get { return _alignmentWeight; } }
     public float boundsWeight { get { return _boundsWeight; } }
+    public float obstacleWeight { get { return _obstacleWeight; } }
 
     public FlockUnit[] allUnits { get; set; }
     void Start()
