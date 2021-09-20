@@ -10,8 +10,11 @@ public class Flock : MonoBehaviour
     [SerializeField] Vector3 spawnBounds;
 
     [Header("Speed Setup")]
-    [SerializeField] float minSpeed;
-    [SerializeField] float maxSpeed;
+    [SerializeField] float _minSpeed;
+    [SerializeField] float _maxSpeed;
+
+    public float minSpeed { get { return _minSpeed; } }
+    public float maxSpeed { get { return _maxSpeed; } }
 
     [Header("Detection Distances")]
     [SerializeField, Range(0, 10)] float _cohesionDistance;
