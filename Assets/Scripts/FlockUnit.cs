@@ -24,11 +24,28 @@ public class FlockUnit : MonoBehaviour
     public void MoveUnit()
     {
         FindNeibhours();
+        CalculateSpeed();
         Vector3 cohesionVector = CalculateCohesionVector();
         var moveVector = Vector3.SmoothDamp(transform.forward, cohesionVector, ref currentVelocity, smoothDamp);
         moveVector = moveVector.normalized * speed;
+        if (moveVector == Vector3.zero)
+            moveVector = transform.forward;
         transform.forward = moveVector;
         transform.position +=  moveVector * Time.deltaTime;
+    }
+
+    void CalculateSpeed()
+    {
+        if (neigbhours.Count == 0)
+            return;
+
+        speed = 0;
+        for (int i = 0; i < neigbhours.Count; i++)
+        {
+            speed += neigbhours[i].speed;
+        }
+        speed /= neigbhours.Count;
+        speed = Mathf.Clamp(speed, assignedFlock.minSpeed, assignedFlock.maxSpeed);
     }
 
     void FindNeibhours()
