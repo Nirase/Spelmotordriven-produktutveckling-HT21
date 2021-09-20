@@ -46,6 +46,12 @@ public class FlockUnit : MonoBehaviour
         transform.position +=  moveVector * Time.deltaTime;
     }
 
+    Vector3 CalculateBoundsVector()
+    {
+        var centerOffset = assignedFlock.transform.position - transform.position;
+        bool isNearCenter = (centerOffset.magnitude >= assignedFlock.boundsDistance * 0.8f);
+        return isNearCenter ? centerOffset.normalized : Vector3.zero;
+    }
 
     Vector3 CalculateCohesionVector()
     {
