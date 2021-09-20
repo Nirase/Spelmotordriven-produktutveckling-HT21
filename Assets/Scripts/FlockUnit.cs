@@ -10,6 +10,7 @@ public class FlockUnit : MonoBehaviour
 
     List<FlockUnit> cohesionNeigbhours = new List<FlockUnit>();
     List<FlockUnit> avoidanceNeigbhours = new List<FlockUnit>();
+    List<FlockUnit> alignmentNeigbhours = new List<FlockUnit>();
 
     Flock assignedFlock;
     Vector3 currentVelocity;
@@ -35,6 +36,8 @@ public class FlockUnit : MonoBehaviour
         var alignmentVector = CalculateAlignmentVector() * assignedFlock.alignmentWeight;
         var boundsVector = CalculateBoundsVector() * assignedFlock.boundsWeight;
 
+        var moveVector = cohesionVector + avoidanceVector + alignmentVector + boundsVector;
+        moveVector = Vector3.SmoothDamp(transform.forward, moveVector, ref currentVelocity, smoothDamp);
         moveVector = moveVector.normalized * speed;
         if (moveVector == Vector3.zero)
             moveVector = transform.forward;
@@ -87,6 +90,27 @@ public class FlockUnit : MonoBehaviour
         avoidanceVector = avoidanceVector.normalized;
         return avoidanceVector;
     }
+    Vector3 CalculateAlignmentVector()
+    {
+        var alignmentVector = transform.forward;
+        if (alignmentNeigbhours.Count == 0)
+            return alignmentVector;
+        int neighboursInFOV = 0;
+        for (int i = 0; i < alignmentNeigbhours.Count; i++)
+        {
+            if (IsInFOV(alignmentNeigbhours[i].transform.position))
+            {
+                neighboursInFOV++;
+                alignmentVector += alignmentNeigbhours[i].transform.forward;
+            }
+        }
+        if (neighboursInFOV == 0)
+            return alignmentVector;
+        alignmentVector /= neighboursInFOV;
+        alignmentVector = alignmentVector.normalized;
+        return alignmentVector;
+    }
+
     void CalculateSpeed()
     {
         if (cohesionNeigbhours.Count == 0)
@@ -105,6 +129,7 @@ public class FlockUnit : MonoBehaviour
     {
         cohesionNeigbhours.Clear();
         avoidanceNeigbhours.Clear();
+        alignmentNeigbhours.Clear();
         var allUnits = assignedFlock.allUnits;
         for (int i = 0; i < allUnits.Length; i++)
         {
@@ -120,6 +145,9 @@ public class FlockUnit : MonoBehaviour
                 {
                     avoidanceNeigbhours.Add(currentUnit);
                 }
+                if (currentNeibhoursDistanceSqr <= assignedFlock.alignmentDistance * assignedFlock.alignmentDistance)
+                {
+                    alignmentNeigbhours.Add(currentUnit);
                 }
             }
         }
