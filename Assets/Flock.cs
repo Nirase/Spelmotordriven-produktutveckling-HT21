@@ -20,19 +20,23 @@ public class Flock : MonoBehaviour
     [SerializeField, Range(0, 10)] float _cohesionDistance;
     [SerializeField, Range(0, 10)] float _avoidanceDistance;
     [SerializeField, Range(0, 10)] float _alignmentDistance;
+    [SerializeField, Range(0, 10)] float _boundsDistance;
 
     public float cohesionDistance { get { return _cohesionDistance; } }
     public float avoidanceDistance { get { return _avoidanceDistance; } }
     public float alignmentDistance { get { return _alignmentDistance; } }
+    public float boundsDistance { get { return _boundsDistance; } }
 
     [Header("Behavoir Weights")]
     [SerializeField, Range(0, 10)] float _cohesionWeight;
     [SerializeField, Range(0, 10)] float _avoidanceWeight;
     [SerializeField, Range(0, 10)] float _alignmentWeight;
+    [SerializeField, Range(0, 10)] float _boundsWeight;
 
     public float cohesionWeight { get { return _cohesionWeight; } }
     public float avoidanceWeight { get { return _avoidanceWeight; } }
     public float alignmentWeight { get { return _alignmentWeight; } }
+    public float boundsWeight { get { return _boundsWeight; } }
 
     public FlockUnit[] allUnits { get; set; }
     void Start()
