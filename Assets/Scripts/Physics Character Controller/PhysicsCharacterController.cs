@@ -53,9 +53,8 @@ public class PhysicsCharacterController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.V) && isGrounded)
             isJumping = true;
-
     }
 
     private void FixedUpdate()
@@ -64,7 +63,7 @@ public class PhysicsCharacterController : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             accelerationValue = Mathf.Lerp(0, 1, 0.9f);
-            velocity = direction * Speed * Time.fixedDeltaTime * accelerationValue;
+            velocity = direction * Speed * Time.fixedDeltaTime * accelerationValue + new Vector3(0, velocity.y, 0);
             controller.Move(velocity);
         }
 
@@ -91,7 +90,6 @@ public class PhysicsCharacterController : MonoBehaviour
         if (isGrounded)
             velocity.y = 0;
     }
-
 
     // Collision detection.
     void OnControllerColliderHit(ControllerColliderHit hit)
