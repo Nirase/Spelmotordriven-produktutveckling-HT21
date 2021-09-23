@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 9159018881534697818}
   - component: {fileID: 9159018881534697808}
   - component: {fileID: 1750555838762885681}
+  - component: {fileID: 967633321246831130}
   m_Layer: 0
   m_Name: ADLR_NoRhythm
   m_TagString: Untagged
@@ -323,3 +324,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 250
   turnSpeed: 1
+--- !u!114 &967633321246831130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159018881534697819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 9159018881534697809}

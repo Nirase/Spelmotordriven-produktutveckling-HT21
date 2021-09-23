@@ -17,6 +17,9 @@ public class WASD_Controller : MonoBehaviour
     // Mass 55-67kg, is the avrage weight of an adult female woman 170cm
     // Lower Vmax and higher force for snappier movement.
 
+    float turnSmoothTime = 0.08f;
+    float turnSmoothVelocity;
+
 
     void Start()
     {
@@ -32,12 +35,19 @@ public class WASD_Controller : MonoBehaviour
         if (inputs != Vector3.zero)
             transform.forward = inputs;
 
+        if (inputs.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(inputs.x, inputs.z) * Mathf.Rad2Deg;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        }
+
 
     }
 
     private void FixedUpdate()
     {
-        if (rb.velocity.magnitude < VelocityMax)  
             rb.AddForce(inputs * Force * Time.fixedDeltaTime, ForceMode.Force); // Possibly use impulse instead.
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, VelocityMax);
     }
 }
