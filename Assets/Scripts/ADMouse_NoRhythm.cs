@@ -5,6 +5,7 @@ using UnityEngine;
 public class ADMouse_NoRhythm : MonoBehaviour
 {
     public float Speed = 10f;
+    public float VelocityMax = 15f;
 
     private Rigidbody body;
 
@@ -46,6 +47,7 @@ public class ADMouse_NoRhythm : MonoBehaviour
         if (movePlayer == false)
             return;
         body.velocity += transform.forward * Speed * Time.fixedDeltaTime;
+        body.velocity = Vector3.ClampMagnitude(body.velocity, VelocityMax);
         movePlayer = false;
     }
 }
