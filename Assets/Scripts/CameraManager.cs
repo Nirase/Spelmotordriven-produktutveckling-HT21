@@ -35,5 +35,13 @@ public class CameraManager : MonoBehaviour
             PlayableCharacters[count].SetActive(true);
             textMeshes[count].SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Vector3 start = new Vector3(0, 1, 0);
+            PlayableCharacters[count].GetComponentInChildren<FollowPlayer>().player.transform.position = start;
+            PlayableCharacters[count].GetComponentInChildren<CharacterController>().transform.position = start;
+
+        }
     }
 }
