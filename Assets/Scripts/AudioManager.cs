@@ -36,5 +36,11 @@ public class AudioManager : MonoBehaviour
             audioSources[0].Pause();
             audioSources[1].Pause();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            audioSources[0].Pause();
+            audioSources[1].Pause();
+            audioSources[2].Pause();
+        }
     }
 }
