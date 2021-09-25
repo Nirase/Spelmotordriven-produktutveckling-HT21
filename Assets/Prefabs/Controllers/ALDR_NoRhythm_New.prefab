@@ -177,6 +177,14 @@ PrefabInstance:
       propertyPath: turnSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9159018881534697808, guid: 2ea07c2f76842cc418740e549a2c45f4, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159018881534697808, guid: 2ea07c2f76842cc418740e549a2c45f4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100006, guid: bae110eee250e4b418b188f4ae4e3170, type: 3}
     - target: {fileID: 9159018881534697809, guid: 2ea07c2f76842cc418740e549a2c45f4, type: 3}
       propertyPath: m_RootOrder
       value: 1
