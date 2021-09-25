@@ -233,6 +233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ADLR_NoRhythm
       objectReference: {fileID: 0}
+    - target: {fileID: 9159018881534697823, guid: 2ea07c2f76842cc418740e549a2c45f4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e9de28ede1332a49bd0c295dc9a9d6c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea07c2f76842cc418740e549a2c45f4, type: 3}
 --- !u!4 &6457951688327323967 stripped
