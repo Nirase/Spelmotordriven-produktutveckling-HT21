@@ -10,6 +10,10 @@ public class ADLRLean : MonoBehaviour
         private Rigidbody body;
         bool movePlayer = false;
         KeyCode lastInput;
+
+        [SerializeField]
+        float VelocityMax = 15;
+
         void Start()
         {
             body = GetComponent<Rigidbody>();
@@ -43,6 +47,7 @@ public class ADLRLean : MonoBehaviour
             if (movePlayer == false)
                 return;
             body.velocity += transform.forward * Speed * Time.fixedDeltaTime;
+            body.velocity = Vector3.ClampMagnitude(body.velocity, VelocityMax);
             movePlayer = false;
         }
 }
