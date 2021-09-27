@@ -69,10 +69,11 @@ public class ADMouse_Rhythm : MonoBehaviour
     
     private void FixedUpdate()
     {
+        body.velocity = transform.forward * body.velocity.magnitude * 0.999f;
         if (movePlayer == false)
             return;
         body.velocity += transform.forward * Speed * Time.fixedDeltaTime;
         body.velocity = Vector3.ClampMagnitude(body.velocity, VelocityMax);
         movePlayer = false;
-    }
+    } 
 }
