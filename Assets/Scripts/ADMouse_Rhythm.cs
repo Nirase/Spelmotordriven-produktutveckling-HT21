@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,11 +20,25 @@ public class ADMouse_Rhythm : MonoBehaviour
     private float beatHighlight;
     float active = 1f;
 
+    [SerializeField] private AudioSource beat;
+    [SerializeField] private ParticleSystem particle;
     void Start()
     {
         body = GetComponent<Rigidbody>();
         beatHighlight = (60 / Bpm); // 0.5
         StartCoroutine(BeatArea());
+    }
+
+
+    private void OnEnable()
+    {
+        StartCoroutine(BeatArea());
+        beat.Play();
+    }
+
+    private void OnDisable()
+    {
+        beat.Stop();
     }
 
     IEnumerator BeatArea() 
@@ -37,13 +52,13 @@ public class ADMouse_Rhythm : MonoBehaviour
                 active -= Time.deltaTime;
                 if (Input.GetKeyDown(KeyCode.A) && lastInput != KeyCode.A)
                 {
-                    Debug.Log("LEFT");
+                    particle.Play();
                     lastInput = KeyCode.A;
                     movePlayer = true;
                 }
                 else if (Input.GetKeyDown(KeyCode.D) && lastInput != KeyCode.D)
                 {
-                    Debug.Log("RIGHT");
+                    particle.Play();
                     lastInput = KeyCode.D;
                     movePlayer = true;
                 }
