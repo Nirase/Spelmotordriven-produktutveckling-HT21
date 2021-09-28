@@ -323,7 +323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 250
-  turnSpeed: 1
+  turnSpeed: 2
+  VelocityMax: 15
 --- !u!114 &967633321246831130
 MonoBehaviour:
   m_ObjectHideFlags: 0
