@@ -68,6 +68,15 @@ public class AnimationStateController : MonoBehaviour
         if(!leftPressed && !rightPressed && VelocityX != 0.0f && (VelocityX > -0.05f && VelocityX < 0.05f))
             VelocityX = 0.0f;
 
+        // Clamps
+        if(upPressed && VelocityZ > maxRunVelocity)
+            VelocityZ = maxRunVelocity;
+        if(downPressed && VelocityZ < -maxRunVelocity)
+            VelocityZ = -maxRunVelocity;
+        if(leftPressed && VelocityX < -maxRunVelocity)
+            VelocityX = -maxRunVelocity;
+        if(rightPressed && VelocityX > maxRunVelocity)
+            VelocityX = maxRunVelocity;    
 
         animator.SetFloat("VelocityZ", VelocityZ);
         animator.SetFloat("VelocityX", VelocityX);
