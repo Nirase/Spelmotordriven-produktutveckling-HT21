@@ -5,25 +5,26 @@ using UnityEngine;
 public class AnimationStateController : MonoBehaviour
 {
     Animator animator; 
-    int velocityHash;
-    float deceleration= 0.5f;
+    float VelocityZ = 0;
+    float VelocityX = 0;
     Rigidbody rb;
+    float acceleration = 0.5f;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        velocityHash = Animator.StringToHash("Velocity");
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        // bool forwardPressed = Input.GetKey("W");
-        // if (!forwardPressed && velocity > 0.0f)
-        // {
-        //     velocity -= Time.deltaTime * deceleration;
-        // }
+        bool forwardPressed = Input.GetKey("w");
+        bool leftPressed = Input.GetKey("a");
+        bool rightPressed = Input.GetKey("d");
 
-        animator.SetFloat(velocityHash, (int)rb.velocity.magnitude);
+        if(forwardPressed)
+        {
+            VelocityZ += Time.deltaTime * acceleration;
+        }
     }
 }
