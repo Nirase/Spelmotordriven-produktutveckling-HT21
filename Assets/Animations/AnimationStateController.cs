@@ -7,24 +7,27 @@ public class AnimationStateController : MonoBehaviour
     Animator animator; 
     float VelocityZ = 0;
     float VelocityX = 0;
-    Rigidbody rb;
     public float acceleration = 2f;
     public float deceleration = 2f;
     public float maxRunVelocity = 2.0f;
 
+    int VelocityZHash;
+    int VelocityXHash;
+
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        VelocityZHash = Animator.StringToHash("VelocityZ");
+        VelocityXHash = Animator.StringToHash("VelocityX");
     }
 
     void Update()
     {
     // Get input
-        bool upPressed = Input.GetKey("w");
-        bool downPressed = Input.GetKey("s");
-        bool leftPressed = Input.GetKey("a");
-        bool rightPressed = Input.GetKey("d");
+        bool upPressed = Input.GetKey(KeyCode.W);
+        bool downPressed = Input.GetKey(KeyCode.S);
+        bool leftPressed = Input.GetKey(KeyCode.A);
+        bool rightPressed = Input.GetKey(KeyCode.D);
 
     //Acceleration
         // up
@@ -78,7 +81,7 @@ public class AnimationStateController : MonoBehaviour
         if(rightPressed && VelocityX > maxRunVelocity)
             VelocityX = maxRunVelocity;    
 
-        animator.SetFloat("VelocityZ", VelocityZ);
-        animator.SetFloat("VelocityX", VelocityX);
+        animator.SetFloat(VelocityZHash, VelocityZ);
+        animator.SetFloat(VelocityXHash, VelocityX);
     }
 }
