@@ -10,14 +10,14 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
-        transform.position = player.transform.position + new Vector3(0, 15, -10);
+        transform.position = player.transform.position + new Vector3(0, 1, -10);
         //cam = GetComponent<Camera>();
     }
 
     void Update()
     {
         //Vector3 behind = player.position -player.transform.forward * 10 + offSetY;
-        transform.position = player.transform.position + new Vector3(0, 15, -10);
+        transform.position = player.transform.position + new Vector3(0, 1, -10);
 
         //cam.transform.position = Vector3.Lerp(cam.transform.position, behind, 1);
         //Vector3 fw = player.position - cam.transform.position;
