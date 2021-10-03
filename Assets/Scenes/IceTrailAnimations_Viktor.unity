@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &146095735
 Transform:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4308,10 +4308,10 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0, g: 0.6193444, b: 0.9622642, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0}
-        key2: {r: 0.06132078, g: 0.0996239, b: 1, a: 0.12156863}
-        key3: {r: 1, g: 0.4575472, b: 0.99080485, a: 0.39607844}
-        key4: {r: 0.4198113, g: 1, b: 0.79024076, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0.9467383}
+        key2: {r: 0.06132078, g: 0.0996239, b: 1, a: 0}
+        key3: {r: 1, g: 0.4575472, b: 0.99080485, a: 0}
+        key4: {r: 0.4198113, g: 1, b: 0.79024076, a: 0}
         key5: {r: 0.4198113, g: 1, b: 0.79024076, a: 1}
         key6: {r: 1, g: 0.8970643, b: 0, a: 1}
         key7: {r: 0.495283, g: 0.9694395, b: 1, a: 1}
@@ -4324,10 +4324,10 @@ ParticleSystem:
         ctime6: 50462
         ctime7: 58654
         atime0: 0
-        atime1: 4819
+        atime1: 51079
         atime2: 64764
         atime3: 64764
-        atime4: 32768
+        atime4: 64764
         atime5: 40959
         atime6: 49151
         atime7: 57343
