@@ -1182,7 +1182,7 @@
     },
     "m_Name": "ColorRemapStrengthCYAN",
     "m_DefaultReferenceName": "Vector1_16f1e4f7358c4cd58dcf7df75ae40fa6",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "cyan",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
