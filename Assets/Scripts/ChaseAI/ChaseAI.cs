@@ -14,8 +14,10 @@ public class ChaseAI : MonoBehaviour
 
     private NavMeshAgent agent;
     private Vector3 startPosition;
+    private bool done;
     private bool chaseStarted;
 
+    [SerializeField] private Material colourMaterial;
     void Start()
     {
         startPosition = transform.position;
@@ -27,8 +29,15 @@ public class ChaseAI : MonoBehaviour
     {
         var distanceToGoal = (goal.position - transform.position).magnitude;
 
-        if (distanceToGoal <= goalMarginal)
+        if (done)
             return;
+        
+        if (distanceToGoal <= goalMarginal)
+        {
+            colourMaterial.SetFloat("colorRemapYellow", 1f);
+            done = true;
+            return;
+        }
         
         var distanceToPlayer = (player.transform.position - transform.position).magnitude;
         

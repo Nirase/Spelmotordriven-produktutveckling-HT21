@@ -31,7 +31,6 @@ public class MultipleColliders : MonoBehaviour
             val += 0.05f;
             yield return new WaitForSeconds(0.1f); 
         }
-
     }
 
     public int LastUnlockedIndex 
