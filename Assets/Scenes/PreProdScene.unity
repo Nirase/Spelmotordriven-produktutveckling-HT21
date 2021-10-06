@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198619472}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -1.7720667, z: -0.0004624662}
+  m_LocalPosition: {x: 0, y: -6.952067, z: -0.0004624662}
   m_LocalScale: {x: 2006.1448, y: 2006.1448, z: 2006.1448}
   m_Children: []
   m_Father: {fileID: 1462986912}
@@ -2075,13 +2075,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800819310}
-  m_LocalRotation: {x: -0.56753963, y: -0.26028052, z: -0.4217805, w: 0.65746033}
-  m_LocalPosition: {x: -2.5, y: 4.9, z: 1.2}
+  m_LocalRotation: {x: -0.6221722, y: -0.27634665, z: -0.272669, w: 0.67984265}
+  m_LocalPosition: {x: -2.87, y: -2.46, z: 0.65}
   m_LocalScale: {x: 207.99706, y: 207.99706, z: 207.99706}
   m_Children: []
   m_Father: {fileID: 1462986912}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -74.979, y: 31.783, z: -90}
+  m_LocalEulerAnglesHint: {x: -85.316, y: -26.512, z: -19.215}
 --- !u!64 &800819312
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5218,6 +5218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnowPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8a748bc27d2afa4b984675ef2a84855, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8a748bc27d2afa4b984675ef2a84855, type: 3}
 --- !u!1001 &1510538821
@@ -6417,7 +6421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 72011792d689e6845a24ba94ec51bb30, type: 2}
+  - {fileID: 2100000, guid: a6de6e6b3baa47a479917ca94dee500d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6456,7 +6460,7 @@ Transform:
   m_GameObject: {fileID: 1770605100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 43.662}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
