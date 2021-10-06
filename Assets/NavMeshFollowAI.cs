@@ -21,7 +21,7 @@ public class NavMeshFollowAI : MonoBehaviour
     void Update()
     {
 
-        if (Vector3.Magnitude(agent.transform.position - goal.position) <= 1)
+        if (Vector3.Magnitude(agent.transform.position - goal.position) <= 20)
             isFinished = true;
 
         if (!isFinished)
