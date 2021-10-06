@@ -17,6 +17,7 @@ public class GuidingAI : MonoBehaviour
     private bool foundPlayer = false;
     private bool searchForPlayer = false;
 
+    [SerializeField] private float speed = 50;
     [SerializeField] private PointOfInterest[] goals;
     // Start is called before the first frame update
     void Start()
