@@ -36,9 +36,9 @@ public class SavePlayePrefs : MonoBehaviour
                 float playerPositionY = PlayerPrefs.GetFloat("Y");
                 float playerPositionZ = PlayerPrefs.GetFloat("Z");
                 Vector3 playerPosition = new Vector3(playerPositionX, playerPositionY, playerPositionZ);
-                transform.GetComponent<CharacterController>().enabled = false;
+                //transform.GetComponent<CharacterController>().enabled = false;
                 transform.position = playerPosition;
-                transform.GetComponent<CharacterController>().enabled = true;
+                //transform.GetComponent<CharacterController>().enabled = true;
 
                 Debug.Log("Load");
             }
