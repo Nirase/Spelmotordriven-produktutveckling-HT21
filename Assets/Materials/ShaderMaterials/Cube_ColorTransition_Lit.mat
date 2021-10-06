@@ -128,7 +128,12 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - cyan: 1.0000001
+    - colorRemapBlue: 0
+    - colorRemapGreen: 0
+    - colorRemapPink: 0
+    - colorRemapRed: 0
+    - colorRemapYellow: 0
+    - cyan: 0
     m_Colors:
     - Color_3b571f2f54ad42ce95acc11f82cf3150: {r: 0.36320752, g: 0.8635445, b: 1, a: 0}
     - Color_44b53ab11a534ab8bcdb16767696f6b9: {r: 0.7254901, g: 0, b: 1, a: 0}
@@ -140,4 +145,10 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - blue: {r: 0, g: 0, b: 0, a: 0}
+    - colorRemapRED: {r: 0, g: 0, b: 0, a: 0}
+    - green: {r: 0, g: 0, b: 0, a: 0}
+    - pink: {r: 0, g: 0, b: 0, a: 0}
+    - red: {r: 0, g: 0, b: 0, a: 0}
+    - yellow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

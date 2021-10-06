@@ -12,7 +12,14 @@ public class Move : MonoBehaviour
     float size;
     [SerializeField]
     Transform player;
-    int score;
+    float score;
+
+    private bool done;
+    [SerializeField] private Material colourMaterial;
+
+    [SerializeField] private float goalTime;
+    private static readonly int ColorRemapRed = Shader.PropertyToID("colorRemapRED");
+
     void Start()
     {
         startPos = transform.position;
@@ -26,8 +33,12 @@ public class Move : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    
     void Update()
     {
+        if (done || Vector3.Distance(transform.position, player.transform.position) > 30)
+            return;
+        
         timer += Time.deltaTime * speed;
         float x = Mathf.Sin(timer) * size;
 
@@ -35,11 +46,11 @@ public class Move : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
-                score++;
+                score += Time.deltaTime;
             }
             else
             {
-                score--;
+                score -= Time.deltaTime;
             }
 
         }
@@ -47,29 +58,34 @@ public class Move : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                score++;
+                score += Time.deltaTime;
             }
             else
             {
-                score--;
+                score -= Time.deltaTime;
             }
         }
         if(x == 0)
         {
             if (!Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A))
             {
-                score++;
+                score += Time.deltaTime;
             }
             else
             {
-                score--;
+                score -= Time.deltaTime;
             }
         }
 
-        score = Mathf.Clamp(score, 0, 100000);
+        score = Mathf.Clamp(score, 0, 1);
+
+        if (score >= 1)
+        {
+            done = true;
+        }
         Debug.Log(score);
 
-
+        colourMaterial.SetFloat("colorRemapRed", score);
         transform.position = startPos + new Vector3(x, 0, 0);
     }
 }
