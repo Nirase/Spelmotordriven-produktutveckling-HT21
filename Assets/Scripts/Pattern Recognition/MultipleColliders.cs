@@ -14,6 +14,26 @@ public class MultipleColliders : MonoBehaviour
     [SerializeField]
     int lastUnlockedIndex;
 
+    [SerializeField]
+    Material colorCube;
+    bool activated = false;
+
+
+    IEnumerator fadeColors()
+    {
+        float val = 0.1f;
+        activated = true;
+
+        Debug.Log("Hello from coroutine");
+        while(colorCube.GetFloat("cyan") < 1)
+        {
+            colorCube.SetFloat("cyan", val);
+            val += 0.05f;
+            yield return new WaitForSeconds(0.1f); 
+        }
+
+    }
+
     public int LastUnlockedIndex 
     { 
         get => lastUnlockedIndex;
@@ -35,6 +55,8 @@ public class MultipleColliders : MonoBehaviour
 
     void Start()
     {
+        colorCube.SetFloat("cyan", 0f);
+
         int i = 1;
         foreach (GameObject point in points)
         {
@@ -56,6 +78,9 @@ public class MultipleColliders : MonoBehaviour
                 }
             }
             Debug.Log("Pattern Followed");
+            
+            if(!activated)
+                StartCoroutine(fadeColors());
         }
         else
         {
