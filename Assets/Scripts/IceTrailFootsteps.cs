@@ -6,12 +6,15 @@ public class IceTrailFootsteps : MonoBehaviour
 {
    
     ParticleSystem ps;
+    
+    AudioSource footsteps;
     //private Gradient gradient = new Gradient();
     //public bool swapColors = true;
 
     void Start()
     {
         ps = GetComponentInChildren<ParticleSystem>();
+        footsteps = GetComponent<AudioSource>();
         //var main = ps.main;
         ps.Play();
     }
@@ -43,11 +46,11 @@ public class IceTrailFootsteps : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         //swapColors = true;
+        footsteps.Play();
 
     }
     private void OnTriggerExit(Collider other) 
     {
-     
         //swapColors = false;
     }
 
