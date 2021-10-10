@@ -1,6 +1,9 @@
 # Kanvas - Game Design Document<br/>
 
-## Table of Contents
+## :pushpin: Table of Contents
+<details>
+<summary> Click to expand! </summary>
+
 - [1- Design History - Changelog](#history)
 - [2- Goals and Vision](#goals-vision)
   - [2.1 Gameplay synopsis](#gameplay-synopsis)
@@ -95,7 +98,12 @@
     - [10.11.2 Manual](#manual)
     - [10.11.3 Setup](#setup)
 
-## 1- Design History - Changelog <a name="history"></a>
+</details>
+
+## :date: 1- Design History - Changelog <a name="history"></a>
+<details>
+<summary> Click to expand! </summary>
+
 Include what, when and who changed the GDD for future reference and knowing exactly where to focus when someone else check the document (Use a table). This makes it simple and effortless to track changes to the document.
 
 | V.  | Date       | Description | Author |
@@ -105,8 +113,14 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.2 | 13/09/2021 | Wrote a first draft of 7 and 8 | Viktor Rydsund |
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
+| 1.5 | 10/10/2021 | Added collapsible chapters, emojis | Danny Darwiche
 
-## 2- Goals and Vision <a name="goals-vision"></a>
+</details>
+
+## :mag_right: 2- Goals and Vision <a name="goals-vision"></a>
+<details>
+<summary> Click to expand! </summary>
+
 Our goal is to create a short and sweet game that takes the player through a journey of discovery through the use of music and colours. We want to create an experience where the player travels through the emotions of sadness, loneliness, friendship and ultimately happiness. We hope to do this through a story without words, told simply through the use of the music, colours, and the world under the ice.
 
 ### 2.1 Gameplay synopsis <a name="gameplay-synopsis"></a>
@@ -114,7 +128,11 @@ We want to create a very relaxing gameplay loop. The main gameplay loop is simpl
 
 The game starts off black and white, in the middle of a frozen body of water. The music will be quiet and feel sad, but as the player explores, the world starts to be filled in with colour and the music starts changing. We’re going to aim for a look that reminds people of Ink and Watercolours, we don’t want it to be realistic but we want it to be something that the players can relate to, and that they feel relaxed by.
 
-## 3- Audience, Platform, and Marketing <a name="audience-platform-market"></a>
+</details>
+
+## :chart_with_upwards_trend: 3- Audience, Platform, and Marketing <a name="audience-platform-market"></a>
+<details>
+<summary> Click to expand! </summary>
 
 ### 3.1 Target audience <a name="target-audience"></a>
 Our target audience is the people who play games a lot more casually. We aren’t aiming at any specific age group, as casual games are becoming increasingly popular even within the age groups that typically play more active games.
@@ -142,7 +160,12 @@ In the first three games mentioned, the player is still actively involved in mak
 ### 3.6 Sales expectations <a name="sales-expectations"></a>
 Our current plan is to release this game on Itch, however we’ve been discussing the possibility of releasing this as a commercial game on Steam if it turns out well. We don’t have any specific sales expectations, and would more so be doing it to have had the experience of fully releasing a game on Steam. As the development costs will be minimal, this is an opportune chance to do so.
 
-## 4- Legal Analysis <a name="legal-analysis"></a>
+</details>
+
+## :books: 4- Legal Analysis <a name="legal-analysis"></a>
+<details>
+<summary> Click to expand! </summary>
+
 Unity allows for games to be released commercially for free as long as the game is developed by a company that makes less than $100k.
 
 Wwise’s commercial license is a bit unclear, we intend to send an email to them to get clarification for how it works if we decide to make this a commercial game.
@@ -155,7 +178,11 @@ We will need to check if the name “Kanvas” is a name that we are free to use
 
 All of this is mainly dependent on how well the game turns out. We want to have a good game that we can point towards and say that we have officially licensed by the time we finish our studies, and this is a good chance for this to happen.
 
-## 5- Gameplay <a name="gameplay"></a>
+</details>
+
+## :video_game: 5- Gameplay <a name="gameplay"></a>
+<details>
+<summary> Click to expand! </summary>
 
 ### 5.1 Overview <a name="overview"></a>
 The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, possibly through the use of matching a rhythm, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see a new colour.
@@ -236,7 +263,12 @@ EX) **Section A**: Has the interaction of guiding a single lost red fish back to
 
 ### 5.10 Editor <a name="editor"></a>
 
-## 6- Game Characters <a name="game-characters"></a>
+</details>
+
+## :family: 6- Game Characters <a name="game-characters"></a>
+<details>
+<summary> Click to expand! </summary>
+
 This is where you describe any game characters and their attributes.
 
 ### 6.1 Character design <a name="character-design"></a>
@@ -256,7 +288,11 @@ Our game has no NPCs that the player talks to interacts with, but there will be 
 If the artificial intelligence is an important component of your project since the NPCs have a set of complex intertwined systems, you should open a subsection or whole section only for it.
 We will be utilizing a few versions of AI to create a natural feeling wildlife. Most of the fish will be controlled through Boids, so that they appear to be moving around naturally. Some of the other fishes will use pathfinding and behaviour trees to make sure that they’re more noticeable, but still feel natural.
 
-## 7- Story <a name="story"></a>
+</details>
+
+## :speech_balloon: 7- Story <a name="story"></a>
+<details>
+<summary> Click to expand! </summary>
 
 ### 7.1 Synopsis <a name="synopsis"></a>
 A lost ice-skater befriends a fish and restores colour and music to the world. The fish dies and the protagonist becomes sad. Later the fish is revealed to be alive and the world becomes vibrant again.
@@ -307,7 +343,12 @@ Our protagonist encounters a ginormous eye frozen solid near the surface of the 
 #### 7.5.2 Subplot #2 <a name="subplot2"></a>
 tbd
 
-## 8- The Game World <a name="game-world"></a>
+</details>
+
+## :earth_africa: 8- The Game World <a name="game-world"></a>
+<details>
+<summary> Click to expand! </summary>
+
 If your game involves the creation of a world, you may want to go into detail on all aspects of that world. If world creation is a main mechanic of your game as for instance, Carcassonne, you should write about it in the gameplay section and here you have all the reserved space to go into very specific information about it.
 
 ### 8.1 Overview <a name="overview"></a>
@@ -347,7 +388,12 @@ Real life physics (more or less).
 ### 8.11 Society/culture <a name="society-culture"></a>
 Seemingly the only person left alive.
 
-## 9- Media List <a name="media-list"></a>
+</details>
+
+## :art: 9- Media List <a name="media-list"></a>
+<details>
+<summary> Click to expand! </summary>
+
 Any type of digital asset that you will be using should be placed here.
 
 ### 9.1 Interface assets <a name="interface-assets"></a>
@@ -369,7 +415,11 @@ https://assetstore.unity.com/packages/3d/animations/toon-ice-skating-animations-
 ### 9.5 Music and sound effects <a name="music-and-sound-effects"></a>
 List all of the media that will need to be produced. The specifics of your game will dictate what categories you need to include. Be detailed with this list, and create a file naming convention up front. This can avoid a lot of confusion later on.
 
-## 10- Technical Specifications <a name="technical-specifications"></a>
+</details>
+
+## :computer: 10- Technical Specifications <a name="technical-specifications"></a>
+<details>
+<summary> Click to expand! </summary>
 
 ### 10.1 Technical analysis <a name="technical-analysis"></a>
 
@@ -471,3 +521,5 @@ Possibly.
 #### 10.11.2 Manual <a name="manual"></a>
 
 #### 10.11.3 Setup <a name="setup"></a>
+
+</details>
