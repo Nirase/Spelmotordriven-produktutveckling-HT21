@@ -119,7 +119,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.2 | 13/09/2021 | Wrote a first draft of 7 and 8 | Viktor Rydsund |
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
-| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5 | Danny Darwiche
+| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5, 10.1.2, 10.10.7, 10.10.8 | Danny Darwiche
 
 </details>
 
@@ -176,7 +176,7 @@ Unity allows for games to be released commercially for free as long as the game 
 
 We'll be using FMod to combine Unity and Sound easily. The license for FMod is free as long as we've made less than $200k in revenue this year, which we're not expecting in the slightest.
 
-Maya’s license does not allow us to sell the game commercially unless we pay for it. We might need to focus on Blender if we decide to go the route of commercially licensing this game.
+We will use Blender because they allow us to commercially license our models
 
 We will keep the commercial aspect in mind for every asset we might buy.
 
@@ -581,7 +581,7 @@ Is there any new technology that you plan on developing for this game? If so, de
 #### 10.1.2 Major software development tasks <a name="major-software-development-tasks"></a>
 We are using a preexisting game engine to make the development process easier. We will be developing through Unity.
 
-The only major software that we need to develop is a tool that will help the process. We will be developing a tool that...
+We will also be developing our own spline tool to make it easier for us to draw patterns for our pattern recognition, trails, camera path and fish behavior.
 
 #### 10.1.3 Risks <a name="risks"></a>
 What are the risks inherent in your strategy?
@@ -597,7 +597,7 @@ Describe the development platform, as well as any software tools and hardware th
 
 #### 10.2.1 Software <a name="software"></a>
 - Github - Used as version control and as a way for us to organize all our work.
-- Maya & Blender - Used to create 3D Models.
+- Blender - Used to create 3D Models.
 - Unity - Used as a game engine for the entire process.
 
 #### 10.2.2 Hardware <a name="hardware"></a>
@@ -662,9 +662,12 @@ None.
 None.
 
 #### 10.10.7 Saving games <a name="saving-games"></a>
-Possibly.
+The save system will save the player transform, fish transforms, colors unlocked and interactions completed.
+
+Two save systems are currently used. Unity's PlayerPrefs and a custom script converting data to a binary file.
 
 #### 10.10.8 Loading games <a name="loading-games"></a>
+Loading is done through Unity's PlayerPrefs and the binary file.
 
 ### 10.11 Other <a name="other"></a>
 
