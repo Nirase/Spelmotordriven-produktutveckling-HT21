@@ -7,6 +7,7 @@ public class WASD_RigidbodyController : MonoBehaviour
     // Interpolation should be on since the movement is physics based and therefore seperated from the graphics
     // Mass and force are connected. Adjusting mass also adjusts force.
     // AngularDrag = 0.15-0.18f
+    // CenterOfMass is not needed since transformation is frozen.
 
     Rigidbody _rigidbody;
     private Vector3 _direction;
@@ -21,8 +22,6 @@ public class WASD_RigidbodyController : MonoBehaviour
     void Start()
     {
         Thrust = _rigidbody.mass * Thrust;
-        // Things to possibly add:
-        // Center of Mass?
     }
 
     // This section is used to manage input and determine logic separate from physics.
@@ -38,6 +37,7 @@ public class WASD_RigidbodyController : MonoBehaviour
     public void Move()
     {
         _rigidbody.AddForce(_direction * Thrust * Time.fixedDeltaTime, ForceMode.Force);
+        //_rigidbody.AddRelativeForce(_direction * Thrust * Time.fixedDeltaTime, ForceMode.Force);
         _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, VelocityMax);
     }
 
