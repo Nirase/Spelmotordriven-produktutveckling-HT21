@@ -119,7 +119,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.2 | 13/09/2021 | Wrote a first draft of 7 and 8 | Viktor Rydsund |
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
-| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 5.8 levels | Danny Darwiche
+| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11 | Danny Darwiche
 
 </details>
 
@@ -174,7 +174,7 @@ Our current plan is to release this game on Itch, however we’ve been discussin
 
 Unity allows for games to be released commercially for free as long as the game is developed by a company that makes less than $100k.
 
-Wwise’s commercial license is a bit unclear, we intend to send an email to them to get clarification for how it works if we decide to make this a commercial game.
+We'll be using FMod to combine Unity and Sound easily. The license for FMod is free as long as we've made less than $200k in revenue this year, which we're not expecting in the slightest.
 
 Maya’s license does not allow us to sell the game commercially unless we pay for it. We might need to focus on Blender if we decide to go the route of commercially licensing this game.
 
@@ -385,13 +385,107 @@ tbd
 <details>
 <summary> Click to expand! </summary>
 
-If your game involves the creation of a world, you may want to go into detail on all aspects of that world. If world creation is a main mechanic of your game as for instance, Carcassonne, you should write about it in the gameplay section and here you have all the reserved space to go into very specific information about it.
-
 ### 8.1 Overview <a name="overview"></a>
-A world covered in ice, a vast frozen sea with remnants of a world past.
+In a lot of ways the world is reminiscent to ours taking place in a not so distant future. The exception however is that the world is flooded by the oceans with a thick layer of ice encapsulating it. The players world exists only on the ice. The aquatic life however live freely within the ruins of the past civilization.
+
+It is a cold and desolate world for anything above the surface, with the only colors left being black and white. With time, warmth is restored to the world through music, colors and friendship as the player interacts with the world around them. Whilst the environmental setting is explicit, the majority of elements in the world are left implicit. An empty canvas onto which the player can project their own interpretation and meaning hence the games title and the game starting of as black and white but allowing the player to create music and even draw on the ice with their trails.
 
 ### 8.2 Key locations <a name="key-locations"></a>
-Five key locations, four of them that all need to be completed to unlock the final event.
+The game will feature a lot of locations, some more important than others. They can be categorized as 2 types, Essential and Atmospheric. The essential locations are the ones outlined in section 5.8 Levels. The player is required to find them in order to complete the game. The atmospheric locations can be thought of as decorations. They fill the world with variation, breaking up the monotony of the otherwise flat and boring world the player would be presented when skating from one essential location to the next. The atmospheric don't serve an interactive purpose. They are mostly a visual component which also helps the player orient themselves in the world and get a sense of direction.
+
+List of locations:
+
+<details>
+<summary> The dead tree </summary>
+
+- **Type**: Essential
+- **Number of colors**: None
+- **Breadcrumb**: The only tree, companion fish
+- **Description**: This is the starting area of the game which is at the center of the world. It features a lone tree breaking through the ice at the bottom of the stem. Initially it looks dead, a bare tree with no leaves, no color, the ice surrounding it being completely white. This is because the player has yet to explore the world and unlock any new colors. As the player progresses and unlocks new colors in the world, color and life is brought back to this tree and it's surroundings. The tree revitalizes and leaves reappear, under the ice all sorts of fish can be seen swimming around. Whether the tree was actually ever dead and regrown or if the character simple changes their point of view of the world as the game progresses will never be explicitly stated. This is part of the subtle environmental storytelling where as few things are defined allowing the player to project their own interpretation and meaning to the different interactions and developments of the world.
+
+</details>
+
+<details>
+<summary> The lighthouse </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Snow storm, light beam
+- **Description**: The lighthouse is covered in a heavy snow storm. Only at the eye of the storm can tranquility be found. The player must endure the storm and push their way through despite its attempts to force the player out. Inside the storm the player has little chance of navigating through since they will be moved and rotated by the storm all the while the view is very limited. They are however not alone. The lighthouse is full with water with eels living inside. Whenever they release a pulse of electricity the lighthouse lights up for a couple of seconds. This will give the player the direction they need to navigate the storm. Thus, even after civilizations fall the trusty lighthouse still fulfills its purpose (with a little help from its new residents). Thematically the storm and lighthouse represent the feeling of being lost and overwhelmed yet overcoming adversity and finding a state of peace thanks to a little help. Once at the center, the player can perform some interaction to unlock a color.
+
+</details>
+
+<details>
+<summary> The power plant </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Faint music in the distance
+- **Description**: The power plant is a visual representation of the cause of the state of the world. Disregard of the environment causes the civilization to fall. Once a hostile place it now serves as a playground for animals where they create their own music using the husk of the very thing that once threatened their eco system. The player can hear the sound of frogs croaking into silos or seals barking into pipes long before they reach the location. At this place the player needs to harmonize with the animals to create some musical piece thus unlocking a new color.
+
+</details>
+
+<details>
+<summary> The buried city </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Large city under ice, companion fish
+- **Description**: The buried city is an artifact of the past civilization now inhabited by aquatic life. Since the player is above the city they can freely skate above it and explore it from any angle. Here some lost fish can be found and the player can guide them through the streets and buildings of the city to return the to their shoal. This is the interaction that takes place at this location.
+
+</details>
+
+<details>
+<summary> The new tree </summary>
+
+- **Type**: Essential
+- **Number of colors**: 4
+- **Breadcrumb**: Trail of leaves, companion fish
+- **Description**: The new tree is actually the same tree from the starting location. At this point of the game a lot has changed and the scenery with the original tree looks very different to the point where one could assume it is a different one. "The new tree" alludes to "the new me" referencing that the character and player have changed since the start of their journey and are not the same as they were. Whether a physical change (the tree revitalized) or a emotional change (perspective of the world) the scene is set for the player to determine this themselves. This is the finale location of the game. Once here the player will need to complete one final interaction before the climax of the game. What the finale will be is still undetermined.
+
+</details>
+
+<details>
+<summary> The ice canyon </summary>
+
+- **Type**: Atmospheric
+- **Number of colors**: None
+- **Breadcrumb**: None
+- **Description**: A large canyon of separated ice frozen deep into the ocean. Serves as some world border or cutoff point limiting access to some areas from certain directions.
+
+</details>
+
+<details>
+<summary> The frozen waterfalls </summary>
+
+- **Type**: Atmospheric
+- **Number of colors**: None
+- **Breadcrumb**: None
+- **Description**: A small area featuring rivers and waterfalls frozen solid. A peaceful and quiet stop on the road. The player can skate of course skate behind the waterfall to find some hidden thing.
+
+</details>
+
+<details>
+<summary> The flower field </summary>
+
+- **Type**: Atmospheric
+- **Number of colors**: None
+- **Breadcrumb**: None
+- **Description**: A field of flowers on the ice. Near some shore or hill a field of flora are stuck in the ice creating a field of flowers on top of the ice. No necessary interaction just a colorful field of flowers to skate amongst with the music.
+
+</details>
+
+<details>
+<summary> The orca </summary>
+
+- **Type**: Atmospheric
+- **Number of colors**: None
+- **Breadcrumb**: None
+- **Description**: An orca frozen solid along the surface of the ice. At first it is not visible because the required colors are missing. As more colors are unlocked new elements to the orca become visible. For instance if we unlock blue, we can spot a large blue eye looking back at us from the ice. As more colors are unlocked more warmth is brought into the world through color, music and friendship. This warmth causes the orca to thaw eventually breaking out of the ice and returning into the waters. Visiting this place after it has escaped will leave trails of its path and shattered ice.
+
+</details>
+
+<br/>
 
 ![WorldLayout](https://drive.google.com/uc?export=view&id=1LcCZqW5GkJ2moDL5mDXKRCWWynhtrk5-)
 
@@ -410,7 +504,15 @@ It will take the player a few minutes to skate the map border to border.
 None.
 
 ### 8.7 Weather conditions <a name="weather-conditions"></a>
-There will be weather, it is not decided if this will affect the player or not. Examples of weather conditions that will be implemented are: snow, wind and rain.
+The game will feature different weather conditions. These range from rain and snow to wind and heavy storms. They will all have different effects on their surroundings and the player.
+
+**Snow** will increase the friction of the ice making the player slower.
+
+**Rain** will lower the friction of the ice making the player slide more.
+
+**Wind** will push the player in a certain direction increasing their movement speed along that direction but lowering their speed in any other direction.
+
+**Storm** will have similar functionality to wind however it limits the players visibility and attempts to push them out and rotate them making the storms very hard to navigate.
 
 ### 8.8 Day and night <a name="day-and-night"></a>
 TBD
@@ -422,7 +524,7 @@ Real time.
 Real life physics (more or less).
 
 ### 8.11 Society/culture <a name="society-culture"></a>
-Seemingly the only person left alive.
+Because the game takes place in a near future setting to our own a lot of the societal and cultural setting is similar to our own. However, because the world is flooded this civilization has disappeared and the only remnant of humanity could be the main character. Whether or not the player is the last human alive is outside the scope of the story, which focuses on more personal issues like depression or loss. The frozen world is a catalyst to visualize these issues.
 
 </details>
 
@@ -435,6 +537,8 @@ Any type of digital asset that you will be using should be placed here.
 ### 9.1 Interface assets <a name="interface-assets"></a>
 
 ### 9.2 Environments <a name="environments"></a>
+These are references for assets that will be produced/ purchased:
+
 https://assetstore.unity.com/packages/3d/environments/landscapes/stylized-ice-formations-163302
 
 https://assetstore.unity.com/packages/3d/environments/stylized-nature-pack-37457
@@ -446,7 +550,8 @@ https://blenderartists.org/t/black-and-white-comic-book-materials-cycles/645066
 ### 9.3 Characters <a name="characters"></a>
 
 ### 9.4 Animation <a name="animation"></a>
-https://assetstore.unity.com/packages/3d/animations/toon-ice-skating-animations-134707
+Purchased:
+https://assetstore.unity.com/packages/3d/animations/female-speed-skater-134446
 
 ### 9.5 Music and sound effects <a name="music-and-sound-effects"></a>
 List all of the media that will need to be produced. The specifics of your game will dictate what categories you need to include. Be detailed with this list, and create a file naming convention up front. This can avoid a lot of confusion later on.
