@@ -119,7 +119,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.2 | 13/09/2021 | Wrote a first draft of 7 and 8 | Viktor Rydsund |
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
-| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11 | Danny Darwiche
+| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5 | Danny Darwiche
 
 </details>
 
@@ -555,6 +555,17 @@ https://assetstore.unity.com/packages/3d/animations/female-speed-skater-134446
 
 ### 9.5 Music and sound effects <a name="music-and-sound-effects"></a>
 List all of the media that will need to be produced. The specifics of your game will dictate what categories you need to include. Be detailed with this list, and create a file naming convention up front. This can avoid a lot of confusion later on.
+
+**Elvins Theme**: <br/>
+https://drive.google.com/file/d/1WGvEP0Pn1RtlSUsIFNBEHG80pqUs2S6H/view?usp=sharing
+
+**Aramis Theme**: <br/>
+https://drive.google.com/file/d/1M8eDLzNd0i3LuxDolsAWynsjCHU_N7ec/view?usp=sharing
+
+**Alexanders Theme**: <br/>
+https://drive.google.com/file/d/1NkHCHW2pyYD7N00V79hH-gSXizjV4pCS/view?usp=sharing
+<br/>
+https://drive.google.com/file/d/1Y84VaUGPoFpLW8fQPkE5IOqFUwH0_8uB/view?usp=sharing
 
 </details>
 
