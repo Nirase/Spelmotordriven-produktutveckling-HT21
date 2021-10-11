@@ -25,6 +25,12 @@
   - [5.6 Scoring/winning conditions](#score-win-conditions)
   - [5.7 Modes and other features](#modes)
   - [5.8 Levels](#levels)
+    - [5.8.1 Level 0 - The dead tree](#level-0)
+    - [5.8.2 Level L - The lighthouse](#level-l)
+    - [5.8.3 Level P - The power plant](#level-p)
+    - [5.8.1 Level B - The buried city](#level-b)
+    - [5.8.1 Level *[letter]* - The *[name]*](#level-letter)
+    - [5.8.1 Level 5 - The new tree](#level-5)
   - [5.9 Flowchart](#flowchart)
   - [5.10 Editor](#editor)
 - [6- Game Characters](#game-characters)
@@ -113,7 +119,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.2 | 13/09/2021 | Wrote a first draft of 7 and 8 | Viktor Rydsund |
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
-| 1.5 | 10/10/2021 | Added collapsible chapters, emojis | Danny Darwiche
+| 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 5.8 levels | Danny Darwiche
 
 </details>
 
@@ -247,6 +253,36 @@ After the game has ended the player is free to skate around on the ice.
 
 ### 5.8 Levels <a name="levels"></a>
 The designs for each level should be laid out here. The more detailed the better.
+
+The game does not feature levels in the traditional sense since the game has a non-linear open world progression. Instead there are a set amount of locations in the world the player needs to find where they can interact with their surroundings. We consider these locations and interactions Kanvas' levels.
+
+#### 5.8.1 Level 0 - The dead tree <a name="level-0"></a>
+This is the area the player starts the game from and is placed at the center of the map. At the start of the game, when the player has no colors unlocked, this area is barren and the only thing the player can outline is the stem and branches of a tree. This tree and area is a central location to the game as it will change throughout the playthrough and be the final location the player needs to return to once all colors have been unlocked. This serves as a tutorial, introducing the companion fish and teaching the player how to skate and sync to the music.
+
+*[Images/sketches of the location to be added.]*
+
+#### 5.8.2 Level L - The lighthouse <a name="level-l"></a>
+The lighthouse is located at the eye of a storm. The player has to navigate through the storm to reach this place. The storm is hard to navigate through and constantly pushes the player away from the center disorienting them. The lighthouse is filled with water, inhabited by countless of eels. Every now and then they send out shocks of electricity, temporarily lighting the lighthouse. The player can use this beam of light whenever it appears to realign themselves and push through towards the center. At the center it is calm and quiet. Some interaction is to be performed here.
+
+*[Images/sketches of the location to be added.]*
+
+#### 5.8.3 Level P - The power plant <a name="level-p"></a>
+The plant is a submerged frozen power plant with large silos and chimneys extruding the ice. Different types of animals use this place as their playground creating music with the different parts of the plant. For instance frogs croaking into the large silos to create reverbs and echoes. The play is expected to accompany their music with their own to complete some interaction.
+
+*[Images/sketches of the location to be added.]*
+
+#### 5.8.4 Level B - The buried city <a name="level-b"></a>
+The buried city is an area of the game where a large city is buried under ice. The player can skate freely around above it and see aquatic life that has inhabited the buildings and streets. In this city different types of fish are lost and the player needs to lead them back to their shoal. The player thus explores the city and helps the animals they find.
+
+*[Images/sketches of the location to be added.]*
+
+#### 5.8.5 Level *[Letter]* - The *[name]* <a name="level-letter"></a>
+[Location still to be determined]
+
+#### 5.8.6 Level 5 - The new tree <a name="level-5"></a>
+The new tree is the same location as the dead tree (level 0). The difference is that the player, at this stage, has unlocked all the colors and the scene has thus changed. The area is now sprawling with life and color. This is the place where the finale of the game will take place. Whilst the ending isn't finished one thought is a confrontation with the orca.
+
+*[Images/sketches of the location to be added.]*
 
 ### 5.9 Flowchart <a name="flowchart"></a>
 Create a flowchart showing all the areas and screens that will need to be created.
