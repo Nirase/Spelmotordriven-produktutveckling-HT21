@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 1994682241}
   - component: {fileID: 1994682245}
   m_Layer: 0
-  m_Name: PlayerCamera
+  m_Name: StaticPlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
