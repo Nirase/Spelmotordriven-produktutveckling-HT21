@@ -1,0 +1,486 @@
+[LOG] System::create                           : Header version = 2.01.11. Current version = 2.01.11.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::init                            : Initialize version=20111 (118066), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 000002D68D8430A8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D64BFF4C58 : node = 000002D64B52D5B0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D64BFF4748 : node = 000002D64B52D470
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D64BFF4C58
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D6C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D64BFF4C58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D64BFF4748
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D580
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D64BFF4748
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23A148)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FFDC8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E546A28)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23AB68)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FC828)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E549E78)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D68E54ABF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D68E54ABF8
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F23AB68 : node = 000002D64B52D1F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F23A2F8 : node = 000002D64B52D6F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F23AB68
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F23AB68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F23A2F8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D800
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F23A2F8
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D64BFF4748)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FD048)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54A538)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D64BFF4C58)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C5012E8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ABF8)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F239F98 : node = 000002D64B52D470
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F239F98
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002D64BFF4C58 : node = 000002D64B52D5B0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D580
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F239F98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D64BFF4C58
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D6C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D64BFF4C58
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23A2F8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D649467568)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E0093F8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23AB68)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D649466048)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E007E08)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F23A2F8 : node = 000002D64B52D6F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F23A9B8 : node = 000002D64B52D1F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F23A2F8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D800
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F23A2F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F23A9B8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D64B52D300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F23A9B8
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D64BFF4C58)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FEA48)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54A538)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F239F98)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FFDC8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54B7C8)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63EA94078 : node = 000002D63ED262C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D649CF9A98 : node = 000002D63ED26400
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63EA94078
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED263D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63EA94078
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D649CF9A98
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED26510
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D649CF9A98
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23A9B8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FC9C8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ADA8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F23A2F8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FEBE8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ABF8)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D649CF9FA8 : node = 000002D63ED26540
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D649CF9738 : node = 000002D63ED26680
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D649CF9FA8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED26650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D649CF9FA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D649CF9738
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED26790
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D649CF9738
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D649CF9A98)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C5029A8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54B7C8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63EA94078)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FD048)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54A538)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D649CF9C48 : node = 000002D63ED26400
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63E94F598 : node = 000002D63ED26040
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D649CF9C48
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED26510
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D649CF9C48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63E94F598
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D63ED26150
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63E94F598
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D649CF9738)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FDD48)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ABF8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D649CF9FA8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C502188)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54BB28)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D68E54A538
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D68E54A538
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2A98 : node = 000002D557FD06D0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2588 : node = 000002D5AA58C4E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2A98
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D557FD07E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2A98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2588
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58C5F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2588
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63E94F598)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FF748)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54B7C8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D649CF9C48)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FEBE8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54A538)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E3158 : node = 000002D5AA58C9E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2DF8 : node = 000002D5AA58C760
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E3158
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58CAF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E3158
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2DF8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58C870
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2DF8
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2588)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FFDC8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ADA8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2A98)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C5029A8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ABF8)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2A98 : node = 000002D5AA58CEE0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2588 : node = 000002D5AA58CC60
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2A98
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58CFF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2A98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2588
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58CD70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2588
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2DF8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FD388)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54BB28)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E3158)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C500C68)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54B7C8)
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E28E8 : node = 000002D5AA58CDA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 0
+[LOG] SystemI::createSound                     : filename = KANVAS-FMOD/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002D63F0E2C48 : node = 000002D5AA58C4E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002D63EA9CAA8.  list count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E28E8
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58CEB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E28E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002D63F0E2C48
+[LOG] SystemI::createSoundInternal             :     Create name='KANVAS-FMOD/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1950336
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4960
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002D5AA58C5F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 66600
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Alexander_KANVAS_PITCH THEME', format=5, channels=2, frequency=48000, lengthbytes=1877728, lengthpcm=6911998, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.856201.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002D63F0E2C48
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2588)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FED88)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54A538)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2A98)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C500E08)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ABF8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E2C48)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C4FEA48)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54ADA8)
+[LOG] SoundI::release                          : Alexander_KANVAS_PITCH THEME (000002D63F0E28E8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D64C5029A8)
+[LOG] SoundI::release                          :     Alexander_KANVAS_PITCH THEME (000002D68E54BB28)
+[LOG] SoundI::release                          :  (000002D59F4B8A38)
+[LOG] SoundI::release                          :     218282-ICE_Skate_move_combination_09 (000002D59FAFC8E8)
+[LOG] SoundI::release                          :  (000002D59F4B88C8)
+[LOG] SoundI::release                          :     218316-ICE_Skate_push_and_propel_20 (000002D59FAFBA48)
+[LOG] SoundI::release                          :  (000002D59F4B8BA8)
+[LOG] SoundI::release                          :     316284-XMS_FOOTSTEPS_Ice_Skating_Stop_2 (000002D59FAFC0C8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
