@@ -46,8 +46,8 @@ public class BezierSpline : MonoBehaviour
                 }
                 else if (index + 1 < points.Length)
                 {
-                    points[0] = point;
-                    points[1] += delta;
+                    points[index] = point;
+                    points[index + 1] += delta;
                     points[index - 1] += delta;
                 }
                 else
