@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System;
 
 [CustomEditor(typeof(BezierSpline))]
 public class BezierSplineInspector : Editor
@@ -25,7 +22,6 @@ public class BezierSplineInspector : Editor
     BezierSpline spline;
     Transform handleTransform;
     Quaternion handleRotation;
-
 
 
     void OnSceneGUI()
@@ -105,7 +101,6 @@ public class BezierSplineInspector : Editor
             spline.Loop = loop;
             EditorUtility.SetDirty(spline);
         }
-        if(selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
         bool _2d = EditorGUILayout.Toggle("2D", spline._2D);
         if (EditorGUI.EndChangeCheck())
         {
@@ -121,6 +116,14 @@ public class BezierSplineInspector : Editor
         {
             Undo.RecordObject(spline, "Add Curve");
             spline.AddCurve();
+            EditorUtility.SetDirty(spline);
+        }
+        if(GUILayout.Button("Remove Curve"))
+        {
+            if (selectedIndex >= spline.ControlPointCount - 3)
+                selectedIndex = -1;
+            Undo.RecordObject(spline, "Remove Curve");
+            spline.RemoveCurve();
             EditorUtility.SetDirty(spline);
         }
     }

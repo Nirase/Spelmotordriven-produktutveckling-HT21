@@ -27,13 +27,13 @@ public class BezierSpline : MonoBehaviour
             return points.Length;
         }
     }
-    public Vector3 GetControlPoint (int index)
+    public Vector3 GetControlPoint(int index)
     {
         return points[index];
     }
-    public void SetControlPoint (int index, Vector3 point)
+    public void SetControlPoint(int index, Vector3 point)
     {
-        if(index % 3 == 0)
+        if (index % 3 == 0)
         {
             Vector3 delta = point - points[index];
             if (loop)
@@ -80,17 +80,17 @@ public class BezierSpline : MonoBehaviour
     {
         return modes[(index + 1) / 3];
     }
-    public void SetControlPointMode (int index, BezierControlPointMode mode)
+    public void SetControlPointMode(int index, BezierControlPointMode mode)
     {
         int modeIndex = (index + 1) / 3;
         modes[modeIndex] = mode;
         if (loop)
         {
-            if(modeIndex == 0)
+            if (modeIndex == 0)
             {
                 modes[modes.Length - 1] = mode;
             }
-            else if(modeIndex == modes.Length - 1)
+            else if (modeIndex == modes.Length - 1)
             {
                 modes[0] = mode;
             }
@@ -103,7 +103,7 @@ public class BezierSpline : MonoBehaviour
         set
         {
             loop = value;
-            if(value == true)
+            if (value == true)
             {
                 modes[modes.Length - 1] = modes[0];
                 SetControlPoint(0, points[0]);
@@ -227,6 +227,22 @@ public class BezierSpline : MonoBehaviour
 
         Array.Resize(ref modes, modes.Length + 1);
         modes[modes.Length - 1] = modes[modes.Length - 2];
+        EnforceMode(points.Length - 4);
+        if (loop)
+        {
+            points[points.Length - 1] = points[0];
+            modes[modes.Length - 1] = modes[0];
+            EnforceMode(0);
+        }
+    }
+
+    public void RemoveCurve()
+    {
+        
+        Array.Resize(ref points, points.Length - 3);
+
+        Array.Resize(ref modes, modes.Length - 1);
+
         EnforceMode(points.Length - 4);
         if (loop)
         {
