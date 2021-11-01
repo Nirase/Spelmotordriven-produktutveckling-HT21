@@ -16,8 +16,6 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     [SerializeField] float ThrustDecay = 0.985f;
     public float VelocityMax = 10f;
 
-    public float angle;
-
     KeyCode _lastInput;
     public Camera _camera;
     public Vector3 _direction;
@@ -87,7 +85,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
         if (_direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;
-            angle = Mathf.SmoothDampAngle(_rigidbody.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _rigidbody.angularDrag);
+            float angle = Mathf.SmoothDampAngle(_rigidbody.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _rigidbody.angularDrag);
             Quaternion rot = Quaternion.Euler(0, angle, 0);
             _rigidbody.MoveRotation(rot);
         }

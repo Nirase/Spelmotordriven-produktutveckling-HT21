@@ -8,9 +8,7 @@ public class AnimationStateController : MonoBehaviour
     float VelocityY = 0;
     float DirectionX = 0;
 
-    float angle;
     public float acceleration = 0.2f;
-    public float deceleration = 2f;
     public float maxRunVelocity;
 
     int VelocityYHash;
@@ -30,41 +28,51 @@ public class AnimationStateController : MonoBehaviour
 
     void Update()
     {
+        // Forward velocity
         VelocityY = AD_Controller.displaySpeed / AD_Controller.VelocityMax; 
 
+        // Rotation
+        Vector3 targetDir = AD_Controller._direction;
+        Vector3 forward = transform.forward;
 
-        // Delta rot
-        //float angle = Vector3.Angle(AD_Controller.transform.forward, AD_Controller._direction);
-        //DirectionX = AD_Controller.angle;
+        float angle = Vector3.SignedAngle(targetDir, forward, Vector3.up);
+        
+     
 
-        // float targetAngle = Mathf.Atan2(AD_Controller._direction.x, AD_Controller._direction.z) * Mathf.Rad2Deg;
-        // angle = Mathf.angle
+        if(angle < -5.0f) // Turning Right
+            DirectionX += Time.deltaTime * acceleration; 
+        else if(angle > 5.0f) // Turning left
+            DirectionX -= Time.deltaTime * acceleration; 
+        else
+        {   
+            // Clamp to 0 at border values
+            if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
+                DirectionX = 0.0f;
 
-        Vector3 dir = AD_Controller._direction;
-        dir = Vector3.ClampMagnitude(dir, 1);
-        dir = Vector3.ClampMagnitude(dir, -1);
-
-        if(dir.x > transform.forward.z)
-        {
-            DirectionX += Time.deltaTime * acceleration;
-            // Right turn
+            // Deaceleration
+            if(DirectionX < 0)
+                DirectionX += Time.deltaTime * acceleration; 
+            else if(DirectionX > 0)
+                DirectionX -= Time.deltaTime * acceleration; 
         }
-        if(dir.x < transform.forward.z)
-        {
-            DirectionX -= Time.deltaTime * acceleration;
-            // Left turn
-        }
-
         DirectionX = Mathf.Clamp(DirectionX, -1, 1);
- 
-
+        
+        
         Debug.Log(DirectionX);
-        // if(angle > 0)
-        //     DirectionX += Time.deltaTime * acceleration;
-
-
         animator.SetFloat(VelocityYHash, VelocityY);
         animator.SetFloat(DirectionXHash, DirectionX);
+
+
+
+        // float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+        // float angle = Mathf.DeltaAngle(AD_Controller.transform.forward.y, targetAngle);
+       // DirectionX = AD_Controller.angle / 360;
+        //DirectionX = Mathf.Clamp(DirectionX, -1, 1);
+
+ 
+    
+ 
+
 
 
         // Todo:
@@ -119,9 +127,6 @@ public class AnimationStateController : MonoBehaviour
         // if(!rightPressed && DirectionX > 0.0f)
         //     DirectionX -= Time.deltaTime * deceleration;
 
-        // // clamp to zero for X axis
-        // if(!leftPressed && !rightPressed && DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
-        //     DirectionX = 0.0f;
 
         // Clamps
         // if(upPressed && VelocityZ > maxRunVelocity)

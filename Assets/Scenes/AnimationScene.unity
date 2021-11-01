@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 625354937}
   - component: {fileID: 625354936}
   - component: {fileID: 625354934}
+  - component: {fileID: 625354935}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -331,6 +332,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &625354935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625354933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6ab872245d8184896441025aa0d7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 855772201}
 --- !u!20 &625354936
 Camera:
   m_ObjectHideFlags: 0
@@ -509,6 +523,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 81b5ad79078a15c43922c821bd5295e7, type: 3}
   m_PrefabInstance: {fileID: 265254674}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &855772201 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 81b5ad79078a15c43922c821bd5295e7, type: 3}
+  m_PrefabInstance: {fileID: 265254674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &855772202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +574,7 @@ MonoBehaviour:
   ThrustDecay: 0.985
   VelocityMax: 10
   _camera: {fileID: 625354936}
+  _direction: {x: 0, y: 0, z: 0}
   Timer: 2
 --- !u!54 &855772205
 Rigidbody:
@@ -566,7 +586,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.15
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
