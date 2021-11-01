@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum BezierControlPointMode
@@ -19,6 +17,8 @@ public class BezierSpline : MonoBehaviour
 
     [SerializeField]
     bool loop;
+    [SerializeField]
+    bool _2d;
 
     public int ControlPointCount
     {
@@ -67,6 +67,11 @@ public class BezierSpline : MonoBehaviour
                     points[index + 1] += delta;
                 }
             }
+
+            if (_2d)
+            {
+                point.y = 0;
+            }
         }
         points[index] = point;
         EnforceMode(index);
@@ -105,6 +110,25 @@ public class BezierSpline : MonoBehaviour
             }
         }
     }
+
+    public bool _2D{
+        get { return _2d;}
+        set
+        {
+            _2d = value;
+            if(_2d)
+                Enforce2D();
+        }
+    }
+
+    private void Enforce2D()
+    {
+        for (int i = 0; i < points.Length; i++)
+        {
+            points[i].y = 0;
+        }
+    }
+
     void EnforceMode(int index)
     {
         int modeIndex = (index + 1) / 3;
