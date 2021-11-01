@@ -12,7 +12,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     Rigidbody _rigidbody;
 
     public float displaySpeed;
-    [SerializeField] float Thrust = 100f;
+    public float Thrust = 100f;
     [SerializeField] float ThrustDecay = 0.985f;
     public float VelocityMax = 10f;
 

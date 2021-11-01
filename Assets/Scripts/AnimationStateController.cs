@@ -14,6 +14,7 @@ public class AnimationStateController : MonoBehaviour
     int VelocityYHash;
     int DirectionXHash;
 
+    bool isThrusting = false; 
     ADLean_Rigidbody_Controller AD_Controller;
 
     void Start()
@@ -30,34 +31,53 @@ public class AnimationStateController : MonoBehaviour
     {
         // Forward velocity
         VelocityY = AD_Controller.displaySpeed / AD_Controller.VelocityMax; 
-
         // Rotation
         Vector3 targetDir = AD_Controller._direction;
         Vector3 forward = transform.forward;
-
         float angle = Vector3.SignedAngle(targetDir, forward, Vector3.up);
         
-     
-
-        if(angle < -5.0f) // Turning Right
-            DirectionX += Time.deltaTime * acceleration; 
-        else if(angle > 5.0f) // Turning left
-            DirectionX -= Time.deltaTime * acceleration; 
-        else
-        {   
-            // Clamp to 0 at border values
-            if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
-                DirectionX = 0.0f;
-
-            // Deaceleration
-            if(DirectionX < 0)
-                DirectionX += Time.deltaTime * acceleration; 
-            else if(DirectionX > 0)
-                DirectionX -= Time.deltaTime * acceleration; 
+       
+       
+        float thrust = AD_Controller.Thrust;
+        if(thrust > 600)
+        {
+            isThrusting = true;
         }
-        DirectionX = Mathf.Clamp(DirectionX, -1, 1);
-        
-        
+        else
+            isThrusting = false;
+
+        if(isThrusting)
+        {
+               if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
+                    DirectionX = 0.0f;
+
+                if(DirectionX < 0)
+                    DirectionX += Time.deltaTime * acceleration; 
+                else if(DirectionX > 0)
+                    DirectionX -= Time.deltaTime * acceleration;   
+        }
+
+        if(!isThrusting)
+        {
+            if(angle < -5.0f) // Turning Right
+                DirectionX += Time.deltaTime * acceleration; 
+            else if(angle > 5.0f) // Turning left
+                DirectionX -= Time.deltaTime * acceleration; 
+            else
+            {   
+                // Clamp to 0 at border values
+                if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
+                    DirectionX = 0.0f;
+
+                // Deaceleration
+                if(DirectionX < 0)
+                    DirectionX += Time.deltaTime * acceleration; 
+                else if(DirectionX > 0)
+                    DirectionX -= Time.deltaTime * acceleration; 
+            }
+            DirectionX = Mathf.Clamp(DirectionX, -1, 1);
+        }
+
         Debug.Log(DirectionX);
         animator.SetFloat(VelocityYHash, VelocityY);
         animator.SetFloat(DirectionXHash, DirectionX);
