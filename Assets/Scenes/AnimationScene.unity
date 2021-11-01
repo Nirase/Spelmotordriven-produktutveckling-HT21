@@ -540,9 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6ee7b951733af4897caf28cfdfff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 2
-  deceleration: 2
+  Acceleration: 1
   maxRunVelocity: 2
+  ThrustThreshold: 700
 --- !u!136 &855772203
 CapsuleCollider:
   m_ObjectHideFlags: 0

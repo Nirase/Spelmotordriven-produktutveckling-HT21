@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class AnimationStateController : MonoBehaviour
 {
-    Animator animator; 
+    Animator _animator; 
     float VelocityY = 0;
     float DirectionX = 0;
 
-    public float acceleration = 0.2f;
+    [SerializeField, Range(0, 2)] float Acceleration = 0.2f;
     public float maxRunVelocity;
 
     int VelocityYHash;
     int DirectionXHash;
 
     bool isThrusting = false; 
+    [SerializeField, Range(0, 1000)] float ThrustThreshold = 600;
     ADLean_Rigidbody_Controller AD_Controller;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         VelocityYHash = Animator.StringToHash("VelocityY");
         DirectionXHash = Animator.StringToHash("DirectionX");
         
@@ -31,133 +32,48 @@ public class AnimationStateController : MonoBehaviour
     {
         // Forward velocity
         VelocityY = AD_Controller.displaySpeed / AD_Controller.VelocityMax; 
-        // Rotation
+        
+        // Find active rotation
         Vector3 targetDir = AD_Controller._direction;
         Vector3 forward = transform.forward;
         float angle = Vector3.SignedAngle(targetDir, forward, Vector3.up);
         
-       
-       
+        // Get thrust
         float thrust = AD_Controller.Thrust;
-        if(thrust > 600)
-        {
+
+        if(thrust > ThrustThreshold)
             isThrusting = true;
-        }
         else
             isThrusting = false;
 
         if(isThrusting)
-        {
-               if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
-                    DirectionX = 0.0f;
-
-                if(DirectionX < 0)
-                    DirectionX += Time.deltaTime * acceleration; 
-                else if(DirectionX > 0)
-                    DirectionX -= Time.deltaTime * acceleration;   
-        }
-
-        if(!isThrusting)
+              SmoothTransitionDirectionX();
+        else if(!isThrusting)
         {
             if(angle < -5.0f) // Turning Right
-                DirectionX += Time.deltaTime * acceleration; 
+                DirectionX += Time.deltaTime * Acceleration; 
             else if(angle > 5.0f) // Turning left
-                DirectionX -= Time.deltaTime * acceleration; 
+                DirectionX -= Time.deltaTime * Acceleration; 
             else
-            {   
-                // Clamp to 0 at border values
-                if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
-                    DirectionX = 0.0f;
-
-                // Deaceleration
-                if(DirectionX < 0)
-                    DirectionX += Time.deltaTime * acceleration; 
-                else if(DirectionX > 0)
-                    DirectionX -= Time.deltaTime * acceleration; 
-            }
+               SmoothTransitionDirectionX();
             DirectionX = Mathf.Clamp(DirectionX, -1, 1);
         }
 
         Debug.Log(DirectionX);
-        animator.SetFloat(VelocityYHash, VelocityY);
-        animator.SetFloat(DirectionXHash, DirectionX);
+        _animator.SetFloat(VelocityYHash, VelocityY);
+        _animator.SetFloat(DirectionXHash, DirectionX);
+    }
 
+    public void SmoothTransitionDirectionX()
+    {       
+        // Clamp at 0
+        if(DirectionX != 0.0f && (DirectionX > -0.05f && DirectionX < 0.05f))
+            DirectionX = 0.0f;
 
-
-        // float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
-        // float angle = Mathf.DeltaAngle(AD_Controller.transform.forward.y, targetAngle);
-       // DirectionX = AD_Controller.angle / 360;
-        //DirectionX = Mathf.Clamp(DirectionX, -1, 1);
-
- 
-    
- 
-
-
-
-        // Todo:
-        // Some way to find direction from mouse
-
-    // Get input
-        // bool upPressed = Input.GetKey(KeyCode.W);
-        // bool downPressed = Input.GetKey(KeyCode.S);
-        // bool leftPressed = Input.GetKey(KeyCode.A);
-        // bool rightPressed = Input.GetKey(KeyCode.D);
-
-    //Acceleration
-        // A
-        // if(leftPressed && VelocityY < maxRunVelocity)
-        //     VelocityY += Time.deltaTime * acceleration;
-        
-        // // D
-        // if(rightPressed && VelocityY < maxRunVelocity)
-        //     VelocityY += Time.deltaTime * acceleration;
-
-
-
-
-        // Redo for turn left and right
-        // up
-        // if(upPressed && VelocityZ < maxRunVelocity)
-        //     VelocityZ += Time.deltaTime * acceleration;
-        
-        // // down
-        // if(downPressed && VelocityZ > - maxRunVelocity)
-        //     VelocityZ -= Time.deltaTime * acceleration;
-
- 
-
-    // Deceleration
-        // up
-        // if(!leftPressed && VelocityY > 0.0f)
-        //     VelocityY -= Time.deltaTime * deceleration;
-        
-        // // down
-        // if(!rightPressed && VelocityY > 0.0f)
-        //     VelocityY -= Time.deltaTime * deceleration;
-
-        // // Clamp to zero for Z axis
-        // if(!upPressed && !downPressed && VelocityZ !=0 && (VelocityZ > 0.0f && VelocityZ < 0.05f))
-        //     VelocityZ = 0.0f;
-
-        // // Turning
-        // if(!leftPressed && DirectionX < 0.0f)
-        //     DirectionX += Time.deltaTime * deceleration;
-
-        // if(!rightPressed && DirectionX > 0.0f)
-        //     DirectionX -= Time.deltaTime * deceleration;
-
-
-        // Clamps
-        // if(upPressed && VelocityZ > maxRunVelocity)
-        //     VelocityZ = maxRunVelocity;
-        // if(downPressed && VelocityZ < -maxRunVelocity)
-        //     VelocityZ = -maxRunVelocity;
-
-        // if(leftPressed && DirectionX < -maxRunVelocity)
-        //     DirectionX = -maxRunVelocity;
-        // if(rightPressed && DirectionX > maxRunVelocity)
-        //     DirectionX = maxRunVelocity;    
-
+        // Deaceleration
+        if(DirectionX < 0)
+            DirectionX += Time.deltaTime * Acceleration; 
+        else if(DirectionX > 0)
+            DirectionX -= Time.deltaTime * Acceleration; 
     }
 }
