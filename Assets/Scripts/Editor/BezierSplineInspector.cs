@@ -106,6 +106,14 @@ public class BezierSplineInspector : Editor
             EditorUtility.SetDirty(spline);
         }
         if(selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
+        bool _2d = EditorGUILayout.Toggle("2D", spline._2D);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(spline, "Toogle 2D");
+            spline._2D = _2d;
+            EditorUtility.SetDirty(spline);
+        }
+        if (selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
         {
             DrawSelectedPointInspector();
         }
