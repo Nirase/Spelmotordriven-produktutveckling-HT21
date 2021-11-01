@@ -14,11 +14,13 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     public float displaySpeed;
     [SerializeField] float Thrust = 100f;
     [SerializeField] float ThrustDecay = 0.985f;
-    [SerializeField] float VelocityMax = 10f;
+    public float VelocityMax = 10f;
+
+    public float angle;
 
     KeyCode _lastInput;
     public Camera _camera;
-    private Vector3 _direction;
+    public Vector3 _direction;
     private Vector3 target = Vector3.zero;
     private float _thrust;
     float turnSmoothVelocity; // This is set via angular velocity.
@@ -44,6 +46,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
             
             target = ray.GetPoint(distance);
             _direction = target - transform.position;
+            Debug.DrawLine(transform.position, target, Color.red);
             _direction.Normalize();
         }
 
@@ -84,7 +87,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
         if (_direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(_direction.x, _direction.z) * Mathf.Rad2Deg;
-            float angle = Mathf.SmoothDampAngle(_rigidbody.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _rigidbody.angularDrag);
+            angle = Mathf.SmoothDampAngle(_rigidbody.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _rigidbody.angularDrag);
             Quaternion rot = Quaternion.Euler(0, angle, 0);
             _rigidbody.MoveRotation(rot);
         }
