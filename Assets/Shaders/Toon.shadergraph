@@ -10,7 +10,17 @@
             "m_Id": "feb3706eb532429b820b7df6b913d7b3"
         }
     ],
-    "m_Keywords": [],
+    "m_Keywords": [
+        {
+            "m_Id": "e9114288c08749878fd97880f0dc7f67"
+        },
+        {
+            "m_Id": "18413a42cf594e28acbd84613f4c3720"
+        },
+        {
+            "m_Id": "85db6a85efd349bbbc9b8982957a1bea"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "e90a33696c154c568b1fbb6b2c0b14e7"
@@ -44,6 +54,9 @@
         },
         {
             "m_Id": "4594fc4b30ca4e77b5e0d59b99f09939"
+        },
+        {
+            "m_Id": "b6a623ff28704bea9b8c72a2bf628b20"
         }
     ],
     "m_GroupDatas": [],
@@ -187,6 +200,9 @@
         "m_Blocks": [
             {
                 "m_Id": "cbe8af76f7f94c3eb950b36c76b84e4a"
+            },
+            {
+                "m_Id": "b6a623ff28704bea9b8c72a2bf628b20"
             }
         ]
     },
@@ -240,6 +256,25 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "18413a42cf594e28acbd84613f4c3720",
+    "m_Guid": {
+        "m_GuidSerialized": "4ea8ba28-d0b1-4521-83ec-e1fa774c339f"
+    },
+    "m_Name": "Shadows Cascade",
+    "m_DefaultReferenceName": "BOOLEAN_18413A42CF594E28ACBD84613F4C3720_ON",
+    "m_OverrideReferenceName": "_MAIN_LIGHT_SHADOWS_CASCADE",
+    "m_GeneratePropertyBlock": true,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 0,
+    "m_Entries": [],
+    "m_Value": 1,
+    "m_IsEditable": true
 }
 
 {
@@ -692,6 +727,25 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "85db6a85efd349bbbc9b8982957a1bea",
+    "m_Guid": {
+        "m_GuidSerialized": "0c3f059c-44a5-4b1a-a105-4714e768fe72"
+    },
+    "m_Name": "Soft Shadows",
+    "m_DefaultReferenceName": "BOOLEAN_85DB6A85EFD349BBBC9B8982957A1BEA_ON",
+    "m_OverrideReferenceName": "_SHADOWS_SOFT",
+    "m_GeneratePropertyBlock": true,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 0,
+    "m_Entries": [],
+    "m_Value": 1,
+    "m_IsEditable": true
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.NormalMaterialSlot",
     "m_ObjectId": "87cba3c4beb84c6d8c8807bc40541c9b",
     "m_Id": 0,
@@ -862,6 +916,39 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "b6a623ff28704bea9b8c72a2bf628b20",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.SpriteMask",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "e4a2a3e4ae4a4d5c80de40889dc344b2"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.SpriteMask"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "b71fe972b8c14a25910061330e00e8cd",
     "m_Group": {
@@ -958,10 +1045,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -142.39999389648438,
-            "y": -238.3999786376953,
-            "width": 144.79998779296876,
-            "height": 128.79998779296876
+            "x": -141.59994506835938,
+            "y": -244.00001525878907,
+            "width": 144.8000030517578,
+            "height": 128.8000030517578
         }
     },
     "m_Slots": [
@@ -1089,6 +1176,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
+    "m_ObjectId": "e4a2a3e4ae4a4d5c80de40889dc344b2",
+    "m_Id": 0,
+    "m_DisplayName": "Sprite Mask",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "SpriteMask",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0,
+        "w": 1.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
     "m_ObjectId": "e62f87309acb45b9ad60260c49012b78",
     "m_Guid": {
@@ -1141,6 +1253,25 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Position"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "e9114288c08749878fd97880f0dc7f67",
+    "m_Guid": {
+        "m_GuidSerialized": "2fa8f117-15a9-4560-914f-b72f414aa00e"
+    },
+    "m_Name": "Shadows",
+    "m_DefaultReferenceName": "BOOLEAN_E9114288C08749878FD97880F0DC7F67_ON",
+    "m_OverrideReferenceName": "MAIN_LIGHT_CALCULATE_SHADOWS",
+    "m_GeneratePropertyBlock": true,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 0,
+    "m_Entries": [],
+    "m_Value": 1,
+    "m_IsEditable": true
 }
 
 {
