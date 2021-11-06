@@ -25,4 +25,51 @@ out half DistanceAtten, out half ShadowAtten)
 #endif
 }
 
+float GetLightIntensity(float3 color){
+    return max(color.r, max(color.g, color.b));
+}
+
+#ifndef SHADERGRAPH_PREVIEW
+Light GetAdditionalLightForToon(int pixelLightIndex, float3 worldPosition){
+    int perObjectLightIndex = GetPerObjectLightIndex(pixelLightIndex);
+    Light light = GetAdditionalPerObjectLight(perObjectLightIndex, worldPosition);
+    light.shadowAttenuation = AdditionalLightRealtimeShadow(perObjectLightIndex, worldPosition);
+    return light;
+}
+#endif
+
+void AddAdditionalLights_float(float Smoothness, float3 WorldPosition, float3 WorldNormal, float3 WorldView,
+float MainDiffuse, float MainSpecular, float3 MainColor,
+out float Diffuse, out float Specular, out float3 Color){
+    
+    float mainIntensity = GetLightIntensity(MainColor);
+    Diffuse = MainDiffuse * mainIntensity;
+    Specular = MainSpecular * mainIntensity;
+    Color = MainColor /* * (MainDiffuse + MainSpecular)*/;
+
+#ifndef SHADERGRAPH_PREVIEW
+    float highestDiffuse = Diffuse;
+
+    int pixelLightCount = GetAdditionalLightsCount();
+    for(int i = 0; i < pixelLightCount; ++i){
+        Light light = GetAdditionalLightForToon(i, WorldPosition);
+        half NdotL = saturate(dot(WorldNormal, light.direction));
+        half atten = light.distanceAttenuation * light.shadowAttenuation * GetLightIntensity(light.color);
+        half thisDiffuse = atten * NdotL;
+        half thisSpecular = LightingSpecular(thisDiffuse, light.direction, WorldNormal, WorldView, 1, Smoothness);
+        Diffuse += thisDiffuse;
+        Specular += thisSpecular;
+        // Color += light.color * (thisDiffuse + thisSpecular);
+
+        if(thisDiffuse > highestDiffuse){
+            highestDiffuse = thisDiffuse;
+            Color = light.color;
+        }
+    }
+#endif
+
+    // half total = Diffuse + Specular;
+    // Color = total <= 0 ? MainColor : Color / total;
+}
+
 #endif

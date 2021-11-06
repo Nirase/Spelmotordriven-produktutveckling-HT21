@@ -10,6 +10,7 @@ Material:
   m_Name: Toon
   m_Shader: {fileID: -6465566751694194690, guid: 714a9368ae616d645ba9aaf99080b6eb, type: 3}
   m_ShaderKeywords: MAIN_LIGHT_CALCULATE_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SOFT_SHADOWS
+    ADDITIONAL_LIGHT_CALCULATE_SHADOWS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
