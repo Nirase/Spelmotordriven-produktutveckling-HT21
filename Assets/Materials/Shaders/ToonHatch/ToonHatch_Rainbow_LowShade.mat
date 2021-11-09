@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toon_White_LowShade
+  m_Name: ToonHatch_Rainbow_LowShade
   m_Shader: {fileID: -6465566751694194690, guid: 714a9368ae616d645ba9aaf99080b6eb, type: 3}
   m_ShaderKeywords: MAIN_LIGHT_CALCULATE_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SOFT_SHADOWS
     ADDITIONAL_LIGHT_CALCULATE_SHADOWS
@@ -20,8 +20,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_26e8712ecee5460d9a928e009b244f84:
+        m_Texture: {fileID: 2800000, guid: ac905dda4b7e2874abb40286cf71d628, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_4dd41344e8b4456f83cebc9d01acd5e3:
+        m_Texture: {fileID: 2800000, guid: 930a9bb29a452754788a70f40ce3113f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7ed5888dce7e4da98d48d0fc9dba0c93:
+        m_Texture: {fileID: 2800000, guid: a5c197a1e6a715740a629df2a97d6952, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_e62f87309acb45b9ad60260c49012b78:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 57e3817fc6abf6449b889d5775d4e566, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_feb3706eb532429b820b7df6b913d7b3:
@@ -85,7 +97,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_5c285a2f2bd444bc8503576d6fcf55e0: 1
     - Boolean_77e0d66d7ef246c89a8287c7daff088f: 0
+    - Vector1_d7746f95bf5f4a13881ba6103736d832: 4
     - Vector1_dd71560775ab472c8c6fa15730860865: 0.5
     - _AlphaClip: 0
     - _Blend: 0
