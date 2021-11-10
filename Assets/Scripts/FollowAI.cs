@@ -16,24 +16,25 @@ public class FollowAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        transform.position = start.position;
         agent.speed = 5;
     }
 
     void Update()
     {
-        Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-        Vector3 startToPlayer = playerPos - start.transform.position;
+        Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        Vector3 startToPlayer = playerPos - start.position;
 
         if (startToPlayer.magnitude <= detectionDistance)
             agent.destination = playerPos;
         else
-            agent.destination = start.transform.position;
+            agent.destination = start.position;
 
         
         Vector3 fishToGoal = goal.transform.position - transform.position;
         
         if (fishToGoal.magnitude <= detectionDistance)
-            agent.destination = goal.transform.position;
+            agent.destination = goal.position;
 
 
 

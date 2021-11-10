@@ -59,7 +59,7 @@ public class AnimationStateController : MonoBehaviour
             DirectionX = Mathf.Clamp(DirectionX, -1, 1);
         }
 
-        Debug.Log(DirectionX);
+        //Debug.Log(DirectionX);
         _animator.SetFloat(VelocityYHash, VelocityY);
         _animator.SetFloat(DirectionXHash, DirectionX);
     }
