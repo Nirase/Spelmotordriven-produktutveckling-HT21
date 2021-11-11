@@ -173,6 +173,40 @@ public class BezierSpline : MonoBehaviour
         }
         points[enforcedIndex] = middle + enforcedTangent;
     }
+    public void RemoveSelected(int selectedIndex)
+    {
+        int selectedPoint = GetIndex(selectedIndex);
+        if (selectedPoint == GetIndex(points.Length - 1))
+        {
+            RemoveCurve();
+            return;
+        }
+        for (int i = selectedPoint-1; i < points.Length; i++)
+        {
+            if(i+3 < points.Length-1)
+                points[i] = points[i + 3];
+        }
+        Array.Resize(ref points, points.Length - 3);
+
+        Array.Resize(ref modes, modes.Length - 1);
+
+        EnforceMode(points.Length - 4);
+        if (loop)
+        {
+            points[points.Length - 1] = points[0];
+            modes[modes.Length - 1] = modes[0];
+            EnforceMode(0);
+        }
+    }
+
+    private int GetIndex(int selectedIndex)
+    {
+        if (selectedIndex % 3 == 1)
+            selectedIndex -= 1;
+        if (selectedIndex % 3 == 2)
+            selectedIndex += 1;
+        return selectedIndex;
+    }
     public Vector3 GetPoint(float t)
     {
         int i;

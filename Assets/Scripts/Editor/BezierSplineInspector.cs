@@ -111,6 +111,13 @@ public class BezierSplineInspector : Editor
         if (selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
         {
             DrawSelectedPointInspector();
+            if (GUILayout.Button("Remove selected"))
+            {
+                Undo.RecordObject(spline, "Remove selected");
+                spline.RemoveSelected(selectedIndex);
+                selectedIndex = -1;
+                EditorUtility.SetDirty(spline);
+            }
         }
         if(GUILayout.Button("Add Curve"))
         {
