@@ -17,7 +17,7 @@ public class FollowAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         transform.position = start.position;
-        agent.speed = 5f;
+        agent.speed = 25f;
         agent.stoppingDistance = 10f;
     }
 
@@ -50,7 +50,17 @@ public class FollowAI : MonoBehaviour
         if (fishToGoal.magnitude <= detectionDistance)
         {
             agent.destination = goal.position;
+            following = false;
         }
 
+    }
+    public NavMeshAgent GetAgent()
+    {
+        return agent;
+    }
+
+    public void Flee()
+    {
+        agent.SetDestination(start.position);
     }
 }
