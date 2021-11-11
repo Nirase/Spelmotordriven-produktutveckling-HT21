@@ -552,9 +552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bf94309ebfca440847816bfec837cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wolf: {fileID: 0}
-  goat: {fileID: 0}
-  cabbage: {fileID: 0}
+  wolf: {fileID: 1846021813}
+  goat: {fileID: 1624673781}
+  cabbage: {fileID: 1216488433}
 --- !u!65 &734256666
 BoxCollider:
   m_ObjectHideFlags: 0
