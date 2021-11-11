@@ -5,69 +5,47 @@ using UnityEngine.AI;
 
 public class GoatWolfCabbagePuzzle : MonoBehaviour
 {
-
-
     [SerializeField] FollowAI wolf;
     [SerializeField] FollowAI goat;
     [SerializeField] FollowAI cabbage;
     List<FollowAI> list;
     private bool completed = false;
+    float distance = 10f;
 
     void Start()
     {
         list = new List<FollowAI>(); 
-
-        // wolf = GameObject.FindGameObjectWithTag("Wolf");
-        // goat = GameObject.FindGameObjectWithTag("Goat");
-        // cabbage = GameObject.FindGameObjectWithTag("Cabbage");
+        list.Clear();
     }
 
-    private void OnTriggerEnter(Collider other) 
-    {
-        if(other.tag == "Wolf")
-            list.Add(wolf);
-        if(other.tag == "Cabbage")
-            list.Add(cabbage);
-        if(other.tag == "Goat")
-            list.Add(goat);
-    }
-    private void OnTriggerExit(Collider other) 
-    {
-        if(other.tag == "Wolf")
-            list.Remove(wolf);
-        if(other.tag == "Cabbage")
-            list.Remove(cabbage);
-        if(other.tag == "Goat")
-            list.Remove(goat);
-    }
+
+    // Not working as intended.
 
     void Update()
     {
-        if(list.Contains(wolf) && list.Contains(cabbage) && list.Contains(goat))
-            completed = true;
+        HandleEnterExit();
 
-
-        if(!completed)
+        // Fail states
+        if(list.Contains(wolf) && list.Contains(goat))
         {
-            if(list.Contains(wolf) && list.Contains(goat))
-            {
-                goat.Flee();
-                //wolf.GetAgent().SetDestination(goat.transform.position);
-            }
 
-            if(list.Contains(wolf) && list.Contains(cabbage))
-            {
-                // stay
-            }
 
-            if(list.Contains(goat) && list.Contains(cabbage))
-            {
-                cabbage.Flee();
-                //goat.GetAgent().SetDestination(cabbage.transform.position);
-            }
         }
-    
-        
+        if(list.Contains(goat) && list.Contains(cabbage))
+        {
+            Debug.Log("Fail state - Goat cabbage");
+            
+        }
+
+        // if(list.Contains(wolf) && list.Contains(goat))
+        // {
+
+            
+        // }
+
+
+
+
         // Solution to problem:
         // Take the goat(A) over
         
@@ -82,5 +60,40 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
         // Return
         
         // Take goat over(A)
+    }
+    
+    private void HandleEnterExit(){
+
+        Vector3 d_wolf = transform.position - wolf.transform.position;
+        Vector3 d_goat = transform.position - goat.transform.position;
+        Vector3 d_cabbage = transform.position - cabbage.transform.position;
+
+        // Cabbage
+        if(d_cabbage.magnitude < distance  && !list.Contains(cabbage)){
+            list.Add(cabbage);
+            Debug.Log("Cabbage enter");
+        }
+        if(d_cabbage.magnitude > distance  && list.Contains(cabbage)){
+            list.Remove(cabbage);
+            Debug.Log("Cabbage exit");
+        }
+        // Goat
+        if(d_goat.magnitude < distance  && !list.Contains(goat)){
+            list.Add(goat);
+            Debug.Log("Goat enter");
+        }
+        if(d_goat.magnitude > distance  && list.Contains(goat)){
+            list.Remove(goat);
+            Debug.Log("Goat exit");
+        }
+        // Wolf
+        if(d_wolf.magnitude < distance  && !list.Contains(wolf)){
+            list.Add(wolf);
+            Debug.Log("Wolf enter");
+        }
+        if(d_wolf.magnitude > distance  && list.Contains(wolf)){
+            list.Remove(wolf);
+            Debug.Log("Wolf exit");
+        }
     }
 }

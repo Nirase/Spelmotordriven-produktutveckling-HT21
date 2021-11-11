@@ -61,6 +61,6 @@ public class FollowAI : MonoBehaviour
 
     public void Flee()
     {
-        agent.SetDestination(start.position);
+        agent.destination = start.position;
     }
 }
