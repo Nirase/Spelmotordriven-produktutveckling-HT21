@@ -26,20 +26,23 @@ public class FollowAI : MonoBehaviour
         Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         Vector3 startToPlayer = playerPos - start.position;
 
-
         // Follow player
         if (startToPlayer.magnitude <= detectionDistance && !following)
         {
             agent.destination = playerPos;
             following = true;
         }
+        
+        // Keep following player.
+        if(following)
+            agent.destination = playerPos;
 
         // If too far away from player, stay where you are. Possibly check for LOS?
         Vector3 fishToPlayer = playerPos - transform.position;
         if(fishToPlayer.magnitude > detectionDistance && following)
         {
             following = false;
-            agent.destination = transform.position;
+            agent.destination = start.position;
         }
 
         // Move to goal
