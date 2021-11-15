@@ -18,34 +18,38 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
         list.Clear();
     }
 
-
-    // Not working as intended.
-
     void Update()
     {
         HandleEnterExit();
 
+        // Success
+        if(list.Count == 3)
+        {
+            completed = true;
+            Debug.Log("Puzzle completed");
+        }
+
         // Fail states
-        if(list.Contains(wolf) && list.Contains(goat))
+        if(!completed)
         {
+            if(list.Contains(wolf) && list.Contains(goat))
+            {
+                Debug.Log("Fail state - Goat cabbage");
+                goat.Flee();
 
-
+            }
+            if(list.Contains(goat) && list.Contains(cabbage))
+            {
+                Debug.Log("Fail state - Goat cabbage");
+                cabbage.Flee();
+                
+            }
+            if(list.Contains(wolf) && list.Contains(goat))
+            {
+                goat.Flee();
+            }
         }
-        if(list.Contains(goat) && list.Contains(cabbage))
-        {
-            Debug.Log("Fail state - Goat cabbage");
-            
-        }
-
-        // if(list.Contains(wolf) && list.Contains(goat))
-        // {
-
-            
-        // }
-
-
-
-
+   
         // Solution to problem:
         // Take the goat(A) over
         
@@ -53,7 +57,7 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
         
         // Take the wolf(B) or cabbage(C) over
 
-        // Return with the goat(A) // break, goat instead flees.
+        // Return with the goat(A) // i.e. same ass flee
         
         // Take the cabbage(C) or wolf(B) over
         
