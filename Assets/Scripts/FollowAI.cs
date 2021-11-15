@@ -62,7 +62,6 @@ public class FollowAI : MonoBehaviour
             if(fleeing && fishToStart.magnitude <= detectionDistance)
                 fleeing = false;
         }
-
     }
     public NavMeshAgent GetAgent()
     {
