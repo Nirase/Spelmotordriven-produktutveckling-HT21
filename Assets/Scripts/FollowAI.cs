@@ -12,6 +12,7 @@ public class FollowAI : MonoBehaviour
     [SerializeField, Range(20, 100)] int detectionDistance = 50;
     private NavMeshAgent agent;
     bool following = false;
+    bool fleeing = false;
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class FollowAI : MonoBehaviour
         Vector3 startToPlayer = playerPos - start.position;
 
         // Follow player
-        if (startToPlayer.magnitude <= detectionDistance && !following)
+        if (startToPlayer.magnitude <= detectionDistance && !following && !fleeing)
         {
             agent.destination = playerPos;
             following = true;
@@ -39,7 +40,7 @@ public class FollowAI : MonoBehaviour
 
         // If too far away from player, stay where you are. Possibly check for LOS?
         Vector3 fishToPlayer = playerPos - transform.position;
-        if(fishToPlayer.magnitude > detectionDistance && following)
+        if(fishToPlayer.magnitude > detectionDistance && following && !fleeing)
         {
             following = false;
             agent.destination = start.position;
@@ -47,10 +48,19 @@ public class FollowAI : MonoBehaviour
 
         // Move to goal
         Vector3 fishToGoal = goal.transform.position - transform.position;
-        if (fishToGoal.magnitude <= detectionDistance)
+        if (fishToGoal.magnitude <= detectionDistance && !fleeing)
         {
             agent.destination = goal.position;
             following = false;
+        }
+
+        // Flee to start
+        Vector3 fishToStart = start.position - transform.position;
+        if (fleeing)
+        {
+            agent.destination = start.position;
+            if(fleeing && fishToStart.magnitude <= detectionDistance)
+                fleeing = false;
         }
 
     }
@@ -62,5 +72,6 @@ public class FollowAI : MonoBehaviour
     public void Flee()
     {
         agent.destination = start.position;
+        fleeing = true;
     }
 }
