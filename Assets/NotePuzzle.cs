@@ -5,19 +5,39 @@ using UnityEngine;
 public class NotePuzzle : MonoBehaviour
 {
 
+    public List<PipeNote> played;
+    private bool puzzleCompleted = false;
     [SerializeField] private PipeNote[] pipes;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
+    }
+
+    void RestartPuzzle()
+    {
+        played.Clear();
+        for (int i = 0; i < pipes.Length; ++i)
+            pipes[i].triggered = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (var i = 0; i < pipes.Length; ++i)
+        if (played.Count != pipes.Length) return;
+
+
+        for (var i = 0; i < played.Count; ++i)
         {
-            
+            if (played[i] != pipes[i])
+            {
+                RestartPuzzle();
+                return;
+            }
         }
+
+        puzzleCompleted = true;
+        Debug.Log("complete");
     }
 }
