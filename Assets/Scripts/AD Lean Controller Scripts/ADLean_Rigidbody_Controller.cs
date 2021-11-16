@@ -9,6 +9,9 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     // AD for speed
     // Not rhythm based.
 
+    //Added for lighthouse
+    public bool wind = false;
+    //
     Rigidbody _rigidbody;
 
     public float displaySpeed;
@@ -71,6 +74,11 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
 
     public void Move()
     {   
+        if(wind)
+        {   
+            Thrust = 0;
+            return;
+        }
         // If we reach maxvel mass no longer counts, right now we arrive at maxvel to quickly, therefore add more noticable acceleration.
         Thrust = Thrust * ThrustDecay;
         _rigidbody.AddForce(_direction * Thrust * Time.fixedDeltaTime, ForceMode.Force);
@@ -96,6 +104,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
         Move();
         Rotate();
     }
+
 
 
 }
