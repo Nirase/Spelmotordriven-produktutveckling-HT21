@@ -53,7 +53,7 @@ public class BezierSpline : MonoBehaviour
                 else
                 {
                     points[index - 1] += delta;
-                    points[index + 1] += delta;
+                    points[0] += delta;
                 }
             }
             else
