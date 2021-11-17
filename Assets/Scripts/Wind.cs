@@ -21,12 +21,14 @@ public class Wind : MonoBehaviour
     [SerializeField] private Direction windDirection;
 
     [SerializeField] private float speed = 100;
+    [SerializeField, Range(-180, 180)] private float angle = -45;
     // Start is called before the first frame update
     void Start()
     {
         if (useOrigin)
         {
             var directionVector = transform.position - origin.position;
+            directionVector = Quaternion.Euler(0, -45, 0) * directionVector;
             directionVector.Normalize();
 
             transform.forward = directionVector;
