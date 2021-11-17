@@ -28,7 +28,7 @@ public class Wind : MonoBehaviour
         if (useOrigin)
         {
             var directionVector = transform.position - origin.position;
-            directionVector = Quaternion.Euler(0, -45, 0) * directionVector;
+            directionVector = Quaternion.Euler(0, angle, 0) * directionVector;
             directionVector.Normalize();
 
             transform.forward = directionVector;
@@ -50,6 +50,7 @@ public class Wind : MonoBehaviour
                     break;
             }
         }
+
         
     }
 
@@ -66,6 +67,16 @@ public class Wind : MonoBehaviour
             else
                 col.GetComponent<ADLean_Rigidbody_Controller>().wind = false;
 
+        }
+
+        
+        if (useOrigin)
+        {
+            var directionVector = transform.position - origin.position;
+            directionVector = Quaternion.Euler(0, angle, 0) * directionVector;
+            directionVector.Normalize();
+
+            transform.forward = directionVector;
         }
     }
 
