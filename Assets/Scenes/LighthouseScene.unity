@@ -777,6 +777,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &381498248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381498249}
+  - component: {fileID: 381498251}
+  - component: {fileID: 381498250}
+  m_Layer: 0
+  m_Name: WindSpline (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &381498249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381498248}
+  m_LocalRotation: {x: -0, y: -0.5053454, z: -0, w: 0.8629172}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.1330755, y: 0, z: 1.1330755}
+  m_Children: []
+  m_Father: {fileID: 468845998}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -60.709, z: 0}
+--- !u!114 &381498250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381498248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d25eb311635014fbeca22421b3e710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 381498251}
+  frequency: 5
+  item: {fileID: 610736377}
+--- !u!114 &381498251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381498248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3042f69f6df14db4ba1ec75e0e4c9dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -0.04544984, y: 0, z: -0.42989978}
+  - {x: 0.24180187, y: 0, z: -0.4973726}
+  - {x: 0.40714225, y: 0, z: -0.3273042}
+  - {x: 0.44817334, y: 0, z: -0.061476864}
+  - {x: 0.48920444, y: 0, z: 0.2043505}
+  - {x: 0.369695, y: 0, z: 0.363811}
+  - {x: 0.12088721, y: 0, z: 0.41965532}
+  - {x: -0.12792057, y: 0, z: 0.47549966}
+  - {x: -0.334771, y: 0, z: 0.40179768}
+  - {x: -0.41293743, y: 0, z: 0.0987162}
+  - {x: -0.49110386, y: 0, z: -0.20436528}
+  - {x: -0.33270156, y: 0, z: -0.36242697}
+  - {x: -0.04544984, y: 0, z: -0.42989978}
+  modes: 0200000002000000020000000200000002000000
+  loop: 1
+  _2d: 1
 --- !u!1 &393053682
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1043,7 @@ Transform:
   m_LocalScale: {x: 173.13408, y: 0, z: 173.13408}
   m_Children:
   - {fileID: 111204533}
+  - {fileID: 381498249}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1036,7 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useOrigin: 1
-  origin: {fileID: 647053789}
+  origin: {fileID: 685677582}
   windDirection: 1
   speed: 1000
 --- !u!4 &610736377 stripped
