@@ -11,7 +11,7 @@ public class SplineWalker : MonoBehaviour
 {
     [SerializeField]
     BezierSpline spline;
-    [SerializeField, Range(0.1f, 10f)]
+    [SerializeField, Range(0.1f, 100f)]
     float duration;
     [SerializeField]
     bool lookForward;
