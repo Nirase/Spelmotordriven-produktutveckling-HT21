@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670733861707038083, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1056035681188343925, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_RootOrder
@@ -1020,7 +1020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1047,26 +1047,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useOrigin: 1
   origin: {fileID: 685677582}
-  windDirection: 2
+  windDirection: 1
   speed: 1000
   angle: 0
---- !u!114 &610736376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610736374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c29f300a3f09fc4c8c35fa9f4dbf0a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spline: {fileID: 685677584}
-  duration: 100
-  lookForward: 1
-  mode: 1
-  offset: 0
 --- !u!4 &610736377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3702594945171011966, guid: db1e04fc477d6574ba393193bd74bba0, type: 3}
@@ -1466,7 +1449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670733861707038083, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1056035681188343925, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_RootOrder
@@ -1542,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1585,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 383623521081185777, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 241.7
+      value: 29.5
       objectReference: {fileID: 0}
     - target: {fileID: 383623521081185777, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1593,7 +1576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 383623521081185777, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 202.8
+      value: 17.7
       objectReference: {fileID: 0}
     - target: {fileID: 383623521081185777, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32835,7 +32818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3702594945171011961, guid: db1e04fc477d6574ba393193bd74bba0, type: 3}
       propertyPath: m_Size.x
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3702594945171011961, guid: db1e04fc477d6574ba393193bd74bba0, type: 3}
       propertyPath: m_Size.y
@@ -33368,7 +33351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670733861707038083, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1056035681188343925, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_RootOrder
@@ -33444,7 +33427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5889550904776649933, guid: 57862fd3421f547468049ad784aaef94, type: 3}
       propertyPath: m_Materials.Array.data[0]

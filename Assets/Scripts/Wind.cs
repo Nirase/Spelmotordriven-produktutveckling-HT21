@@ -10,7 +10,7 @@ public class Wind : MonoBehaviour
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
     }
 
     List<Collider> colliders = new List<Collider>();
@@ -22,12 +22,14 @@ public class Wind : MonoBehaviour
 
     [SerializeField] private float speed = 100;
     [SerializeField, Range(-180, 180)] private float angle = -45;
+
+    Vector3 directionVector;
     // Start is called before the first frame update
     void Start()
     {
         if (useOrigin)
         {
-            var directionVector = transform.position - origin.position;
+            directionVector = transform.position - origin.position;
             directionVector = Quaternion.Euler(0, angle, 0) * directionVector;
             directionVector.Normalize();
 
@@ -50,17 +52,14 @@ public class Wind : MonoBehaviour
                     break;
             }
         }
-
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         foreach(var col in colliders)
-        {
-            //col.transform.position += transform.forward * (speed * Time.deltaTime);
-            col.GetComponent<Rigidbody>().AddForce(transform.forward * (speed * Time.deltaTime), ForceMode.Force);
+        {                                               // Force to player should be added via transform.right to maintain relative direction.
+            col.GetComponent<Rigidbody>().AddForce(transform.right * (speed * Time.deltaTime), ForceMode.Force);
             
             if(Vector3.Dot(transform.forward, col.transform.forward) < 0)
                 col.GetComponent<ADLean_Rigidbody_Controller>().wind = true;
@@ -69,7 +68,6 @@ public class Wind : MonoBehaviour
 
         }
 
-        
         if (useOrigin)
         {
             var directionVector = transform.position - origin.position;
