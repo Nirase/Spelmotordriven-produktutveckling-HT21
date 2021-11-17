@@ -6,7 +6,7 @@ public class Rotate : MonoBehaviour
 {
 
     [SerializeField]Transform origo;
-    [SerializeField, Range(1, 25)] float rotationSpeed = 5f;
+    [SerializeField, Range(-25, 25)] float rotationSpeed;
     void Start()
     {
     }
