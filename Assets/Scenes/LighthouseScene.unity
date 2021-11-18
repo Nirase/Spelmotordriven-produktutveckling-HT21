@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 421269519}
   - component: {fileID: 421269522}
   m_Layer: 0
-  m_Name: UnscrewLighthousePuzzle
+  m_Name: FishCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33410,6 +33410,82 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &2042708404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042708408}
+  - component: {fileID: 2042708407}
+  - component: {fileID: 2042708406}
+  m_Layer: 0
+  m_Name: PuzzlePattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2042708406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042708404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d25eb311635014fbeca22421b3e710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 2042708407}
+  frequency: 10
+  item: {fileID: 598745982}
+--- !u!114 &2042708407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042708404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3042f69f6df14db4ba1ec75e0e4c9dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -0.04544984, y: 0, z: -0.42989978}
+  - {x: 0.24180187, y: 0, z: -0.4973726}
+  - {x: 0.40714225, y: 0, z: -0.3273042}
+  - {x: 0.44817334, y: 0, z: -0.061476864}
+  - {x: 0.48920444, y: 0, z: 0.2043505}
+  - {x: 0.369695, y: 0, z: 0.363811}
+  - {x: 0.12088721, y: 0, z: 0.41965532}
+  - {x: -0.12792057, y: 0, z: 0.47549966}
+  - {x: -0.334771, y: 0, z: 0.40179768}
+  - {x: -0.41293743, y: 0, z: 0.0987162}
+  - {x: -0.49110386, y: 0, z: -0.20436528}
+  - {x: -0.33270156, y: 0, z: -0.36242697}
+  - {x: -0.04544984, y: 0, z: -0.42989978}
+  modes: 0200000002000000020000000200000002000000
+  loop: 1
+  _2d: 1
+--- !u!4 &2042708408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042708404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 164.21, y: 0, z: 133.9}
+  m_LocalScale: {x: 31.860897, y: 0.3075377, z: 31.860897}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2098259284
 PrefabInstance:
   m_ObjectHideFlags: 0
