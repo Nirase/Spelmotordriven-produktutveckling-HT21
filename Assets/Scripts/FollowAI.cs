@@ -74,4 +74,12 @@ public class FollowAI : MonoBehaviour
         agent.destination = start.position;
         fleeing = true;
     }
+
+    public int LighthouseEscort()
+    {
+        if(agent.destination == goal.position)
+            return 1;
+        else
+            return 0;
+    }
 }
