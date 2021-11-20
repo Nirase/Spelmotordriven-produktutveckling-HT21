@@ -12,6 +12,7 @@ public class Flicker : MonoBehaviour
 
     // starting value for the Lerp
     static float t = 0.0f;
+    public bool flicker = true;
 
     void Start()
     {
@@ -21,15 +22,20 @@ public class Flicker : MonoBehaviour
 
     void Update()
     {
-        lightComp.intensity = Mathf.Lerp(minimum, maximum, t) * m_Value;
-        t += 0.5f * Time.deltaTime;
-
-        if (t > 1.0f)
+        if(!flicker)
+            lightComp.intensity = m_Value;
+        else
         {
-            float temp = maximum;
-            maximum = minimum;
-            minimum = temp;
-            t = 0.0f;
+            lightComp.intensity = Mathf.Lerp(minimum, maximum, t) * m_Value;
+            t += 0.5f * Time.deltaTime;
+
+            if (t > 1.0f)
+            {
+                float temp = maximum;
+                maximum = minimum;
+                minimum = temp;
+                t = 0.0f;
+            }
         }
     }
 }

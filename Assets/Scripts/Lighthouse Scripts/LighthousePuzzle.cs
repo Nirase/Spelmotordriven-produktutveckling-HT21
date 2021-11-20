@@ -6,8 +6,13 @@ public class LighthousePuzzle : MonoBehaviour
 {
     List<BoxCollider> list;
     [SerializeField] Transform _lightHouse;
+    [SerializeField] Flicker _light;
+    [SerializeField] GameObject[] _fishes;
+    
+    int fishesEscorted = 0;
     int count = 0;
     bool partOne = false;
+    bool partTwo = false;
     static float t = 0.0f;
     private float rotation = -25;
 
@@ -16,23 +21,47 @@ public class LighthousePuzzle : MonoBehaviour
 
     void Start()
     {
+        // For lerping the lighthouse position
         start = _lightHouse.transform.position;
         end = _lightHouse.transform.position + new Vector3(0, 10, 0);
 
+        // For deactivating fishes untill part two
+        foreach(var gameObject in _fishes)
+            gameObject.SetActive(false);
+
+        // Initialization for pattern detection when ice skating around lighthouse.
         list = new List<BoxCollider>();
         foreach (var i in gameObject.GetComponentsInChildren<BoxCollider>())
             list.Add(i);
         Debug.Log(list.Count);
     }
 
-    // Update is called once per frame
     void Update()
     {   
         if(count == list.Count && !partOne)
             partOne = true;
 
         if(partOne)
+        {
             ElevateLighthouse();
+
+            foreach(var gameObject in _fishes)
+            {
+                if(gameObject.activeSelf == false)
+                    gameObject.SetActive(true);
+                fishesEscorted += gameObject.GetComponent<FollowAI>().LighthouseEscort();
+            }
+
+            if(fishesEscorted == _fishes.Length)
+                partTwo = true;
+
+        }
+
+        if(partTwo)
+        {
+            _light.flicker = false;
+            // dissipate storm..
+        }
 
     }
 
@@ -40,6 +69,7 @@ public class LighthousePuzzle : MonoBehaviour
     {
         count++;
     }
+
 
     private void ElevateLighthouse()
     {   
