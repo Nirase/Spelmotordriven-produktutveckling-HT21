@@ -6,13 +6,16 @@ public class LighthousePuzzle : MonoBehaviour
 {
     List<BoxCollider> list;
     [SerializeField] Transform _lightHouse;
+    [SerializeField] Transform _goal;
     [SerializeField] Flicker _light;
     [SerializeField] GameObject[] _fishes;
-    
-    int fishesEscorted = 0;
-    int count = 0;
+
+    int count = 1;
+    int escortedFish = 0;
     bool partOne = false;
     bool partTwo = false;
+
+    bool fishesActive = false;
     static float t = 0.0f;
     private float rotation = -25;
 
@@ -29,7 +32,7 @@ public class LighthousePuzzle : MonoBehaviour
         foreach(var gameObject in _fishes)
             gameObject.SetActive(false);
 
-        // Initialization for pattern detection when ice skating around lighthouse.
+        // Initialization for pattern detection when ice skating around lighthouse. + 1 for the fish detection..
         list = new List<BoxCollider>();
         foreach (var i in gameObject.GetComponentsInChildren<BoxCollider>())
             list.Add(i);
@@ -41,24 +44,17 @@ public class LighthousePuzzle : MonoBehaviour
         if(count == list.Count && !partOne)
             partOne = true;
 
-        if(partOne)
+        if(partOne && !partTwo)
         {
             ElevateLighthouse();
-
-            foreach(var gameObject in _fishes)
-            {
-                if(gameObject.activeSelf == false)
-                    gameObject.SetActive(true);
-               // fishesEscorted += gameObject.GetComponentInChildren<FollowAI>().LighthouseEscort();
-                //Debug.Log(fishesEscorted);
-            }
-
-            if(fishesEscorted == _fishes.Length)
+            if(!fishesActive)
+                ActivateFishes();
+            
+            if(escortedFish == _fishes.Length)
                 partTwo = true;
-
         }
 
-        if(partTwo)
+        if(partOne && partTwo)
         {
             _light.flicker = false;
             // dissipate storm..
@@ -66,11 +62,28 @@ public class LighthousePuzzle : MonoBehaviour
 
     }
 
+    void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "EscortFish")
+        {
+            Debug.Log("Fish escorted");
+            escortedFish++;
+        }
+    }
+
     public void Add()
     {
         count++;
     }
 
+    private void ActivateFishes()
+    {
+            fishesActive = true;
+            foreach(var gameObject in _fishes)
+            {
+                if(gameObject.activeSelf == false)
+                    gameObject.SetActive(true);
+            }
+    }
 
     private void ElevateLighthouse()
     {   

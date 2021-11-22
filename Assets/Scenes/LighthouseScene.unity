@@ -134,11 +134,11 @@ GameObject:
   - component: {fileID: 7108027}
   m_Layer: 0
   m_Name: FishWrapper (1)
-  m_TagString: Untagged
+  m_TagString: EscortFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7108027
 Transform:
   m_ObjectHideFlags: 0
@@ -1081,11 +1081,11 @@ GameObject:
   - component: {fileID: 367831226}
   m_Layer: 0
   m_Name: FishWrapper
-  m_TagString: Untagged
+  m_TagString: EscortFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &367831226
 Transform:
   m_ObjectHideFlags: 0
@@ -2605,6 +2605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish04
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c84a829a871d0db45b026c9d3dc187be, type: 3}
+      propertyPath: m_TagString
+      value: EscortFish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a829a871d0db45b026c9d3dc187be, type: 3}
 --- !u!1 &815109087 stripped
@@ -2628,6 +2632,7 @@ MonoBehaviour:
   goal: {fileID: 933803949}
   start: {fileID: 952260330}
   detectionDistance: 50
+  destinationReached: 0
 --- !u!195 &815109089
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2650,6 +2655,19 @@ NavMeshAgent:
   m_BaseOffset: 0.24364442
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &815109090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815109087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9094924, y: 0.5521255, z: 0.096624255}
+  m_Center: {x: 0.051545754, y: -0.03241834, z: 0}
 --- !u!4 &815109092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c84a829a871d0db45b026c9d3dc187be, type: 3}
@@ -33814,7 +33832,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21946
+  m_Name: pb_Mesh32190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34234,7 +34252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5760
+  m_Name: pb_Mesh32078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34586,6 +34604,7 @@ GameObject:
   - component: {fileID: 2042708407}
   - component: {fileID: 2042708406}
   - component: {fileID: 2042708405}
+  - component: {fileID: 2042708409}
   m_Layer: 0
   m_Name: PuzzlePattern
   m_TagString: Untagged
@@ -34606,6 +34625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lightHouse: {fileID: 647053789}
+  _goal: {fileID: 933803949}
   _light: {fileID: 669677103}
   _fishes:
   - {fileID: 367831225}
@@ -34662,12 +34682,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042708404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 164.21, y: 0, z: 133.9}
+  m_LocalPosition: {x: 164.21, y: 0, z: 135.3}
   m_LocalScale: {x: 31.860897, y: 0.3075377, z: 31.860897}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2042708409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042708404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 20, z: 0.5}
+  m_Center: {x: 0, y: -25, z: 0}
 --- !u!1001 &2046534117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34789,6 +34822,20 @@ MonoBehaviour:
   goal: {fileID: 933803949}
   start: {fileID: 1310659589}
   detectionDistance: 50
+  destinationReached: 0
+--- !u!65 &2046534122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046534119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9094924, y: 0.5521255, z: 0.096624255}
+  m_Center: {x: 0.051545754, y: -0.03241834, z: 0}
 --- !u!1001 &2098259284
 PrefabInstance:
   m_ObjectHideFlags: 0

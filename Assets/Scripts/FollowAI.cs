@@ -13,6 +13,7 @@ public class FollowAI : MonoBehaviour
     private NavMeshAgent agent;
     bool following = false;
     bool fleeing = false;
+    public bool destinationReached = false;
 
     void Start()
     {
@@ -51,6 +52,7 @@ public class FollowAI : MonoBehaviour
         if (fishToGoal.magnitude <= detectionDistance && !fleeing)
         {
             agent.destination = goal.position;
+            destinationReached = true;
             following = false;
         }
 
@@ -73,13 +75,5 @@ public class FollowAI : MonoBehaviour
     {
         agent.destination = start.position;
         fleeing = true;
-    }
-
-    public int LighthouseEscort()
-    {
-        if(agent.remainingDistance < 5f)
-            return 1;
-        else
-            return 0;
     }
 }
