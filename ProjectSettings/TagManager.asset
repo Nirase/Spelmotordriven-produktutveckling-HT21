@@ -8,6 +8,7 @@ TagManager:
   - Cabbage
   - Goat
   - IcePlane
+  - EscortFish
   layers:
   - Default
   - TransparentFX
