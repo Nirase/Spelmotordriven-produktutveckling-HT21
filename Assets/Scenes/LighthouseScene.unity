@@ -34788,6 +34788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish04
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c84a829a871d0db45b026c9d3dc187be, type: 3}
+      propertyPath: m_TagString
+      value: EscortFish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84a829a871d0db45b026c9d3dc187be, type: 3}
 --- !u!4 &2046534118 stripped
