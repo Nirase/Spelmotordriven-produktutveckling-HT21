@@ -25,7 +25,7 @@ public class LighthousePuzzle : MonoBehaviour
         start = _lightHouse.transform.position;
         end = _lightHouse.transform.position + new Vector3(0, 10, 0);
 
-        // For deactivating fishes untill part two
+        //For deactivating fishes untill part two
         foreach(var gameObject in _fishes)
             gameObject.SetActive(false);
 
@@ -49,7 +49,8 @@ public class LighthousePuzzle : MonoBehaviour
             {
                 if(gameObject.activeSelf == false)
                     gameObject.SetActive(true);
-                fishesEscorted += gameObject.GetComponent<FollowAI>().LighthouseEscort();
+               // fishesEscorted += gameObject.GetComponentInChildren<FollowAI>().LighthouseEscort();
+                //Debug.Log(fishesEscorted);
             }
 
             if(fishesEscorted == _fishes.Length)

@@ -77,7 +77,7 @@ public class FollowAI : MonoBehaviour
 
     public int LighthouseEscort()
     {
-        if(agent.destination == goal.position)
+        if(agent.remainingDistance < 5f)
             return 1;
         else
             return 0;
