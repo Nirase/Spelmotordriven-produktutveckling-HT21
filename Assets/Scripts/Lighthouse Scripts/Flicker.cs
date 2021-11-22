@@ -22,20 +22,23 @@ public class Flicker : MonoBehaviour
 
     void Update()
     {
-        if(!flicker)
-            lightComp.intensity = m_Value;
-        else
-        {
-            lightComp.intensity = Mathf.Lerp(minimum, maximum, t) * m_Value;
-            t += 0.5f * Time.deltaTime;
-
-            if (t > 1.0f)
+            if(flicker)
             {
-                float temp = maximum;
-                maximum = minimum;
-                minimum = temp;
-                t = 0.0f;
+                lightComp.intensity = Mathf.Lerp(minimum, maximum, t) * m_Value;
+                t += 0.5f * Time.deltaTime;
+
+                if (t > 1.0f)
+                {
+                    float temp = maximum;
+                    maximum = minimum;
+                    minimum = temp;
+                    t = 0.0f;
+                }
             }
-        }
+            else
+            {
+                lightComp.intensity = m_Value;
+            }
+  
     }
 }

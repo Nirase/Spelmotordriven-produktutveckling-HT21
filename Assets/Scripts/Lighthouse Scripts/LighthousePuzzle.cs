@@ -36,7 +36,6 @@ public class LighthousePuzzle : MonoBehaviour
         list = new List<BoxCollider>();
         foreach (var i in gameObject.GetComponentsInChildren<BoxCollider>())
             list.Add(i);
-        Debug.Log(list.Count);
     }
 
     void Update()
@@ -50,11 +49,11 @@ public class LighthousePuzzle : MonoBehaviour
             if(!fishesActive)
                 ActivateFishes();
             
-            if(escortedFish == _fishes.Length)
+            if(escortedFish >= _fishes.Length)
                 partTwo = true;
         }
 
-        if(partOne && partTwo)
+        if(partTwo)
         {
             _light.flicker = false;
             // dissipate storm..
@@ -64,10 +63,7 @@ public class LighthousePuzzle : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "EscortFish")
-        {
-            Debug.Log("Fish escorted");
             escortedFish++;
-        }
     }
 
     public void Add()
