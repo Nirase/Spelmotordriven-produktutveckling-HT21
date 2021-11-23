@@ -11,6 +11,9 @@ public class SplineDecorator : MonoBehaviour
     [SerializeField]
     Transform item;
 
+    [SerializeField]
+    bool followSpline = false;
+
     void Awake()
     {
         if(frequency <= 0  || item == null)
@@ -32,6 +35,13 @@ public class SplineDecorator : MonoBehaviour
             Vector3 position = spline.GetPoint(p * stepSize);
             spawnedItem.localPosition = position;
             spawnedItem.parent = transform;
+
+            if(followSpline)
+            {
+                var dir = transform.position - position;
+                spawnedItem.transform.forward = dir.normalized;
+            }
+                
         }
     }
 }
