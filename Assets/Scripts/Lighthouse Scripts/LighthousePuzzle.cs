@@ -87,6 +87,6 @@ public class LighthousePuzzle : MonoBehaviour
         t += 0.5f * Time.deltaTime;
 
         if(_lightHouse.position != end)
-            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * Time.deltaTime);
+            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, -rotation * Time.deltaTime);
     }
 }
