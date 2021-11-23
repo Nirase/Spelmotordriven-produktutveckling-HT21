@@ -14,7 +14,7 @@ public class TriggerObject : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             _parent.Add();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }

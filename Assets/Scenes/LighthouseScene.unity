@@ -35052,6 +35052,10 @@ MonoBehaviour:
   _fishes:
   - {fileID: 367831225}
   - {fileID: 51727993}
+  tpain: 0.1
+  rotation: -25
+  MaxTimer: 1
+  countStep: 0.5
 --- !u!114 &2042708406
 MonoBehaviour:
   m_ObjectHideFlags: 0
