@@ -10,17 +10,27 @@ public class LighthousePuzzle : MonoBehaviour
     [SerializeField] Flicker _light;
     [SerializeField] GameObject[] _fishes;
 
-    int count = 1;
+    float count = 0;
     int escortedFish = 0;
     bool partOne = false;
     bool partTwo = false;
 
     bool fishesActive = false;
-    static float t = 0.0f;
-    private float rotation = -25;
+
+    // Unscrew lighthouse
+
+    private float t = 0.0f;
+    [SerializeField, Range(0, 1)] float tpain = 0.25f;
+    [SerializeField, Range(-25, 25)] float rotation = -25;
+    [SerializeField, Range(1, 10)] float MaxTimer = 3f;
+
+    [SerializeField, Range(0, 1)] float countStep;
+
+    private float timer = 0f;
 
     Vector3 start;
     Vector3 end;
+    Vector3 partialEnd;
 
     void Start()
     {
@@ -31,21 +41,37 @@ public class LighthousePuzzle : MonoBehaviour
         //For deactivating fishes untill part two
         foreach(var gameObject in _fishes)
             gameObject.SetActive(false);
-
-        // Initialization for pattern detection when ice skating around lighthouse. + 1 for the fish detection..
-        list = new List<BoxCollider>();
-        foreach (var i in gameObject.GetComponentsInChildren<BoxCollider>())
-            list.Add(i);
     }
 
     void Update()
     {   
-        if(count == list.Count && !partOne)
+        // When first arriving to lighthouse, unscrew it from ice.
+        if(!partOne)
+        {
+            if(count <= 0)
+                count = 0;
+
+            timer += Time.deltaTime;
+            partialEnd = start + new Vector3(0, count * countStep, 0);
+            
+            if(timer > MaxTimer)
+            {
+                count--;
+                timer = 0;
+                t = 0;
+            }
+            if(_lightHouse.position != end)
+            {
+                ElevateLighthouse();
+            }
+        }
+     
+        // End first phase.
+        if(_lightHouse.position.y >= end.y && !partOne)
             partOne = true;
 
         if(partOne && !partTwo)
         {
-            ElevateLighthouse();
             if(!fishesActive)
                 ActivateFishes();
             
@@ -69,24 +95,36 @@ public class LighthousePuzzle : MonoBehaviour
     public void Add()
     {
         count++;
+        timer = 0; // Not going down timer.
+        t = 0;  // Lerp.
     }
 
     private void ActivateFishes()
     {
-            fishesActive = true;
-            foreach(var gameObject in _fishes)
-            {
-                if(gameObject.activeSelf == false)
-                    gameObject.SetActive(true);
-            }
+        fishesActive = true;
+        foreach(var gameObject in _fishes)
+        {
+            if(gameObject.activeSelf == false)
+                gameObject.SetActive(true);
+        }
     }
 
     private void ElevateLighthouse()
     {   
-        _lightHouse.transform.position = Vector3.Lerp(start, end, t);
-        t += 0.5f * Time.deltaTime;
 
-        if(_lightHouse.position != end)
-            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, -rotation * Time.deltaTime);
+        if(_lightHouse.position != partialEnd)
+        {   
+            float rotFactor;
+            if(_lightHouse.transform.position.y > partialEnd.y)
+                rotFactor = 1;
+            else
+                rotFactor = -1;
+
+            _lightHouse.transform.position = Vector3.Lerp(_lightHouse.transform.position, partialEnd, t);
+            t += tpain * Time.deltaTime;
+
+            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
+        }
+
     }
 }
