@@ -240,12 +240,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 141497060}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Radius: 0.1
+  m_Speed: 50
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 240
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2816,12 +2816,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 708234422}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Radius: 0.1
+  m_Speed: 50
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 240
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2977,6 +2977,10 @@ PrefabInstance:
     - target: {fileID: 228996918, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228996922, guid: 0d834c9064a908949a69403440b655d8, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 383623521081185777, guid: 0d834c9064a908949a69403440b655d8, type: 3}
       propertyPath: m_RootOrder
