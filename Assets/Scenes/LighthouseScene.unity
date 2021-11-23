@@ -35047,6 +35047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lightHouse: {fileID: 647053789}
+  _player: {fileID: 1905575176}
   _goal: {fileID: 933803949}
   _light: {fileID: 669677103}
   _fishes:
