@@ -19,8 +19,6 @@ public class FollowAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         transform.position = start.position;
-        agent.speed = 25f;
-        agent.stoppingDistance = 10f;
     }
 
     void Update()
