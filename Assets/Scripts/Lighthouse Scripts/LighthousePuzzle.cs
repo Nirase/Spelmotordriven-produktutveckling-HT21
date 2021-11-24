@@ -47,7 +47,7 @@ public class LighthousePuzzle : MonoBehaviour
         if(!partOne)
         {
             if(count <= 0)
-                count = 0;
+            count = 0;
 
             timer += Time.deltaTime;
             partialEnd = start + new Vector3(0, count * countStep, 0);
@@ -58,7 +58,8 @@ public class LighthousePuzzle : MonoBehaviour
                 timer = 0;
                 t = 0;
             }
-            if(_lightHouse.position != end)
+
+            if(_lightHouse.position != end && isRaising)
             {
                 ElevateLighthouse();
             }
@@ -82,7 +83,6 @@ public class LighthousePuzzle : MonoBehaviour
             _light.flicker = false;
             // dissipate storm..
         }
-
     }
 
     void OnTriggerEnter(Collider other) {
@@ -96,23 +96,7 @@ public class LighthousePuzzle : MonoBehaviour
         timer = 0; // Not going down timer.
         t = 0;  // Lerp.
 
-        // Comp geometry - Left / Rigth turn testing
-        var a = col.transform.position;
-        a.y = 0; 
-
-        var u = origo - a;
-
-        var temp = _player.transform.position;
-        temp.y = 0;
-
-        var w = temp - a;
-
-        if (( (u.x * w.y) - (u.y*w.x) ) > 0)
-            Debug.Log("Left Turn");
-        else
-        {
-            Debug.Log("Right Turn");
-        }
+        TestTurn(col);
     }
 
     private void ActivateFishes()
@@ -125,9 +109,26 @@ public class LighthousePuzzle : MonoBehaviour
         }
     }
 
+    // Comp geometry - Left / Rigth turn testing
+    private void TestTurn(BoxCollider col)
+    {
+        var a = col.transform.position;
+        a.y = 0; 
+        var u = origo - a;
+        var temp = _player.transform.position;
+        temp.y = 0;
+
+        var w = temp - a;
+        var x = (u.x * w.z) - (u.z*w.x);
+
+        if (x > 0)
+            isRaising = false;
+        else
+            isRaising = true;
+    }
+
     private void ElevateLighthouse()
     {   
-
         if(_lightHouse.position != partialEnd)
         {   
             float rotFactor;
@@ -141,6 +142,5 @@ public class LighthousePuzzle : MonoBehaviour
 
             _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
         }
-
     }
 }
