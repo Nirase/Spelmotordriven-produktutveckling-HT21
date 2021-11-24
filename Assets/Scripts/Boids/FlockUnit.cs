@@ -218,4 +218,10 @@ public class FlockUnit : MonoBehaviour
     {
         return Vector3.Angle(transform.forward, position - transform.position) <= fOVAngle;
     }
+
+    public void Glow(Color color)
+    {
+        var meshRenderer = GetComponentInChildren<MeshRenderer>();
+        meshRenderer.material.SetColor("Glow_", color);
+    }
 }
