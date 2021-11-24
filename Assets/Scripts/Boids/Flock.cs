@@ -26,7 +26,7 @@ public class Flock : MonoBehaviour
     public float cohesionDistance { get { return _cohesionDistance; } }
     public float avoidanceDistance { get { return _avoidanceDistance; } }
     public float alignmentDistance { get { return _alignmentDistance; } }
-    public float boundsDistance { get { return _boundsDistance; } }
+    public float boundsDistance { get { return _boundsDistance; } set{ _boundsDistance = value; } }
     public float obstacleDistance { get { return _obstacleDistance; } }
 
     [Header("Behavoir Weights")]
