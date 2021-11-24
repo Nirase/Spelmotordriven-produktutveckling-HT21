@@ -56,7 +56,8 @@ public class FlockUnit : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, assignedFlock.obstacleDistance, obstacleMask))
         {
-            obstacleVector = FindBestDirectionToAvoidObstacle();
+            obstacleVector = -transform.forward;
+           //FindBestDirectionToAvoidObstacle();
         }
         else
         {
