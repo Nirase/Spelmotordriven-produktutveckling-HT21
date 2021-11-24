@@ -23,6 +23,7 @@ public class PipeNote : MonoBehaviour
         
         manager.played.Add(this);
         sound.Play();
+        
         // Scatter
         StartCoroutine(Scatter());
      
