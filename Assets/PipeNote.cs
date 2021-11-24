@@ -40,8 +40,8 @@ public class PipeNote : MonoBehaviour
 
     private IEnumerator Scatter()
     {
-        flock.boundsDistance = 10;
+        flock.boundsDistance = 20;
         yield return new WaitForSeconds(3f);
-        flock.boundsDistance = 4;
+        flock.boundsDistance = 8;
     }
 }
