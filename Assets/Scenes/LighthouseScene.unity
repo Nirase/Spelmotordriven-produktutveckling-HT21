@@ -269,7 +269,7 @@ MonoBehaviour:
   player: {fileID: 1905575176}
   goal: {fileID: 933803949}
   start: {fileID: 952260330}
-  detectionDistance: 50
+  detectionDistance: 25
   destinationReached: 0
 --- !u!54 &141497065
 Rigidbody:
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   player: {fileID: 1905575176}
   goal: {fileID: 933803949}
   start: {fileID: 728495492}
-  detectionDistance: 50
+  detectionDistance: 25
   destinationReached: 0
 --- !u!195 &708234424
 NavMeshAgent:
