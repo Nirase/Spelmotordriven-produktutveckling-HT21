@@ -8,6 +8,8 @@ public class PipeNote : MonoBehaviour
     public bool triggered = false;
     [SerializeField] private NotePuzzle manager;
     private AudioSource sound;
+
+    public bool puzzleComplete;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +18,10 @@ public class PipeNote : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (triggered || !other.CompareTag("Player")) 
+        if (puzzleComplete)
             return;
         
-        
         manager.played.Add(this);
-        triggered = true;
         sound.Play();
 
     }

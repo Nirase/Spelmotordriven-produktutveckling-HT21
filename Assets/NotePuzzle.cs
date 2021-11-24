@@ -19,7 +19,7 @@ public class NotePuzzle : MonoBehaviour
     {
         played.Clear();
         for (int i = 0; i < pipes.Length; ++i)
-            pipes[i].triggered = false;
+            pipes[i].puzzleComplete = false;
     }
 
     // Update is called once per frame
@@ -30,6 +30,7 @@ public class NotePuzzle : MonoBehaviour
 
         for (var i = 0; i < played.Count; ++i)
         {
+            pipes[i].puzzleComplete = true;
             if (played[i] != pipes[i])
             {
                 RestartPuzzle();
