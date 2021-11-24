@@ -8,9 +8,9 @@ public class PipeNote : MonoBehaviour
     public bool triggered = false;
     [SerializeField] private NotePuzzle manager;
     private AudioSource sound;
-
+    [SerializeField] private Flock flock;
     public bool puzzleComplete;
-    // Start is called before the first frame update
+
     void Start()
     {
         sound = GetComponent<AudioSource>();
@@ -23,6 +23,11 @@ public class PipeNote : MonoBehaviour
         
         manager.played.Add(this);
         sound.Play();
+        // Scatter
+        StartCoroutine(Scatter());
+     
+
+        // Light
 
     }
 
@@ -30,5 +35,12 @@ public class PipeNote : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private IEnumerator Scatter()
+    {
+        flock.boundsDistance = 10;
+        yield return new WaitForSeconds(3f);
+        flock.boundsDistance = 4;
     }
 }
