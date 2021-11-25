@@ -34,6 +34,7 @@ public class PipeNote : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player")) return;
         if (puzzleComplete)
             return;
         
@@ -44,7 +45,8 @@ public class PipeNote : MonoBehaviour
         StartCoroutine(Scatter());
      
         // Light
-    
+
+
     }
 
     void Update()
