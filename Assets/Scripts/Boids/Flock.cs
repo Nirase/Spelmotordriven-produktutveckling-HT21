@@ -43,7 +43,7 @@ public class Flock : MonoBehaviour
     public float obstacleWeight { get { return _obstacleWeight; } }
 
     public FlockUnit[] allUnits { get; set; }
-    void Start()
+    void Awake()
     {
         GenerateUnits();
     }
