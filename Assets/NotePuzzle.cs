@@ -9,7 +9,6 @@ public class NotePuzzle : MonoBehaviour
     private bool puzzleCompleted = false;
     [SerializeField] private PipeNote[] pipes;
 
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -22,7 +21,6 @@ public class NotePuzzle : MonoBehaviour
             pipes[i].puzzleComplete = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (played.Count != pipes.Length) return;
