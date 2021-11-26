@@ -370,7 +370,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1 &195386577 stripped
 GameObject:
@@ -481,7 +482,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1 &277079011 stripped
 GameObject:
@@ -589,7 +591,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1 &284619827 stripped
 GameObject:
@@ -1499,7 +1502,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1 &359461309 stripped
 GameObject:
@@ -2227,7 +2231,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1 &550991439 stripped
 GameObject:
@@ -2518,7 +2523,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1 &634109492
 GameObject:
@@ -3211,7 +3217,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1 &732454956 stripped
 GameObject:
@@ -3370,7 +3377,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1 &864848701 stripped
 GameObject:
@@ -3478,7 +3486,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1 &946137396 stripped
 GameObject:
@@ -3586,7 +3595,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1 &950474264 stripped
 GameObject:
@@ -3693,7 +3703,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1001 &1032916476
 PrefabInstance:
@@ -3774,7 +3785,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1001 &1142580458
 PrefabInstance:
@@ -3859,7 +3871,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1203411381}
   - component: {fileID: 1203411380}
-  - component: {fileID: 1203411379}
   - component: {fileID: 1203411378}
   - component: {fileID: 1203411382}
   m_Layer: 0
@@ -3886,102 +3897,6 @@ MonoBehaviour:
   - D
   - C
   - D
---- !u!82 &1203411379
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203411377}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!65 &1203411380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4287,7 +4202,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1 &1303336235 stripped
 GameObject:
@@ -4473,7 +4389,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1 &1712112685
 GameObject:
@@ -4636,7 +4553,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1 &1862214741 stripped
 GameObject:
@@ -4732,7 +4650,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!114 &1951178503 stripped
 MonoBehaviour:
@@ -4851,7 +4770,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1 &2011007757 stripped
 GameObject:
@@ -5097,7 +5017,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 260411284}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4337435951239355629, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
 --- !u!1001 &4777731926564358189
 PrefabInstance:
@@ -5166,7 +5087,8 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777731927336632063, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
 --- !u!1001 &6823145177330860265
 PrefabInstance:
@@ -5235,7 +5157,8 @@ PrefabInstance:
       propertyPath: flockUnitPrefab
       value: 
       objectReference: {fileID: 1951178503}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6823145177101965218, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
 --- !u!1001 &7942987841471609561
 PrefabInstance:
