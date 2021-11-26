@@ -12,9 +12,9 @@ public class NoteEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action<PipeNote> onNotePlayed;
+    public event Action<Note> onNotePlayed;
 
-    public void NotePlayed(PipeNote note)
+    public void NotePlayed(Note note)
     {
         onNotePlayed?.Invoke(note);
     }

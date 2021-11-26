@@ -15,7 +15,7 @@ public class NotePuzzle : MonoBehaviour
         NoteEvents.current.onNotePlayed += NotePlayed;
     }
 
-    void NotePlayed(PipeNote note)
+    void NotePlayed(Note note)
     {
         if (note.note != notes[currentIndex])
             currentIndex = 0;
