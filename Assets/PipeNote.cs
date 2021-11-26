@@ -7,7 +7,7 @@ public class PipeNote : MonoBehaviour
 {
     public bool triggered = false;
     [SerializeField] private NotePuzzle manager;
-    private AudioSource sound;
+    //private AudioSource sound;
     [SerializeField] public string note; 
     public bool puzzleComplete;
 
@@ -27,7 +27,7 @@ public class PipeNote : MonoBehaviour
 
     void Start()
     {
-        sound = GetComponent<AudioSource>();
+        //sound = GetComponent<AudioSource>();
         boids = flock.allUnits;
         baseColor = boids[0].GetComponentInChildren<MeshRenderer>().material.GetColor("Glow_");
         glowColor = new Color(baseColor.r * factor, baseColor.g * factor, baseColor.b * factor);
@@ -40,7 +40,7 @@ public class PipeNote : MonoBehaviour
             return;
         
         NoteEvents.current.NotePlayed(this);
-        sound.Play();
+        //sound.Play();
         
         // Scatter
         StartCoroutine(Scatter());
