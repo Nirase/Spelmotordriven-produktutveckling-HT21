@@ -1,42 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class NotePuzzle : MonoBehaviour
 {
-
-    public List<PipeNote> played;
+    private int currentIndex = 0;
     private bool puzzleCompleted = false;
-    [SerializeField] private PipeNote[] pipes;
+    [FormerlySerializedAs("pipes")] [SerializeField] private string[] notes;
 
     void Start()
     {
-
+        NoteEvents.current.onNotePlayed += NotePlayed;
     }
 
-    void RestartPuzzle()
+    void NotePlayed(PipeNote note)
     {
-        played.Clear();
-        for (int i = 0; i < pipes.Length; ++i)
-            pipes[i].puzzleComplete = false;
+        if (note.note != notes[currentIndex])
+            currentIndex = 0;
+        else
+            currentIndex++;
+        
+        
+        if (currentIndex == notes.Length)
+        {
+            puzzleCompleted = true;
+        }
     }
 
     void Update()
     {
-        if (played.Count != pipes.Length) return;
-
-
-        for (var i = 0; i < played.Count; ++i)
-        {
-            pipes[i].puzzleComplete = true;
-            if (played[i] != pipes[i])
-            {
-                RestartPuzzle();
-                return;
-            }
-        }
-
-        puzzleCompleted = true;
+        if (!puzzleCompleted) return;
         Debug.Log("complete");
     }
 }

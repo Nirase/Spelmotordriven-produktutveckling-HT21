@@ -8,6 +8,7 @@ public class PipeNote : MonoBehaviour
     public bool triggered = false;
     [SerializeField] private NotePuzzle manager;
     private AudioSource sound;
+    [SerializeField] public string note; 
     public bool puzzleComplete;
 
     // Boids related
@@ -38,7 +39,7 @@ public class PipeNote : MonoBehaviour
         if (puzzleComplete)
             return;
         
-        manager.played.Add(this);
+        NoteEvents.current.NotePlayed(this);
         sound.Play();
         
         // Scatter
