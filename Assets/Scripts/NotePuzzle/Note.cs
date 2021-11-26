@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeNote : MonoBehaviour
+public class Note : MonoBehaviour
 {
     public bool triggered = false;
     [SerializeField] private NotePuzzle manager;
