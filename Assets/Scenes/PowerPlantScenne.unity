@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25774
+  m_Name: pb_Mesh22044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -298,6 +298,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: D_BigCurve_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
+      objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
       value: 
@@ -410,6 +418,10 @@ PrefabInstance:
       value: C_MediumCurve_1
       objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
@@ -504,6 +516,14 @@ PrefabInstance:
     - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: m_Name
       value: C_BigCurve_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
@@ -1407,6 +1427,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: C_BigCurve_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
+      objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
       value: 
@@ -2187,6 +2215,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: G_BigCurve_5
       objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632060, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: note
+      value: G
+      objectReference: {fileID: 0}
     - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: manager
       value: 
@@ -2413,6 +2449,14 @@ PrefabInstance:
     - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: m_Name
       value: D_MediumCurve_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
       objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
@@ -3155,6 +3199,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: G_SmallCurve_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632060, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: note
+      value: G
+      objectReference: {fileID: 0}
     - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: manager
       value: 
@@ -3258,6 +3310,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: D_SmallCurve_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
+      objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
       value: 
@@ -3335,17 +3395,6 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.25
---- !u!114 &900519756 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
-  m_PrefabInstance: {fileID: 6823145177330860265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868181dc0a2570b4383c98c144245e69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &946137395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3356,6 +3405,14 @@ PrefabInstance:
     - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: m_Name
       value: D_BigCurve_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
       objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
@@ -3517,6 +3574,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: G_BigCurve_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632060, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: note
+      value: G
+      objectReference: {fileID: 0}
     - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: manager
       value: 
@@ -3567,6 +3632,14 @@ PrefabInstance:
     - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: m_Name
       value: D_SmallCurve_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
       objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
@@ -3632,6 +3705,14 @@ PrefabInstance:
     - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: m_Name
       value: C_MediumCurve_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
@@ -3780,6 +3861,7 @@ GameObject:
   - component: {fileID: 1203411380}
   - component: {fileID: 1203411379}
   - component: {fileID: 1203411378}
+  - component: {fileID: 1203411382}
   m_Layer: 0
   m_Name: Note Puzzle Manager
   m_TagString: Untagged
@@ -3799,12 +3881,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e0bbf154b154643869995161e5e00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  played: []
-  pipes:
-  - {fileID: 1914205907}
-  - {fileID: 1394334677}
-  - {fileID: 900519756}
-  - {fileID: 1394334677}
+  notes:
+  - G
+  - D
+  - C
+  - D
 --- !u!82 &1203411379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3928,6 +4009,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203411382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203411377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f269ce873a3ec004686bcf14f853d71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275801883
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,6 +4275,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: G_BigCurve_7
       objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632060, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: note
+      value: G
+      objectReference: {fileID: 0}
     - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: manager
       value: 
@@ -4274,17 +4375,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1394334677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
-  m_PrefabInstance: {fileID: 4337435949915604793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868181dc0a2570b4383c98c144245e69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1546732923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
@@ -4374,6 +4464,10 @@ PrefabInstance:
     - target: {fileID: 4777731927336632060, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: m_Name
       value: G_MediumCurve_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
+      propertyPath: note
+      value: G
       objectReference: {fileID: 0}
     - target: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
       propertyPath: manager
@@ -4479,6 +4573,10 @@ PrefabInstance:
       value: D_MediumCurve_2
       objectReference: {fileID: 0}
     - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
+      propertyPath: note
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337435951239355628, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1203411378}
@@ -4574,6 +4672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: C_SmallCurve_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
+      objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
       value: 
@@ -4628,17 +4734,6 @@ PrefabInstance:
       objectReference: {fileID: 1951178503}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
---- !u!114 &1914205907 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4777731927336632062, guid: 1ed71cdbee522a64e9ab4e81815f167f, type: 3}
-  m_PrefabInstance: {fileID: 4777731926564358189}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868181dc0a2570b4383c98c144245e69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1951178503 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3519659388918672698, guid: 5c81d1f1a96fb1a4e9cd0888dd8156f0, type: 3}
@@ -4683,6 +4778,14 @@ PrefabInstance:
     - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: m_Name
       value: C_BigCurve_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965219, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
+      propertyPath: note
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 6823145177101965221, guid: dff844d488b770c42bb607ac1f1f4082, type: 3}
       propertyPath: manager
