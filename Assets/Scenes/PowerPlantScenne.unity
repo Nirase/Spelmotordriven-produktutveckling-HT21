@@ -469,6 +469,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.25
+--- !u!114 &195386579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195386577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!1 &210231525
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +810,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0
+--- !u!114 &277079013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277079011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!1001 &284619826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -896,6 +942,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.875
+--- !u!114 &284619829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284619827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!1001 &313081728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1686,6 +1755,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4337435951239355626, guid: 146d36d614f905b4aa3c9163c80c54a5, type: 3}
   m_PrefabInstance: {fileID: 1018203420}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &339280851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339280850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!114 &339280852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,6 +1905,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.125
+--- !u!114 &359461311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359461309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!1001 &412705936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2693,6 +2808,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.5
+--- !u!114 &550991441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550991439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: G
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: C
+      Value: 0
+  TriggerEvent: 3
 --- !u!43 &564773576
 Mesh:
   m_ObjectHideFlags: 0
@@ -2880,6 +3018,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.4
+--- !u!114 &619851019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619851017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: G
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: C
+      Value: 0
+  TriggerEvent: 3
 --- !u!1001 &625496867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3679,6 +3840,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.5
+--- !u!114 &732454958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732454956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: G
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: C
+      Value: 0
+  TriggerEvent: 3
 --- !u!1 &798055978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,6 +4023,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.25
+--- !u!114 &864848703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864848701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!1001 &946137395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3948,6 +4155,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.625
+--- !u!114 &946137398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946137396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!1001 &950474263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4057,6 +4287,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0
+--- !u!114 &950474266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950474264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: G
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: C
+      Value: 0
+  TriggerEvent: 3
 --- !u!114 &1011952390 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9041124998053831044, guid: 78a7e8ebf5f6020478d6dd088e2cec26, type: 3}
@@ -4705,6 +4958,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.75
+--- !u!114 &1303336237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303336235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: G
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: C
+      Value: 0
+  TriggerEvent: 3
 --- !u!1 &1357726000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,7 +4994,7 @@ GameObject:
   - component: {fileID: 1357726001}
   - component: {fileID: 1357726004}
   m_Layer: 0
-  m_Name: Note Puzzle Audio Trigger
+  m_Name: FactoryThemeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4903,10 +5179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   Event: event:/NotePuzzle
-  PlayEvent: 1
-  StopEvent: 0
+  PlayEvent: 3
+  StopEvent: 4
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -4937,6 +5213,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.6
+--- !u!114 &1546732925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546732923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!1001 &1659920467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5179,6 +5478,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0
+--- !u!114 &1753073968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753073966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!1001 &1846513651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5280,6 +5602,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.2
+--- !u!114 &1862214743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862214741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 0
+    - Name: G
+      Value: 0
+    - Name: D
+      Value: 1
+  TriggerEvent: 3
 --- !u!1001 &1882658269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5388,6 +5733,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.8
+--- !u!114 &1956027391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956027389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!4 &2005227990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee5f19647eafeca40a594f8ab736be5d, type: 3}
@@ -5502,6 +5870,29 @@ MonoBehaviour:
   mode: 1
   offset: 0
   progress: 0.375
+--- !u!114 &2011007759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011007757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 1462838627}
+    Params:
+    - Name: C
+      Value: 1
+    - Name: D
+      Value: 0
+    - Name: G
+      Value: 0
+  TriggerEvent: 3
 --- !u!1 &2040971153
 GameObject:
   m_ObjectHideFlags: 0
