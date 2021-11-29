@@ -16,7 +16,7 @@ public class FollowAI : MonoBehaviour
     bool following = false;
     bool fleeing = false;
     public bool destinationReached = false;
-    Vector3 playerLookAtTarget;
+   // Vector3 playerLookAtTarget;
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class FollowAI : MonoBehaviour
 
     void Update()
     {
-        playerLookAtTarget = new Vector3(player.position.x, transform.position.y, player.position.z);
+       // playerLookAtTarget = new Vector3(player.position.x, transform.position.y, player.position.z);
 
         Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         Vector3 startToPlayer = playerPos - start.position;
@@ -39,13 +39,13 @@ public class FollowAI : MonoBehaviour
             following = true;
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             
-            agent.transform.LookAt(playerLookAtTarget);
+            //agent.transform.LookAt(playerLookAtTarget);
         }
         
         // Keep following player.
         if(following)
         {
-            agent.transform.LookAt(playerLookAtTarget);
+           // agent.transform.LookAt(playerLookAtTarget);
             agent.destination = playerPos;
         }
 
@@ -62,7 +62,7 @@ public class FollowAI : MonoBehaviour
         Vector3 fishToGoal = goal.transform.position - transform.position;
         if (fishToGoal.magnitude <= detectionDistance && !fleeing)
         {
-            agent.transform.LookAt(goal);
+            //agent.transform.LookAt(goal);
             agent.destination = goal.position;
             destinationReached = true;
             following = false;
