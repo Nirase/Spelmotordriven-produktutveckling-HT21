@@ -409,6 +409,17 @@ List of locations:
 </details>
 
 <details>
+<summary> Roman Pillar </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Music in the distance that plays notes in a specific order
+- **Description**: Fishes are swimming around an old pillar with flowers on top. As the player approaches the pillar they start hearing notes being played inside of the music. As the player skates over the fishes, different notes get played based on the colour of the fish. 
+
+</details>
+
+
+<details>
 <summary> The buried city </summary>
 
 - **Type**: Essential
