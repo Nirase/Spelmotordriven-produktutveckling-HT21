@@ -120,7 +120,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
 | 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5, 10.1.2, 10.10.7, 10.10.8 | Danny Darwiche
-| 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. | Mattias Smedman
+| 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 
 </details>
 
@@ -259,13 +259,19 @@ The buried city is an area of the game where a large city is buried under ice. T
 
 *[Images/sketches of the location to be added.]*
 
-#### 5.8.5 Level *[Letter]* - The *[name]* <a name="level-letter"></a>
-[Location still to be determined]
-
-#### 5.8.6 Level 5 - The new tree <a name="level-5"></a>
+#### 5.8.5 Level 5 - The new tree <a name="level-5"></a>
 The new tree is the same location as the dead tree (level 0). The difference is that the player, at this stage, has unlocked all the colors and the scene has thus changed. The area is now sprawling with life and color. This is the place where the finale of the game will take place. Whilst the ending isn't finished one thought is a confrontation with the orca.
 
 *[Images/sketches of the location to be added.]*
+
+#### 5.8.6 Level P - The Greek Pillar <a name="level-P"></a>
+The greek pillar is an area filled with colourful groups of fishes. The player can skate around the pillar, which has some colorful flowers on top. As the player approaches the pillar, music becomes more prominent, and the player can hear notes being played in a specific order. When they swim over the groups of fishes, they play different notes. If they play the notes in the same order as the music in the background, they complete a puzzle. 
+
+[Location still to be determined]
+
+
+#### 5.8.7 Level *[Letter]* - The *[name]* <a name="level-letter"></a>
+[Location still to be determined]
 
 ### 5.9 Flowchart <a name="flowchart"></a>
 Create a flowchart showing all the areas and screens that will need to be created.
