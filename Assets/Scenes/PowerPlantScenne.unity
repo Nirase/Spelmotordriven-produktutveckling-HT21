@@ -508,6 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210231528}
   - component: {fileID: 210231526}
+  - component: {fileID: 210231527}
   m_Layer: 0
   m_Name: Main Audio Manager
   m_TagString: Untagged
@@ -544,6 +545,19 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &210231527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210231525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16cdc30058b76f4fad0973d12c00f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 292700380}
 --- !u!4 &210231528
 Transform:
   m_ObjectHideFlags: 0
@@ -983,6 +997,11 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!54 &292700380 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 383623520932024950, guid: 0c52e23cff84d7f4f8c189da05e46026, type: 3}
+  m_PrefabInstance: {fileID: 313081728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &313081728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2873,7 +2892,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34194
+  m_Name: pb_Mesh22546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
