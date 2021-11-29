@@ -120,6 +120,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.3 | 13/09/2021 | Wrote a first draft of 9 | Jonathan Ryytty |
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
 | 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5, 10.1.2, 10.10.7, 10.10.8 | Danny Darwiche
+| 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. | Mattias Smedman
 
 </details>
 
@@ -143,8 +144,6 @@ The game starts off black and white, in the middle of a frozen body of water. Th
 ### 3.1 Target audience <a name="target-audience"></a>
 Our target audience is the people who play games a lot more casually. We aren’t aiming at any specific age group, as casual games are becoming increasingly popular even within the age groups that typically play more active games.
 
-We aim to create a game that women can resonate with in some form.
-
 ### 3.2 Platform <a name="platform"></a>
 We will be developing the game for Windows, Mac and Linux. The reason for this is that Unity natively can build to these platforms without any additional development effort from us.
 
@@ -164,7 +163,7 @@ We also took inspiration from The Ramp (2021). The ramp is a simple game where t
 In the first three games mentioned, the player is still actively involved in making events transpire. We aim to create a game where even though the play interacts with the world, it should not feel like the player is in control of the world. Through the use of ice, we have a constant layer between the world that the player is interacting with and the player themself. The colour mechanic is also something that these games do not have. Seeing the world gain colour we hope evokes a feeling of exploration, without the world actually having been changed itself, compared to these games where the world changes because the player is in new areas.
 
 ### 3.6 Sales expectations <a name="sales-expectations"></a>
-Our current plan is to release this game on Itch, however we’ve been discussing the possibility of releasing this as a commercial game on Steam if it turns out well. We don’t have any specific sales expectations, and would more so be doing it to have had the experience of fully releasing a game on Steam. As the development costs will be minimal, this is an opportune chance to do so.
+Our plan was to release the game on Itch or Steam, however due to time constraints we've decided not to do so. 
 
 </details>
 
@@ -182,7 +181,7 @@ We will keep the commercial aspect in mind for every asset we might buy.
 
 We will need to check if the name “Kanvas” is a name that we are free to use, however the name is easily changed so this is not a big concern at this moment.
 
-All of this is mainly dependent on how well the game turns out. We want to have a good game that we can point towards and say that we have officially licensed by the time we finish our studies, and this is a good chance for this to happen.
+While we kept all of these things in mind as we worked on the project, as we decided not to release the game it does not have any impact on us.
 
 </details>
 
@@ -191,44 +190,30 @@ All of this is mainly dependent on how well the game turns out. We want to have 
 <summary> Click to expand! </summary>
 
 ### 5.1 Overview <a name="overview"></a>
-The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, possibly through the use of matching a rhythm, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see a new colour.
+The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see a new colour.
 
 ![Gameplay](https://drive.google.com/uc?export=view&id=1BFIyZmLKUMcRTxv-Z7jZ3JtbRwBXypP6)
 
 ### 5.2 Gameplay description <a name="gameplay-description"></a>
 As the player moves through the world, they will encounter different events. The player will need to interact with these events through various means. The ways to interact with the events is the following ways:
 
-Leading a fish from one point to another. Helping the fish find its way back to it’s school makes the fish swim happily in a way that knocks something over, which releases a colour back into the world.
+Leading a fish from one point to another. The player has to lead different fishes to an end destiniation, and doing so completes a puzzle. 
 
-The player has to match the pattern that fish are swimming in to make them move in a certain way.
-
-The player has to move over certain areas of the ice that play unique sounds whenever the player is on them to wake up a sleeping animal.
-
-The player has to follow a fish that tries to run away from her.
-
-The player has to help a crab get through a maze by swimming above it while following the pattern of the maze.
+The player has to move over certain fishes to play sounds to match to the background music. 
 
 ### 5.3 Controls <a name="controls"></a>
-The full controls are still undecided. We’re planning on trying a few different versions to find which works the best for a relaxing game.
-
-The controller we are the most interested in is one where you have to press keys in a certain rhythm to move forward, however we are conscious of how it might make the game feel more stressful than it should. An example of this is to use A and D to alternate between which leg you’re using to move, and using left and right arrow keys to turn, and the player has to alternate A and D to a rhythm.
-
-![Controls](https://drive.google.com/uc?export=view&id=1KgBTJAzdxnHzwy2c-fG0bcggU_Q6oTln)
-
-Another version is where instead of the player having to match a rhythm in their movement, we instead just have the animations and sounds from hitting the ice match a rhythm. This takes out a lot of the gameplay from moving around, where we instead just let the player move freely through the use of WASD, however it might lead to a much more relaxing gameplay feel.
+The controls right now are fairly lackluster at the moment. The character moves towards where they're pointing their mouse by alternating between A and D. There's very little engagment in the controls as they have no reason to match it to anything. The controller would need to be updated to follow a rhythm as they're alternating to get engagment.  
 
 #### 5.3.1 Interfaces <a name="interfaces"></a>
 Main Menu Example:
 
 ![MainMenu](https://drive.google.com/uc?export=view&id=1PG7Oyxe07W6tfUmoL7jBdFJYS293GUHi)
 
-In the main menu, the player only has three different choices. They can either start the game, change the settings, or quit. We might possibly add a load feature if the game ends up being longer than ~1 hour.
+In the main menu, the player only has three different choices. They can either start the game, change the settings, or quit.
 
 While the game is running, there isn’t actually any interface or UI. The player has no resource or information that they need to track, so we’re leaving the in-game screen as clean as possible, so that there’s more space for the player to look at the world.
 
 ### 5.4 Rules <a name="rules"></a>
-If you have created a prototype, describing the rules of your game will be much easier. You will need to define all the game objects, concepts, their behaviors, and how they relate to one another in this section.
-
 The player only has black and white colours at the start of the game.
 
 The player unlocks more colours as they complete various events. These events will be filled in here as the game is developed:
@@ -252,8 +237,6 @@ The win condition of the game happens when the player has finished all the major
 After the game has ended the player is free to skate around on the ice.
 
 ### 5.8 Levels <a name="levels"></a>
-The designs for each level should be laid out here. The more detailed the better.
-
 The game does not feature levels in the traditional sense since the game has a non-linear open world progression. Instead there are a set amount of locations in the world the player needs to find where they can interact with their surroundings. We consider these locations and interactions Kanvas' levels.
 
 #### 5.8.1 Level 0 - The dead tree <a name="level-0"></a>
@@ -573,8 +556,6 @@ https://drive.google.com/file/d/1Y84VaUGPoFpLW8fQPkE5IOqFUwH0_8uB/view?usp=shari
 <details>
 <summary> Click to expand! </summary>
 
-### 10.1 Technical analysis <a name="technical-analysis"></a>
-
 #### 10.1.1 New technology <a name="new-technology"></a>
 Is there any new technology that you plan on developing for this game? If so, describe it in detail.
 
@@ -583,14 +564,7 @@ We are using a preexisting game engine to make the development process easier. W
 
 We will also be developing our own spline tool to make it easier for us to draw patterns for our pattern recognition, trails, camera path and fish behavior.
 
-#### 10.1.3 Risks <a name="risks"></a>
-What are the risks inherent in your strategy?
-
-#### 10.1.4 Alternatives <a name="alternatives"></a>
-Are there any alternatives that can lower the risks and the cost?
-
-#### 10.1.5 Estimated resources required <a name="estimated-resources-required"></a>
-Describe the resources you would need to develop the new technology and software needed for the game.
+The spline tool lets us create an easy to adjust curve within unity that we can use for aspects such as Pattern Recognition and making fishes swim in a specific pattern. We can also use it to easy populate the curve with objects. An example where we use both the populating function and the pattern following one is in the Lighthouse, where we have two circles that we populate with wind walls using the spline tool. The wind walls then follow the spline, always pointing forward. Doing this manually would have been much more work. 
 
 ### 10.2 Development platform and tools <a name="development-platform-and-tools"></a>
 Describe the development platform, as well as any software tools and hardware that are required to produce the game.
@@ -600,24 +574,9 @@ Describe the development platform, as well as any software tools and hardware th
 - Blender - Used to create 3D Models.
 - Unity - Used as a game engine for the entire process.
 
-#### 10.2.2 Hardware <a name="hardware"></a>
-
-### 10.3 Delivery <a name="delivery"></a>
-How do you plan to deliver this game? Over the Internet? Via an app service? At a brick-and-mortar location? What is required to accomplish this?
-
-The game will be delivered through some online game publishing website. It’ll either be through Itch as a free game or through Steam as a paid one.
-
-#### 10.3.1 Required hardware and software <a name="required-hardware-and-software"></a>
-
 #### 10.3.2 Required materials <a name="required-materials"></a>
 
 ### 10.4 Game engine <a name="game-engine"></a>
-
-#### 10.4.1 Technical specs <a name="technical-specs"></a>
-What are the specs of your game engine?
-
-#### 10.4.2 Design <a name="design"></a>
-Describe the design of your game engine.
 
 #### 10.4.3 Collision detection <a name="collision-detection"></a>
 If your game involves collision detection, how does it work?
@@ -646,21 +605,6 @@ Lighting can be a substantial part of a game. Describe how it works and the feat
 #### 10.10.1 Max players <a name="max-players"></a>
 1
 
-#### 10.10.2 Servers <a name="servers"></a>
-None.
-
-#### 10.10.3 Customization <a name="customization"></a>
-None.
-
-#### 10.10.4 Connectivity <a name="connectivity"></a>
-None.
-
-#### 10.10.5 Websites <a name="websites"></a>
-None.
-
-#### 10.10.6 Persistence <a name="persistence"></a>
-None.
-
 #### 10.10.7 Saving games <a name="saving-games"></a>
 The save system will save the player transform, fish transforms, colors unlocked and interactions completed.
 
@@ -668,13 +612,4 @@ Two save systems are currently used. Unity's PlayerPrefs and a custom script con
 
 #### 10.10.8 Loading games <a name="loading-games"></a>
 Loading is done through Unity's PlayerPrefs and the binary file.
-
-### 10.11 Other <a name="other"></a>
-
-#### 10.11.1 Help <a name="help"></a>
-
-#### 10.11.2 Manual <a name="manual"></a>
-
-#### 10.11.3 Setup <a name="setup"></a>
-
 </details>
