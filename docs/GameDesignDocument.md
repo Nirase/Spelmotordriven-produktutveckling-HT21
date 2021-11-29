@@ -376,17 +376,7 @@ It is a cold and desolate world for anything above the surface, with the only co
 ### 8.2 Key locations <a name="key-locations"></a>
 The game will feature a lot of locations, some more important than others. They can be categorized as 2 types, Essential and Atmospheric. The essential locations are the ones outlined in section 5.8 Levels. The player is required to find them in order to complete the game. The atmospheric locations can be thought of as decorations. They fill the world with variation, breaking up the monotony of the otherwise flat and boring world the player would be presented when skating from one essential location to the next. The atmospheric don't serve an interactive purpose. They are mostly a visual component which also helps the player orient themselves in the world and get a sense of direction.
 
-List of locations:
-
-<details>
-<summary> The dead tree </summary>
-
-- **Type**: Essential
-- **Number of colors**: None
-- **Breadcrumb**: The only tree, companion fish
-- **Description**: This is the starting area of the game which is at the center of the world. It features a lone tree breaking through the ice at the bottom of the stem. Initially it looks dead, a bare tree with no leaves, no color, the ice surrounding it being completely white. This is because the player has yet to explore the world and unlock any new colors. As the player progresses and unlocks new colors in the world, color and life is brought back to this tree and it's surroundings. The tree revitalizes and leaves reappear, under the ice all sorts of fish can be seen swimming around. Whether the tree was actually ever dead and regrown or if the character simple changes their point of view of the world as the game progresses will never be explicitly stated. This is part of the subtle environmental storytelling where as few things are defined allowing the player to project their own interpretation and meaning to the different interactions and developments of the world.
-
-</details>
+List of implemented locations:
 
 <details>
 <summary> The lighthouse </summary>
@@ -395,6 +385,38 @@ List of locations:
 - **Number of colors**: 0-3
 - **Breadcrumb**: Snow storm, light beam
 - **Description**: The lighthouse is covered in a heavy snow storm. Only at the eye of the storm can tranquility be found. The player must endure the storm and push their way through despite its attempts to force the player out. Inside the storm the player has little chance of navigating through since they will be moved and rotated by the storm all the while the view is very limited. They are however not alone. The lighthouse is full with water with eels living inside. Whenever they release a pulse of electricity the lighthouse lights up for a couple of seconds. This will give the player the direction they need to navigate the storm. Thus, even after civilizations fall the trusty lighthouse still fulfills its purpose (with a little help from its new residents). Thematically the storm and lighthouse represent the feeling of being lost and overwhelmed yet overcoming adversity and finding a state of peace thanks to a little help. Once at the center, the player can perform some interaction to unlock a color.
+
+</details>
+
+<details>
+<summary> Greek Pillar </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Music in the distance that plays notes in a specific order
+- **Description**: Fishes are swimming around an old pillar with flowers on top. As the player approaches the pillar they start hearing notes being played inside of the music. As the player skates over the fishes, different notes get played based on the colour of the fish. 
+
+</details>
+
+<details>
+<summary> The buried city </summary>
+
+- **Type**: Essential
+- **Number of colors**: 0-3
+- **Breadcrumb**: Large city under ice, companion fish
+- **Description**: The buried city is an artifact of the past civilization now inhabited by aquatic life. Since the player is above the city they can freely skate above it and explore it from any angle. Here some lost fish can be found and the player can guide them through the streets and buildings of the city to return the to their shoal. This is the interaction that takes place at this location.
+
+</details>
+
+List of planned locations:
+
+<details>
+<summary> The dead tree </summary>
+
+- **Type**: Essential
+- **Number of colors**: None
+- **Breadcrumb**: The only tree, companion fish
+- **Description**: This is the starting area of the game which is at the center of the world. It features a lone tree breaking through the ice at the bottom of the stem. Initially it looks dead, a bare tree with no leaves, no color, the ice surrounding it being completely white. This is because the player has yet to explore the world and unlock any new colors. As the player progresses and unlocks new colors in the world, color and life is brought back to this tree and it's surroundings. The tree revitalizes and leaves reappear, under the ice all sorts of fish can be seen swimming around. Whether the tree was actually ever dead and regrown or if the character simple changes their point of view of the world as the game progresses will never be explicitly stated. This is part of the subtle environmental storytelling where as few things are defined allowing the player to project their own interpretation and meaning to the different interactions and developments of the world.
 
 </details>
 
@@ -408,26 +430,6 @@ List of locations:
 
 </details>
 
-<details>
-<summary> Roman Pillar </summary>
-
-- **Type**: Essential
-- **Number of colors**: 0-3
-- **Breadcrumb**: Music in the distance that plays notes in a specific order
-- **Description**: Fishes are swimming around an old pillar with flowers on top. As the player approaches the pillar they start hearing notes being played inside of the music. As the player skates over the fishes, different notes get played based on the colour of the fish. 
-
-</details>
-
-
-<details>
-<summary> The buried city </summary>
-
-- **Type**: Essential
-- **Number of colors**: 0-3
-- **Breadcrumb**: Large city under ice, companion fish
-- **Description**: The buried city is an artifact of the past civilization now inhabited by aquatic life. Since the player is above the city they can freely skate above it and explore it from any angle. Here some lost fish can be found and the player can guide them through the streets and buildings of the city to return the to their shoal. This is the interaction that takes place at this location.
-
-</details>
 
 <details>
 <summary> The new tree </summary>
