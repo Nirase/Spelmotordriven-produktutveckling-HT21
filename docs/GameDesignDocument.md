@@ -130,6 +130,8 @@ Include what, when and who changed the GDD for future reference and knowing exac
 
 Our goal is to create a short and sweet game that takes the player through a journey of discovery through the use of music and colours. We want to create an experience where the player travels through the emotions of sadness, loneliness, friendship and ultimately happiness. We hope to do this through a story without words, told simply through the use of the music, colours, and the world under the ice.
 
+We wanted to create a game that women could resonate with, to go along the theme of the event "I am no man!". However as the time constraints came in, this unfortunately got pushed aside. 
+
 ### 2.1 Gameplay synopsis <a name="gameplay-synopsis"></a>
 We want to create a very relaxing gameplay loop. The main gameplay loop is simply ice skating without any overwhelmingly complex controls. As the player skates, music will be created through their movement, and the world will react to them based on their input. Through this we hope to create a unique experience.
 
