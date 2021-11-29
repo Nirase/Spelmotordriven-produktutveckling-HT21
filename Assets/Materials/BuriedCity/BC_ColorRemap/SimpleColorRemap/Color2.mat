@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plant2
-  m_Shader: {fileID: -6465566751694194690, guid: bd28dc2cf3229354f80877088fd4071c, type: 3}
+  m_Name: Color2
+  m_Shader: {fileID: -6465566751694194690, guid: 1ded233c5776b4349aaf5d128479f567, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -80,8 +80,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_35bd3f2052b240ae9aa2af436355c370: 0.3
-    - Vector1_d5ee1ef774eb45f8b74a354d894f1a55: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -111,7 +109,6 @@ Material:
     m_Colors:
     - Color_950f1d915aeb4c589c0f45a49469beba: {r: 0, g: 0, b: 0, a: 0}
     - Color_d6141761600a484a968c235dd2c8bcf9: {r: 0.15686275, g: 0.2627451, b: 0.32156864, a: 0}
-    - Vector2_86c4ae49996c4c20925a91268975a457: {r: 4, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
