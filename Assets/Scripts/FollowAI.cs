@@ -8,6 +8,8 @@ public class FollowAI : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Transform goal;
     [SerializeField] Transform start;
+    [SerializeField] ColorManager colorManager;
+    [SerializeField] ColorRemapTYPE colorType;
 
     [SerializeField, Range(20, 100)] int detectionDistance = 50;
     private NavMeshAgent agent;
@@ -31,6 +33,7 @@ public class FollowAI : MonoBehaviour
         {
             agent.destination = playerPos;
             following = true;
+            StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
         }
         
         // Keep following player.
@@ -43,6 +46,7 @@ public class FollowAI : MonoBehaviour
         {
             following = false;
             agent.destination = start.position;
+            StartCoroutine(ColorManager.LockColor(colorManager, colorType));
         }
 
         // Move to goal
@@ -61,6 +65,7 @@ public class FollowAI : MonoBehaviour
             agent.destination = start.position;
             if(fleeing && fishToStart.magnitude <= detectionDistance)
                 fleeing = false;
+            StartCoroutine(ColorManager.LockColor(colorManager, colorType));
         }
     }
     public NavMeshAgent GetAgent()
