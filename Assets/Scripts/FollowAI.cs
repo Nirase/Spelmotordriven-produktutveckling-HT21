@@ -16,15 +16,19 @@ public class FollowAI : MonoBehaviour
     bool following = false;
     bool fleeing = false;
     public bool destinationReached = false;
+    Vector3 playerLookAtTarget;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         transform.position = start.position;
+
     }
 
     void Update()
     {
+        playerLookAtTarget = new Vector3(player.position.x, transform.position.y, player.position.z);
+
         Vector3 playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         Vector3 startToPlayer = playerPos - start.position;
 
@@ -34,11 +38,16 @@ public class FollowAI : MonoBehaviour
             agent.destination = playerPos;
             following = true;
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
+            
+            agent.transform.LookAt(playerLookAtTarget);
         }
         
         // Keep following player.
         if(following)
+        {
+            agent.transform.LookAt(playerLookAtTarget);
             agent.destination = playerPos;
+        }
 
         // If too far away from player, stay where you are. Possibly check for LOS?
         Vector3 fishToPlayer = playerPos - transform.position;
@@ -53,6 +62,7 @@ public class FollowAI : MonoBehaviour
         Vector3 fishToGoal = goal.transform.position - transform.position;
         if (fishToGoal.magnitude <= detectionDistance && !fleeing)
         {
+            agent.transform.LookAt(goal);
             agent.destination = goal.position;
             destinationReached = true;
             following = false;
@@ -77,5 +87,6 @@ public class FollowAI : MonoBehaviour
     {
         agent.destination = start.position;
         fleeing = true;
+        following = false;
     }
 }

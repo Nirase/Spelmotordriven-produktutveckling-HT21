@@ -24,6 +24,7 @@ public class Shark : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         transform.position = start.position;
+        //transform.RotateAround(transform.position, Vector3.up, 90);
     }
 
     void Update()
