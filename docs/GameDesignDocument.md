@@ -121,7 +121,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.4 | 26/09/2021 | Reformatted document to markdown | Danny Darwiche |
 | 1.5 | 10/10/2021 | Added collapsible chapters, emojis. Updated 4, 5.8, 8.1, 8.2, 8.7, 8.11, 9.5, 10.1.2, 10.10.7, 10.10.8 | Danny Darwiche
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
-
+| 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 </details>
 
 ## :mag_right: 2- Goals and Vision <a name="goals-vision"></a>
