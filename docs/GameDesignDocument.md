@@ -192,7 +192,7 @@ While we kept all of these things in mind as we worked on the project, as we dec
 <summary> Click to expand! </summary>
 
 ### 5.1 Overview <a name="overview"></a>
-The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see a new colour.
+The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice thro3ugh skating, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see a new colour.
 
 ![Gameplay](https://drive.google.com/uc?export=view&id=1BFIyZmLKUMcRTxv-Z7jZ3JtbRwBXypP6)
 
@@ -206,7 +206,8 @@ The player has to move over certain fishes to play sounds to match to the backgr
 ### 5.3 Controls <a name="controls"></a>
 The controls right now are fairly lackluster at the moment. The character moves towards where they're pointing their mouse by alternating between A and D. There's very little engagment in the controls as they have no reason to match it to anything. The controller would need to be updated to follow a rhythm as they're alternating to get engagment.  
 
-We ran tests where we compared different types of controllers to try to get a good controller going. 
+We ran tests where we compared different types of controllers to try to get a good controller going. We tests a total of 7 different controllers, two of them standing out as the best ones. From the test results, we made the decision to focus on a controller that's based on Rhythm. The controller still needs a lot of work to become engaging, however considering the minimal amount of active controls the game has we found that it's best to have a character controller that does require some level of engagement. 
+Test results can be found here: https://docs.google.com/forms/d/1Cpn-qBux9VwBPjD6pvHw3jEIJgguhTKkajAR1MG92Us/edit?usp=sharing
 
 #### 5.3.1 Interfaces <a name="interfaces"></a>
 Main Menu Example:
