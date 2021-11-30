@@ -81,13 +81,18 @@ public class LighthousePuzzle : MonoBehaviour
         if(partTwo)
         {
             _light.flicker = false;
+            Debug.Log("Puzzle Completed");
             // dissipate storm..
         }
     }
 
-    void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) 
+    {
         if(other.gameObject.tag == "EscortFish")
+        {
             escortedFish++;
+            Debug.Log(escortedFish);
+        }
     }
 
     public void Add(BoxCollider col)
