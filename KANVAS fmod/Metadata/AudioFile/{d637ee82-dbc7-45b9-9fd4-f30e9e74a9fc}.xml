@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d637ee82-dbc7-45b9-9fd4-f30e9e74a9fc}">
+		<property name="assetPath">
+			<value>Factory_D_Octaved.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.3529375000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{616d99d7-e388-49b2-b8c2-05432b510aee}</destination>
+		</relationship>
+	</object>
+</objects>
