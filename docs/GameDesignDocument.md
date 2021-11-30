@@ -590,6 +590,12 @@ We will also be developing our own spline tool to make it easier for us to draw 
 
 The spline tool lets us create an easy to adjust curve within unity that we can use for aspects such as Pattern Recognition and making fishes swim in a specific pattern. We can also use it to easy populate the curve with objects. An example where we use both the populating function and the pattern following one is in the Lighthouse, where we have two circles that we populate with wind walls using the spline tool. The wind walls then follow the spline, always pointing forward. Doing this manually would have been much more work. 
 
+Spline tool used to create a circle: 
+https://drive.google.com/file/d/1--34tAOb52R86YAVO3imOQH-jvQTdMNP/view?usp=sharing
+
+Fishes follow the spline tool and automatically look forward: 
+https://drive.google.com/file/d/1EBqZvrrZmNvq1w2DfZlldIxgNW6d8Nct/view?usp=sharing
+
 ### 10.2 Development platform and tools <a name="development-platform-and-tools"></a>
 Describe the development platform, as well as any software tools and hardware that are required to produce the game.
 
