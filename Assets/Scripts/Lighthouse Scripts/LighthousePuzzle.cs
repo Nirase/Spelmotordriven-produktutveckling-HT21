@@ -27,6 +27,14 @@ public class LighthousePuzzle : MonoBehaviour
     Vector3 end;
     Vector3 partialEnd;
 
+    // Sound
+    FMODUnity.StudioEventEmitter emitter;
+
+    private string param = "";
+
+    private float smin = 0.0f;
+    private float smax = 1.0f;
+
     void Start()
     {
         // For lerping the lighthouse position
@@ -39,6 +47,10 @@ public class LighthousePuzzle : MonoBehaviour
         //For deactivating fishes untill part two
         foreach(var gameObject in _fishes)
             gameObject.SetActive(false);
+
+        // Sound
+        emitter = GetComponentInChildren<FMODUnity.StudioEventEmitter>();
+        param = emitter.Params[0].Name;
     }
 
     void Update()
@@ -127,13 +139,20 @@ public class LighthousePuzzle : MonoBehaviour
         var x = (u.x * w.z) - (u.z*w.x);
 
         if (x > 0)
-            isRaising = false;
+        {
+            //isRaising = false;
+            count--;
+        }
         else
+        {
             isRaising = true;
+  
+        }
     }
 
     private void ElevateLighthouse()
     {   
+        emitter.SetParameter(param, 0.0f);
         if(_lightHouse.position != partialEnd)
         {   
             float rotFactor;
@@ -146,6 +165,10 @@ public class LighthousePuzzle : MonoBehaviour
             t += tpain * Time.deltaTime;
 
             _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
+
+
+            // sound
+            emitter.SetParameter(param, 0.5f);
         }
     }
 }

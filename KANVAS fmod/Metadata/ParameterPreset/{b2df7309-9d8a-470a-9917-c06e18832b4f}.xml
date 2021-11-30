@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{b2df7309-9d8a-470a-9917-c06e18832b4f}">
+		<property name="name">
+			<value>Volume_LighthouseRot</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b6368afe-283d-43a1-9632-c9e2f3a9a9de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{92cb1ec2-002a-4f7e-bcfa-1b36c08085fd}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{92cb1ec2-002a-4f7e-bcfa-1b36c08085fd}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>3</value>
+		</property>
+	</object>
+</objects>
