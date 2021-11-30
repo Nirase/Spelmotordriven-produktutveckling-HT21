@@ -16,13 +16,17 @@ public class FollowAI : MonoBehaviour
     bool following = false;
     bool fleeing = false;
     public bool destinationReached = false;
-   // Vector3 playerLookAtTarget;
+
+    // Sound
+
+    FMODUnity.StudioEventEmitter emitter;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         transform.position = start.position;
 
+        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     void Update()
@@ -38,14 +42,13 @@ public class FollowAI : MonoBehaviour
             agent.destination = playerPos;
             following = true;
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
-            
-            //agent.transform.LookAt(playerLookAtTarget);
+        
+            emitter.Play();
         }
         
         // Keep following player.
         if(following)
         {
-           // agent.transform.LookAt(playerLookAtTarget);
             agent.destination = playerPos;
         }
 
@@ -66,6 +69,8 @@ public class FollowAI : MonoBehaviour
             agent.destination = goal.position;
             destinationReached = true;
             following = false;
+
+            //emitter.Play(); spam
         }
 
         // Flee to start
@@ -88,5 +93,7 @@ public class FollowAI : MonoBehaviour
         agent.destination = start.position;
         fleeing = true;
         following = false;
+
+        emitter.Play();
     }
 }

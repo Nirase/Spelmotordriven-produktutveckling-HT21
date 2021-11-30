@@ -10,7 +10,7 @@ public class GameplayAudioManager : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     FMODUnity.StudioEventEmitter emitter;
     private string param = "";
-    private float value = 100f;
+    [SerializeField, Range(0, 100)] private float value;
 
     void Start()
     {
