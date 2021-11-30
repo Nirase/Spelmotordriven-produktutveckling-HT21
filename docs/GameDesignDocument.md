@@ -206,6 +206,8 @@ The player has to move over certain fishes to play sounds to match to the backgr
 ### 5.3 Controls <a name="controls"></a>
 The controls right now are fairly lackluster at the moment. The character moves towards where they're pointing their mouse by alternating between A and D. There's very little engagment in the controls as they have no reason to match it to anything. The controller would need to be updated to follow a rhythm as they're alternating to get engagment.  
 
+We ran tests where we compared different types of controllers to try to get a good controller going. 
+
 #### 5.3.1 Interfaces <a name="interfaces"></a>
 Main Menu Example:
 
@@ -221,7 +223,7 @@ The player only has black and white colours at the start of the game.
 The player unlocks more colours as they complete various events. These events will be filled in here as the game is developed:
 - The player can swim over specific parts of the ice to play sounds. These sounds will trigger events when played in the right order.
 - Certain fish will follow the player to a location. If the player strays too far from the goal while guiding the fish will swim back to its original location.
-- The player has to swim in specific patterns to match with the fish.
+- The player has to swim in specific patterns to match with the fish. For example, if there are fishes swimming in a figure 8 under the ice, the player needs to start skating in a figure 8 as well. They'll need to do so in the same area that the fish is swimming in, but they don't need to match up exactly with the fish. So if the fish is at the bottom of the 8, the player can start at the top of the 8 and then make an 8 from there. 
 
 The player has no way of directly interacting with the wild life, as in they can not touch it. Any interaction they have will be distant.
 
