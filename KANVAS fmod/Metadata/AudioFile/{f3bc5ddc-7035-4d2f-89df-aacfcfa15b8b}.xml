@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f3bc5ddc-7035-4d2f-89df-aacfcfa15b8b}">
+		<property name="assetPath">
+			<value>LIGHTHOUSE ROTATION.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{616d99d7-e388-49b2-b8c2-05432b510aee}</destination>
+		</relationship>
+	</object>
+</objects>

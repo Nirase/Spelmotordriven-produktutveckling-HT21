@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{b1bd8062-d9d9-48ac-aee0-e0ec4cf08888}">
+		<property name="name">
+			<value>isOnSnow</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b6368afe-283d-43a1-9632-c9e2f3a9a9de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8392cbdd-8586-49f7-8596-b9f33d26ec28}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8392cbdd-8586-49f7-8596-b9f33d26ec28}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
