@@ -4,6 +4,8 @@ using UnityEngine.Rendering.Universal;
 
 public class WatercolorRendererFeature : ScriptableRendererFeature
 {
+    [SerializeField] Material watercolorGlobalEffectMaterial;
+
     class CustomRenderPass : ScriptableRenderPass
     {
         Material material;
@@ -46,8 +48,8 @@ public class WatercolorRendererFeature : ScriptableRendererFeature
 
     public override void Create()
     {
-        var material = new Material(Shader.Find("Shader Graphs/WatercolorGlobalEffect"));
-        this.renderPass = new CustomRenderPass(material);
+        //var material = new Material(Shader.Find("Shader Graphs/WatercolorGlobalEffect"));
+        this.renderPass = new CustomRenderPass(watercolorGlobalEffectMaterial);
 
         renderPass.renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
     }
