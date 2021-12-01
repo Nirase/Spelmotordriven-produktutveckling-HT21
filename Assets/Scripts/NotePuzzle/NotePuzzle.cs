@@ -17,6 +17,8 @@ public class NotePuzzle : MonoBehaviour
 
     void NotePlayed(Note note)
     {
+        if (puzzleCompleted)
+            return;
         if (note.note != notes[currentIndex])
             currentIndex = 0;
         else
