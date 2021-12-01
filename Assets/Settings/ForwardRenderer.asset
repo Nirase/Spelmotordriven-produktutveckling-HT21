@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NewWatercolorRendererFeature
   m_EditorClassIdentifier: 
   m_Active: 1
+  watercolorGlobalEffectMaterial: {fileID: 2100000, guid: 1ebf072986510b5479aa36816f1cd687, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
