@@ -17,7 +17,6 @@
   - [Wwise](#wwise)
   - [Maya & Blender](#maya-blender)
   - [Krita](#krita)
-  - [Google Documents](#google-docs)
 - [Methodology](#method)
   - [Planned Meetings](#planned-meetings)
   - [Sprints](#sprints)
@@ -42,6 +41,7 @@
 | 1.3 | 9/13 | Added and filled in Methodology, Team Composition, Tools and Risks (#1, #2, #3, #4 and #5) and added a risk diagram | Mattias Smedman |
 | 1.4 | 9/13 | Added Risks #6 and #7 | M. Smedman, I. Nyström |
 | 1.5 | 9/26 | Reformated to markdown | Danny Darwiche |
+| 1.6 | 12/01 | Added information about markdown under Github | Mattias Smedman
 
 ## Project Plan <a name="project-plan"></a>
 
@@ -70,6 +70,8 @@ Github will be used for version control as well as for general project planning.
 
 The project is going to be split into three different boards. There will be one for Pre-Production, one for Production and one for Documentation. If we end up in a situation with a lot of bugs during QA, we might create a board for bugs as well depending on how many we have.
 
+We're also going to use Markdown on Github to store our Game Design Document and our Project Plan. This is so that we have everything in the same space and don't loose track of anything. It also has good version control that lets us easily see what changes were made. 
+
 ### Discord <a name="discord"></a>
 Discord will be used for all of our meetings. Through this we can share our screens so that we can easily show others what we have done, or if we need to draw something to convey ideas more easily to each other we can do so as well.
 
@@ -84,9 +86,6 @@ We will be using both Blender and Maya for any 3D modelling that we need to do. 
 
 ### Krita <a name="krita"></a>
 Krita is a 2D art program that we will be using for any concept art and for any possible textures that we need to make.
-
-### Google Documents <a name="google-docs"></a>
-We are using google drive to store our GDD and Project Plan so that it is easily accessed by all team members, and so we can update them at the same time as each other.
 
 ## Methodology <a name="method"></a>
 ### Planned Meetings <a name="planned-meetings"></a>
