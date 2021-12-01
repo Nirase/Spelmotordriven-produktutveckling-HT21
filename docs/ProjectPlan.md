@@ -14,7 +14,7 @@
   - [GitHub](#github)
   - [Discord](#discord)
   - [Unity](#unity)
-  - [Wwise](#wwise)
+  - [Wwise](#fmod)
   - [Maya & Blender](#maya-blender)
   - [Krita](#krita)
 - [Methodology](#method)
@@ -41,7 +41,7 @@
 | 1.3 | 9/13 | Added and filled in Methodology, Team Composition, Tools and Risks (#1, #2, #3, #4 and #5) and added a risk diagram | Mattias Smedman |
 | 1.4 | 9/13 | Added Risks #6 and #7 | M. Smedman, I. Nyström |
 | 1.5 | 9/26 | Reformated to markdown | Danny Darwiche |
-| 1.6 | 12/01 | Added information about markdown under Github | Mattias Smedman
+| 1.6 | 12/01 | Added information about markdown under Github, swapped from Wwise to FMod | Mattias Smedman
 
 ## Project Plan <a name="project-plan"></a>
 
@@ -78,8 +78,8 @@ Discord will be used for all of our meetings. Through this we can share our scre
 ### Unity <a name="unity"></a>
 We will be developing the game using Unity. This means that the game will be developed in C#, and it lets us utilize their Shader graph technology, which means that the shaders we create will be done mainly through visual scripting. This makes the process for developing the game far easier, as we are relying on shaders for a lot of various aspects.
 
-### Wwise <a name="wwise"></a>
-The plan is to use Wwise to connect Unity and the Sound design together.
+### FMod <a name="FMod"></a>
+FMod is used to connect sounds and Unity together in a way where we will be able to easily adjust which sounds should be playing at specific points. 
 
 ### Maya & Blender <a name="maya-blender"></a>
 We will be using both Blender and Maya for any 3D modelling that we need to do. We are using both of them as the team members have different amounts of experience with each.
