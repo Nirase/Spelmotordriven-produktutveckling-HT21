@@ -9,6 +9,8 @@ public class LighthousePuzzle : MonoBehaviour
     [SerializeField] Transform _player;
     private Vector3 origo;
     [SerializeField] Transform _goal;
+    [SerializeField] Transform targetRotation;
+    [SerializeField] float rotationThreshold;
     [SerializeField] Flicker _light;
     [SerializeField] GameObject[] _fishes;
     float count = 0;
@@ -75,15 +77,17 @@ public class LighthousePuzzle : MonoBehaviour
                 t = 0;
             }
 
-            if (_lightHouse.position != end && isRaising)
+            if (isRaising)
             {
                 ElevateLighthouse();
             }
         }
 
-
         // End first phase.
-        if (_lightHouse.position.y >= end.y && !partOne)
+        if (_lightHouse.position.y >= end.y
+            && Vector3.Angle(new Vector3(-_lightHouse.forward.x, 0, -_lightHouse.forward.z), (new Vector3(targetRotation.position.x, 0, targetRotation.position.z)
+            - new Vector3(_lightHouse.position.x, 0, _lightHouse.position.z))) <= rotationThreshold
+            && !partOne)
         {
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             partOne = true;
@@ -161,7 +165,20 @@ public class LighthousePuzzle : MonoBehaviour
     private void ElevateLighthouse()
     {
         emitter.SetParameter(param, 0.0f);
-        if (_lightHouse.position != partialEnd)
+        if (_lightHouse.position.y >= end.y 
+            && Vector3.Angle(new Vector3(-_lightHouse.forward.x, 0, -_lightHouse.forward.z), (new Vector3(targetRotation.position.x, 0, targetRotation.position.z)
+            - new Vector3(-_lightHouse.position.x, 0, -_lightHouse.position.z))) > rotationThreshold)
+        {
+            float rotFactor;
+            if (count > 0)
+                rotFactor = -1;
+            else
+                rotFactor = 1;
+
+            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
+        }
+
+        if (_lightHouse.position != partialEnd && _lightHouse.position.y < end.y)
         {
             float rotFactor;
             if (_lightHouse.transform.position.y > partialEnd.y)
