@@ -27,6 +27,10 @@ public class LighthousePuzzle : MonoBehaviour
     Vector3 end;
     Vector3 partialEnd;
 
+    [Header("COLOR UNLOCKING")]
+    [SerializeField] ColorManager colorManager;
+    [SerializeField] ColorRemapTYPE colorType;
+
     // Sound
     FMODUnity.StudioEventEmitter emitter;
 
@@ -40,12 +44,12 @@ public class LighthousePuzzle : MonoBehaviour
         // For lerping the lighthouse position
         start = _lightHouse.transform.position;
         end = _lightHouse.transform.position + new Vector3(0, 10, 0);
-        
+
         origo = _lightHouse.transform.position;
         origo.y = 0;
 
         //For deactivating fishes untill part two
-        foreach(var gameObject in _fishes)
+        foreach (var gameObject in _fishes)
             gameObject.SetActive(false);
 
         // Sound
@@ -54,43 +58,47 @@ public class LighthousePuzzle : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
         // When first arriving to lighthouse, unscrew it from ice.
-        if(!partOne)
+        if (!partOne)
         {
-            if(count <= 0)
-            count = 0;
+            if (count <= 0)
+                count = 0;
 
             timer += Time.deltaTime;
             partialEnd = start + new Vector3(0, count * countStep, 0);
-            
-            if(timer > MaxTimer)
+
+            if (timer > MaxTimer)
             {
                 count--;
                 timer = 0;
                 t = 0;
             }
 
-            if(_lightHouse.position != end && isRaising)
+            if (_lightHouse.position != end && isRaising)
             {
                 ElevateLighthouse();
             }
         }
-     
-        // End first phase.
-        if(_lightHouse.position.y >= end.y && !partOne)
-            partOne = true;
 
-        if(partOne && !partTwo)
+
+        // End first phase.
+        if (_lightHouse.position.y >= end.y && !partOne)
         {
-            if(!fishesActive)
+            StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
+            partOne = true;
+        }
+
+        if (partOne && !partTwo)
+        {
+            if (!fishesActive)
                 ActivateFishes();
-            
-            if(escortedFish >= _fishes.Length)
+
+            if (escortedFish >= _fishes.Length)
                 partTwo = true;
         }
 
-        if(partTwo)
+        if (partTwo)
         {
             _light.flicker = false;
             Debug.Log("Puzzle Completed");
@@ -98,9 +106,9 @@ public class LighthousePuzzle : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "EscortFish")
+        if (other.gameObject.tag == "EscortFish")
         {
             escortedFish++;
             Debug.Log(escortedFish);
@@ -119,9 +127,9 @@ public class LighthousePuzzle : MonoBehaviour
     private void ActivateFishes()
     {
         fishesActive = true;
-        foreach(var gameObject in _fishes)
+        foreach (var gameObject in _fishes)
         {
-            if(gameObject.activeSelf == false)
+            if (gameObject.activeSelf == false)
                 gameObject.SetActive(true);
         }
     }
@@ -130,13 +138,13 @@ public class LighthousePuzzle : MonoBehaviour
     private void TestTurn(BoxCollider col)
     {
         var a = col.transform.position;
-        a.y = 0; 
+        a.y = 0;
         var u = origo - a;
         var temp = _player.transform.position;
         temp.y = 0;
 
         var w = temp - a;
-        var x = (u.x * w.z) - (u.z*w.x);
+        var x = (u.x * w.z) - (u.z * w.x);
 
         if (x > 0)
         {
@@ -146,17 +154,17 @@ public class LighthousePuzzle : MonoBehaviour
         else
         {
             isRaising = true;
-  
+
         }
     }
 
     private void ElevateLighthouse()
-    {   
+    {
         emitter.SetParameter(param, 0.0f);
-        if(_lightHouse.position != partialEnd)
-        {   
+        if (_lightHouse.position != partialEnd)
+        {
             float rotFactor;
-            if(_lightHouse.transform.position.y > partialEnd.y)
+            if (_lightHouse.transform.position.y > partialEnd.y)
                 rotFactor = 1;
             else
                 rotFactor = -1;
