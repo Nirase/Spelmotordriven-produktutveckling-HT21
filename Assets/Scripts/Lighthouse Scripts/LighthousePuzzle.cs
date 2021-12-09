@@ -29,6 +29,9 @@ public class LighthousePuzzle : MonoBehaviour
     Vector3 end;
     Vector3 partialEnd;
 
+    [Header("Particle System")]
+    [SerializeField] ParticleSystem dustPS;
+
     [Header("COLOR UNLOCKING")]
     [SerializeField] ColorManager colorManager;
     [SerializeField] ColorRemapTYPE colorType;
@@ -40,6 +43,8 @@ public class LighthousePuzzle : MonoBehaviour
 
     private float smin = 0.0f;
     private float smax = 1.0f;
+
+    Vector3 startPosition;
 
     void Start()
     {
@@ -57,6 +62,9 @@ public class LighthousePuzzle : MonoBehaviour
         // Sound
         emitter = GetComponentInChildren<FMODUnity.StudioEventEmitter>();
         param = emitter.Params[0].Name;
+
+        dustPS.Stop();
+        startPosition = _lightHouse.position;
     }
 
     void Update()
@@ -64,9 +72,6 @@ public class LighthousePuzzle : MonoBehaviour
         // When first arriving to lighthouse, unscrew it from ice.
         if (!partOne)
         {
-            if (count <= 0)
-                count = 0;
-
             timer += Time.deltaTime;
             partialEnd = start + new Vector3(0, count * countStep, 0);
 
@@ -75,6 +80,14 @@ public class LighthousePuzzle : MonoBehaviour
                 count--;
                 timer = 0;
                 t = 0;
+            }
+
+            if (count <= 0)
+                count = 0;
+
+            if (_lightHouse.position.y <= startPosition.y + 0.1f && count < 1)
+            {
+                dustPS.Stop();
             }
 
             if (isRaising)
@@ -91,6 +104,7 @@ public class LighthousePuzzle : MonoBehaviour
         {
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             partOne = true;
+            dustPS.Stop();
         }
 
         if (partOne && !partTwo)
@@ -121,6 +135,11 @@ public class LighthousePuzzle : MonoBehaviour
 
     public void Add(BoxCollider col)
     {
+
+        if (count == 0)
+        {
+            dustPS.Play();
+        }
         count++;
         timer = 0; // Not going down timer.
         t = 0;  // Lerp.
@@ -165,20 +184,20 @@ public class LighthousePuzzle : MonoBehaviour
     private void ElevateLighthouse()
     {
         emitter.SetParameter(param, 0.0f);
-        if (_lightHouse.position.y >= end.y 
-            && Vector3.Angle(new Vector3(-_lightHouse.forward.x, 0, -_lightHouse.forward.z), (new Vector3(targetRotation.position.x, 0, targetRotation.position.z)
-            - new Vector3(-_lightHouse.position.x, 0, -_lightHouse.position.z))) > rotationThreshold)
-        {
-            float rotFactor;
-            if (count > 0)
-                rotFactor = -1;
-            else
-                rotFactor = 1;
+        //if (_lightHouse.position.y >= end.y
+        //    && Vector3.Angle(new Vector3(-_lightHouse.forward.x, 0, -_lightHouse.forward.z), (new Vector3(targetRotation.position.x, 0, targetRotation.position.z)
+        //    - new Vector3(-_lightHouse.position.x, 0, -_lightHouse.position.z))) > rotationThreshold)
+        //{
+        //    float rotFactor;
+        //    if (count > 0)
+        //        rotFactor = -1;
+        //    else
+        //        rotFactor = 1;
 
-            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
-        }
+        //    _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
+        //}
 
-        if (_lightHouse.position != partialEnd && _lightHouse.position.y < end.y)
+        if (Mathf.Abs(partialEnd.y - _lightHouse.position.y) > 0.1f /*&& _lightHouse.position.y < end.y*/)
         {
             float rotFactor;
             if (_lightHouse.transform.position.y > partialEnd.y)
@@ -189,8 +208,10 @@ public class LighthousePuzzle : MonoBehaviour
             _lightHouse.transform.position = Vector3.Lerp(_lightHouse.transform.position, partialEnd, t);
             t += tpain * Time.deltaTime;
 
-            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
+            if (_lightHouse.position.y > end.y)
+                _lightHouse.position = end;
 
+            _lightHouse.RotateAround(_lightHouse.transform.position, Vector3.up, rotation * rotFactor * Time.deltaTime);
 
             // sound
             emitter.SetParameter(param, 0.5f);
