@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Color1
-  m_Shader: {fileID: -6465566751694194690, guid: 9a15bcfd69acdf743be8621392ee7232, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 1ded233c5776b4349aaf5d128479f567, type: 3}
   m_ShaderKeywords: MAIN_LIGHT_CALCULATE_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -123,7 +123,7 @@ Material:
     - Color_78e326e341fc4ec48b558f4279ec1d79: {r: 0.0439795, g: 0.09911796, b: 0.128, a: 0}
     - Color_950f1d915aeb4c589c0f45a49469beba: {r: 4, g: 0, b: 0, a: 0}
     - Color_b40e94301bd64178831a43a56eeb6445: {r: 0.2631274, g: 0.5928382, b: 0.764151, a: 0}
-    - Color_d6141761600a484a968c235dd2c8bcf9: {r: 0.15583839, g: 0.26155394, b: 0.3207547, a: 0}
+    - Color_d6141761600a484a968c235dd2c8bcf9: {r: 0, g: 0.039215688, b: 0.21176471, a: 1}
     - Color_e306884191fe4bccabcf71d8102fa499: {r: 0.15686275, g: 0.2627451, b: 0.32156864, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
