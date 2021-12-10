@@ -32,9 +32,12 @@ public class LighthousePuzzle : MonoBehaviour
     [Header("Particle System")]
     [SerializeField] ParticleSystem dustPS;
 
-    [Header("COLOR UNLOCKING")]
+    [Header("Color Unlocking")]
     [SerializeField] ColorManager colorManager;
     [SerializeField] ColorRemapTYPE colorType;
+
+    [Header("Door Animation")]
+    [SerializeField] Animator doorAnimator;
 
     // Sound
     FMODUnity.StudioEventEmitter emitter;
@@ -105,6 +108,7 @@ public class LighthousePuzzle : MonoBehaviour
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             partOne = true;
             dustPS.Stop();
+            doorAnimator.Play("DoorFall");
         }
 
         if (partOne && !partTwo)
