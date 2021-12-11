@@ -769,14 +769,15 @@ MonoBehaviour:
   _goal: {fileID: 742608069}
   targetRotation: {fileID: 102550946}
   rotationThreshold: 5
+  finalHeight: 20
   _light: {fileID: 815171434}
   _fishes:
   - {fileID: 87700200}
   - {fileID: 2069923726}
-  tpain: 0.1
-  rotation: -25
+  tpain: 0.07
+  rotation: -50
   MaxTimer: 1
-  countStep: 0.5
+  countStep: 2
   dustPS: {fileID: 291888178}
   colorManager: {fileID: 180996655}
   colorType: 3
@@ -953,7 +954,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -1644,7 +1645,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 6
       mode: 0
       spread: 0
       speed:
@@ -5662,7 +5663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291888176}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 73, y: -9.44, z: 490}
+  m_LocalPosition: {x: 73, y: -9.65, z: 490}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6858,6 +6859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132395682}
   - component: {fileID: 1132395683}
+  - component: {fileID: 1132395684}
   m_Layer: 0
   m_Name: DoorPivot
   m_TagString: Untagged
@@ -6873,7 +6875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132395681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -3.8}
+  m_LocalPosition: {x: 0, y: 0.8, z: -3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3765873789733789799}
@@ -6899,6 +6901,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1132395684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132395681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40234a5413d363645a882455ddbe69dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dust_PS: {fileID: 7337684721777659816, guid: 4ab05410cd71e0a4da10d4b68d9b3647, type: 3}
 --- !u!1001 &1138809868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40656,8 +40671,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148638732556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 73, y: -22.5, z: 490}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 73, y: -33.25, z: 490}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1871618057756591555}
   - {fileID: 5367916700255856984}
@@ -41888,7 +41903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2672876655171934350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 3.8}
+  m_LocalPosition: {x: 0, y: -0.8, z: 3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1132395682}
