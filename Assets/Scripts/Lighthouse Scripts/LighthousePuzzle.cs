@@ -11,6 +11,7 @@ public class LighthousePuzzle : MonoBehaviour
     [SerializeField] Transform _goal;
     [SerializeField] Transform targetRotation;
     [SerializeField] float rotationThreshold;
+    [SerializeField] float finalHeight;
     [SerializeField] Flicker _light;
     [SerializeField] GameObject[] _fishes;
     float count = 0;
@@ -21,9 +22,9 @@ public class LighthousePuzzle : MonoBehaviour
     bool isRaising = false;
     private float t = 0.0f;
     [SerializeField, Range(0, 1)] float tpain = 0.25f;
-    [SerializeField, Range(-25, 25)] float rotation = -25;
+    [SerializeField, Range(-50, 50)] float rotation = -25;
     [SerializeField, Range(1, 10)] float MaxTimer = 3f;
-    [SerializeField, Range(0, 1)] float countStep;
+    [SerializeField, Range(0, 5)] float countStep;
     private float timer = 0f;
     Vector3 start;
     Vector3 end;
@@ -53,7 +54,7 @@ public class LighthousePuzzle : MonoBehaviour
     {
         // For lerping the lighthouse position
         start = _lightHouse.transform.position;
-        end = _lightHouse.transform.position + new Vector3(0, 10, 0);
+        end = _lightHouse.transform.position + new Vector3(0, finalHeight, 0);
 
         origo = _lightHouse.transform.position;
         origo.y = 0;
