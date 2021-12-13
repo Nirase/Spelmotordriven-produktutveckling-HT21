@@ -29,41 +29,10 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
             Debug.Log("Puzzle completed");
         }
 
-        // Fail states - Cut due to not being communicated clearly.
-        // if(!completed)
-        // {
-        //     if(list.Contains(wolf) && list.Contains(goat))
-        //     {
-        //         Debug.Log("Fail state - Goat cabbage");
-        //         goat.Flee();
-
-        //     }
-        //     if(list.Contains(goat) && list.Contains(cabbage))
-        //     {
-        //         Debug.Log("Fail state - Goat cabbage");
-        //         cabbage.Flee();
-                
-        //     }
-        //     if(list.Contains(wolf) && list.Contains(goat))
-        //     {
-        //         goat.Flee();
-        //     }
-        // }
-   
-        // Solution to problem:
-        // Take the goat(A) over
-        
-        // Return
-        
-        // Take the wolf(B) or cabbage(C) over
-
-        // Return with the goat(A) // i.e. same ass flee
-        
-        // Take the cabbage(C) or wolf(B) over
-        
-        // Return
-        
-        // Take goat over(A)
+        if(completed)
+        {
+            // Do something
+        }
     }
     
     private void HandleEnterExit(){
