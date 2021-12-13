@@ -769,7 +769,7 @@ MonoBehaviour:
   _goal: {fileID: 742608069}
   targetRotation: {fileID: 102550946}
   rotationThreshold: 5
-  finalHeight: 20
+  finalHeight: 26
   _light: {fileID: 0}
   _fishes:
   - {fileID: 87700200}
@@ -6580,7 +6580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lighthouseTheme: {fileID: 753888911}
   spotLight: {fileID: 815171436}
-  frequency: 3
+  frequency: 5
   flicker: 1
 --- !u!1 &974572877
 GameObject:
@@ -40746,7 +40746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148638732556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 73, y: -33.25, z: 490}
+  m_LocalPosition: {x: 73, y: -39, z: 490}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5367916700255856984}
