@@ -9,7 +9,7 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
     [SerializeField] FollowAI goat;
     [SerializeField] FollowAI cabbage;
     List<FollowAI> list;
-    private bool completed = false;
+    public bool completed = false;
     float distance = 10f;
 
     void Start()
@@ -29,6 +29,8 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
             Debug.Log("Puzzle completed");
         }
 
+        if(Input.GetKey(KeyCode.C))
+            completed=true;
         if(completed)
         {
             // Do something
