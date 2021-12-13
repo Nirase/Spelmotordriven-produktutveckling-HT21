@@ -29,26 +29,26 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
             Debug.Log("Puzzle completed");
         }
 
-        // Fail states
-        if(!completed)
-        {
-            if(list.Contains(wolf) && list.Contains(goat))
-            {
-                Debug.Log("Fail state - Goat cabbage");
-                goat.Flee();
+        // Fail states - Cut due to not being communicated clearly.
+        // if(!completed)
+        // {
+        //     if(list.Contains(wolf) && list.Contains(goat))
+        //     {
+        //         Debug.Log("Fail state - Goat cabbage");
+        //         goat.Flee();
 
-            }
-            if(list.Contains(goat) && list.Contains(cabbage))
-            {
-                Debug.Log("Fail state - Goat cabbage");
-                cabbage.Flee();
+        //     }
+        //     if(list.Contains(goat) && list.Contains(cabbage))
+        //     {
+        //         Debug.Log("Fail state - Goat cabbage");
+        //         cabbage.Flee();
                 
-            }
-            if(list.Contains(wolf) && list.Contains(goat))
-            {
-                goat.Flee();
-            }
-        }
+        //     }
+        //     if(list.Contains(wolf) && list.Contains(goat))
+        //     {
+        //         goat.Flee();
+        //     }
+        // }
    
         // Solution to problem:
         // Take the goat(A) over
