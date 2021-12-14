@@ -15,6 +15,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     Rigidbody _rigidbody;
 
     public float displaySpeed;
+    public float RhythmThrust = 300f;
     public float Thrust = 100f;
     [SerializeField] float ThrustDecay = 0.985f;
     public float VelocityMax = 10f;
@@ -24,6 +25,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     public Vector3 _direction;
     private Vector3 target = Vector3.zero;
     private float _thrust;
+    
     float turnSmoothVelocity; // This is set via angular velocity.
     [SerializeField, Range(0, 5)] float Timer = 2;
 
@@ -64,11 +66,13 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
         {
             _lastInput = KeyCode.A;
             Thrust = _thrust;
+            Timer = 2f;
         }
         else if (Input.GetKeyDown(KeyCode.D) && _lastInput != KeyCode.D)
         {
             _lastInput = KeyCode.D;
             Thrust = _thrust;
+            Timer = 2f;
         }
     }
 
