@@ -14,6 +14,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     //
     Rigidbody _rigidbody;
 
+    [SerializeField] private Animator _animator;
     public float displaySpeed;
     public float RhythmThrust = 300f;
     public float Thrust = 100f;
@@ -24,23 +25,33 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     public Camera _camera;
     public Vector3 _direction;
     private Vector3 target = Vector3.zero;
-    private float _thrust;
+    private float _thrust; 
+    
+    private float _rhythmThrust;
+    private bool followingRhythm;
     
     float turnSmoothVelocity; // This is set via angular velocity.
     [SerializeField, Range(0, 5)] float Timer = 2;
 
+    private float rhythmTimer = 0;
+    private float tempo = 1;
     private void Awake() => _rigidbody = GetComponent<Rigidbody>();
 
     void Start()
     {
         Thrust = _rigidbody.mass * Thrust;
         _thrust = Thrust;
+        _rhythmThrust = RhythmThrust;
+        followingRhythm = true;
+        _animator = GetComponent<Animator>();
         Thrust = 0; // So we dont start the game moving.
     }
 
     void Update()
     {
         // Get mouse position, and also direction for player.
+
+        rhythmTimer += Time.deltaTime;
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         Plane plane = new Plane(Vector3.up, Vector3.zero);
         float distance;
@@ -53,26 +64,54 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
             _direction.Normalize();
         }
 
-        // This resets the input requirement.
-        // Possibly add time since last input to prevent spamming AD.
+       
         Timer -= Time.deltaTime;
         if(Timer <= 0)
         {
             Timer = 2f;
             _lastInput = KeyCode.T;
+            followingRhythm = true;
+            rhythmTimer = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.A) && _lastInput != KeyCode.A)
         {
+            _animator.Play("LeftLeg");
+            if (rhythmTimer % tempo >= 0.3)
+            {
+                Debug.Log("Tempo: " + rhythmTimer % tempo);
+                followingRhythm = false;
+            }
+            var thrustToUse = followingRhythm ? _rhythmThrust : _thrust;
+
             _lastInput = KeyCode.A;
-            Thrust = _thrust;
+            Thrust = thrustToUse;
             Timer = 2f;
+
+            if (!followingRhythm)
+                rhythmTimer = 0;
+            else
+                Debug.Log("Moving to rhythm");
         }
         else if (Input.GetKeyDown(KeyCode.D) && _lastInput != KeyCode.D)
         {
+            _animator.Play("RightLeg");
+
+            if (rhythmTimer % tempo >= 0.3)
+            {
+                Debug.Log("Tempo: " + rhythmTimer % tempo);
+                followingRhythm = false;
+            }
+            var thrustToUse = followingRhythm ? _rhythmThrust : _thrust;
+
             _lastInput = KeyCode.D;
-            Thrust = _thrust;
+            Thrust =  thrustToUse;
             Timer = 2f;
+            
+            if(!followingRhythm)
+                rhythmTimer = 0;
+            else
+                Debug.Log("Moving to rhythm");
         }
     }
 
