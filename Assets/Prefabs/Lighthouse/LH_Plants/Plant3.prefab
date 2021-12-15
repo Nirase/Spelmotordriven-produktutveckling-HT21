@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1825762927690754514}
   - component: {fileID: 3384932449130292855}
   - component: {fileID: 656757438762603197}
+  - component: {fileID: -6554300348519786712}
   m_Layer: 0
   m_Name: Plant3
   m_TagString: Plants
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cac4350820831f042ad9cd08cc4f8b5c, type: 2}
+  - {fileID: 2100000, guid: 8ea5b65ce6f080647bc960bf3a9ed115, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6554300348519786712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305402984160949096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6218336, y: 2.5401764, z: 1.5646552}
+  m_Center: {x: 0.0233773, y: 1.2700112, z: 0.08134091}

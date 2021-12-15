@@ -5,6 +5,7 @@ using UnityEngine;
 public class LighthousePuzzle : MonoBehaviour
 {
     [SerializeField] Transform _lightHouse;
+    [SerializeField] Transform lighthousePlants;
 
     [SerializeField] Transform _player;
     private Vector3 origo;
@@ -63,6 +64,8 @@ public class LighthousePuzzle : MonoBehaviour
         foreach (var gameObject in _fishes)
             gameObject.SetActive(false);
 
+        lighthousePlants.gameObject.SetActive(false);
+
         // Sound
         emitter = GetComponentInChildren<FMODUnity.StudioEventEmitter>();
         param = emitter.Params[0].Name;
@@ -106,10 +109,10 @@ public class LighthousePuzzle : MonoBehaviour
             - new Vector3(_lightHouse.position.x, 0, _lightHouse.position.z))) <= rotationThreshold
             && !partOne)
         {
-            StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             partOne = true;
             dustPS.Stop();
             doorAnimator.Play("DoorFall");
+            lighthousePlants.gameObject.SetActive(true);
         }
 
         if (partOne && !partTwo)
@@ -124,6 +127,7 @@ public class LighthousePuzzle : MonoBehaviour
         if (partTwo)
         {
             _light.flicker = false;
+            StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
             Debug.Log("Puzzle Completed");
             // dissipate storm..
         }
