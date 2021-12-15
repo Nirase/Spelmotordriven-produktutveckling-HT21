@@ -9,6 +9,7 @@ TagManager:
   - Goat
   - IcePlane
   - EscortFish
+  - Plants
   layers:
   - Default
   - TransparentFX
