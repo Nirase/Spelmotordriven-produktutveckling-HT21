@@ -8,9 +8,13 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
     [SerializeField] FollowAI wolf;
     [SerializeField] FollowAI goat;
     [SerializeField] FollowAI cabbage;
+    [SerializeField] Animator cinemachine;
     List<FollowAI> list;
     public bool completed = false;
     float distance = 10f;
+
+    [SerializeField,  Range(1, 10f)]
+    float panTime = 5f;
 
     void Start()
     {
@@ -20,6 +24,9 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
 
     void Update()
     {
+        if(completed)
+            return;
+
         HandleEnterExit();
 
         // Success
@@ -31,10 +38,19 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
 
         if(Input.GetKey(KeyCode.C))
             completed=true;
+        
         if(completed)
         {
-            // Do something
+            StartCoroutine(PlayerPan());
+            // Swap camera
         }
+    }
+
+    IEnumerator PlayerPan()
+    {
+        cinemachine.Play("BuriedCityPan");
+        yield return new WaitForSeconds(panTime);
+        cinemachine.Play("ZoomedIn");
     }
     
     private void HandleEnterExit(){
