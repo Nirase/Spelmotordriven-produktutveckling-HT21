@@ -34,7 +34,7 @@ public class ADLean_Rigidbody_Controller : MonoBehaviour
     [SerializeField, Range(0, 5)] float Timer = 2;
 
     private float rhythmTimer = 0;
-    private float inputDelay = 0.7f;
+    private float inputDelay = 0.5f;
     private void Awake() => _rigidbody = GetComponent<Rigidbody>();
 
     void Start()
