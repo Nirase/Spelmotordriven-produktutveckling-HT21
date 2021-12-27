@@ -89178,11 +89178,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3478633125013802437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb94ebc0994443c43ab5b2aca7efbf43, type: 3}
+  m_Script: {fileID: 11500000, guid: 46602184119abdd4fa07bd50aa1457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origo: {fileID: 1047313238224777559}
-  rotationSpeed: 15
+  player: {fileID: 4673427538706606374}
+  angleThreshold: 30
+  distanceThreshold: 30
+  inViewRotSpeed: 15
+  outOfViewRotSpeed: 50
 --- !u!4 &3490221459595899023
 Transform:
   m_ObjectHideFlags: 0
