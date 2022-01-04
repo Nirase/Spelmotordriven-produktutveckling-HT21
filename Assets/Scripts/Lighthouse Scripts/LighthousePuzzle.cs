@@ -33,6 +33,12 @@ public class LighthousePuzzle : MonoBehaviour
 
     [Header("Particle System")]
     [SerializeField] ParticleSystem dustPS;
+    [SerializeField] ParticleSystem puzzleCompletionPS;
+    [SerializeField] ParticleSystem stormPS;
+
+    [Header("Storm Splines")]
+    [SerializeField] Transform bigSpline;
+    [SerializeField] Transform smallSpline;
 
     [Header("Color Unlocking")]
     [SerializeField] ColorManager colorManager;
@@ -40,7 +46,6 @@ public class LighthousePuzzle : MonoBehaviour
 
     [Header("Door Animation")]
     [SerializeField] Animator doorAnimator;
-
     // Sound
     FMODUnity.StudioEventEmitter emitter;
 
@@ -50,6 +55,7 @@ public class LighthousePuzzle : MonoBehaviour
     private float smax = 1.0f;
 
     Vector3 startPosition;
+    bool puzzleComplete = false;
 
     void Start()
     {
@@ -124,10 +130,26 @@ public class LighthousePuzzle : MonoBehaviour
                 partTwo = true;
         }
 
-        if (partTwo)
+        if ((partTwo && !puzzleComplete) || Input.GetKeyDown(KeyCode.T))
         {
             _light.flicker = false;
             StartCoroutine(ColorManager.UnlockColor(colorManager, colorType));
+            puzzleCompletionPS.Play();
+            stormPS.Stop();
+            puzzleComplete = true;
+
+            foreach (Transform trans in bigSpline.transform)
+            {
+                trans.GetComponent<ParticleSystem>().Stop();
+                trans.GetComponent<Wind>().enabled = false;
+            }
+            
+            foreach (Transform trans in smallSpline.transform)
+            {
+                trans.GetComponent<ParticleSystem>().Stop();
+                trans.GetComponent<Wind>().enabled = false;
+            }
+
             Debug.Log("Puzzle Completed");
             // dissipate storm..
         }
