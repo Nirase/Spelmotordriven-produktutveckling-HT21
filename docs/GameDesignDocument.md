@@ -137,7 +137,7 @@ We wanted to create a game that people of any gender could resonate with, to go 
 ### 2.1 Gameplay synopsis <a name="gameplay-synopsis"></a>
 We want to create a very relaxing gameplay loop. The main gameplay loop is simply ice skating without any overwhelmingly complex controls. As the player skates, music will be created through their movement, and the world will react to them based on their input. Through this we hope to create a unique experience.
 
-The game starts off black and white, in the middle of a frozen body of water. The music will be quiet and feel sad, but as the player explores, the world starts to be filled in with colour and the music starts changing. We’re going to aim for a look that reminds people of solitude in a montone world, we don’t want it to be realistic but we want it to be something that the players can relate to. As the colors return to the world we want the player to feel relaxed and comfortable in the game world.
+The game starts off black and white, in the middle of a frozen body of water. The music will be quiet and feel sad, but as the player explores, the world starts to be filled in with colour and the music starts changing. We’re going to aim for a look that reminds people of solitude in a monotone world, we don’t want it to be realistic but we want it to be something that the players can relate to. As the colours return to the world we want the player to feel relaxed and comfortable in the game world.
 
 </details>
 
@@ -157,14 +157,14 @@ We’re aiming to have low system requirements as we are not going for very real
 ### 3.4 Top performers <a name="top-performers"></a>
 ABZU (2016) is one of the best selling games of this type of casual gameplay. In ABZU, you play as a diver swimming alongside aquatic life, and you explore the world that’s under the water directly. While we could not find direct sales figures, it was near the top of the week and month of it’s release on every platform it was released on.
 
-A short hike (2019) is another game that sold very well in a similar genre. In a short hike, the player is tasked with climbing a mountain, and to do so they must interact with the world to unlock new abilities. A short hike also sold very well, doing incredibly well on the Switch compared to how they did on Steam, even though they also did well on Steam.
+A short hike (2019) is another game that sold very well in a similar genre. In a short hike, the player is tasked with climbing a mountain, and to do so they must interact with the world to unlock new abilities. A short hike also sold very well, doing incredibly well on the Switch compared to how they did on Steam, even though it also did well on Steam.
 
 Journey (2012) is a game that’s known worldwide for its amazing success. In Journey, the player is a robed figure that travels across a vast desert. In Journey there are no words spoken, even though the player can even interact with other players at times. While the exact figures are hard to find, it’s very easy to find that Journey was a very popular game that sold incredibly well on every platform it was released on.
 
 We also took inspiration from The Ramp (2021). The ramp is a simple game where the player plays as a skateboarder on a ramp. While it differs a bit from the previous games, we were inspired by the very simple but catching mechanics of the game. The ramp isn’t nearly as well known as the games mentioned previously, but it is still a game that was well received by those that have played it.
 
 ### 3.5 Feature comparison <a name="feature-comparison"></a>
-In the first three games mentioned, the player is still actively involved in making events transpire. We aim to create a game where even though the play interacts with the world, it should not feel like the player is in control of the world. Through the use of ice, we have a constant layer between the world that the player is interacting with and the player themself. The colour mechanic is also something that these games do not have. Seeing the world gain colour we hope evokes a feeling of exploration, without the world actually having been changed itself, compared to these games where the world changes because the player is in new areas.
+In the first three games mentioned, the player is still actively involved in making events transpire. We aim to create a game where even though the player interacts with the world, it should not feel like the player is in control of the world. Through the use of ice, we have a constant layer between the world that the player is interacting with and the player themself. The colour mechanic is also something that these games do not have. Seeing the world gain colour we hope evokes a feeling of exploration, without the world actually having been changed itself, compared to these games where the world changes because the player is in new areas.
 
 ### 3.6 Sales expectations <a name="sales-expectations"></a>
 Our plan was to release the game on Itch or Steam, however due to time constraints we've decided not to do so. 
@@ -194,7 +194,7 @@ While we kept all of these things in mind as we worked on the project, as we dec
 <summary> Click to expand! </summary>
 
 ### 5.1 Overview <a name="overview"></a>
-The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, and as they explore the world they will encounter wild life, typically that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see new colours.
+The core gameplay loop is incredibly simple. The game starts off black and white, and the player moves on the ice through skating, and as they explore the world they will encounter wild life, that lives under the ice, that they can sync up with to create unique events. After triggering a big event, the player will unlock the ability to see new colours.
 
 ![Gameplay](https://drive.google.com/uc?export=view&id=1BFIyZmLKUMcRTxv-Z7jZ3JtbRwBXypP6)
 
@@ -210,11 +210,11 @@ The player has follow the pattern of fish to activate the lighthouse, then they 
 ### 5.3 Controls <a name="controls"></a>
 The character moves towards where they're pointing their mouse by alternating between A and D. The controller still has to be fine tuned to make the player follow a simple rythm or at least alternate between A and D to get forward momentum. Right now the thrust is to high and the decay/friction is to low, which means that simply pressing A or D will make the character skate much further than what is desired.  
 
-We ran tests where we compared different types of controllers to try to get a good controller going. We tests a total of 7 different controllers, two of them standing out as the best ones. From the test results, we made the decision to focus on a controller that's based on Rhythm. The controller still needs a lot of work to become engaging, however considering the minimal amount of active controls the game has we found that it's best to have a character controller that does require some level of engagement. 
+We ran tests where we compared different types of controllers to try to get a good controller going. We tested a total of 7 different controllers, two of them standing out as the best ones. From the test results, we made the decision to focus on a controller that's based on Rhythm. The controller still needs a lot of work to become engaging, however considering the minimal amount of active controls the game has we found that it's best to have a character controller that does require some level of engagement. 
 Test results can be found here: https://docs.google.com/forms/d/1Cpn-qBux9VwBPjD6pvHw3jEIJgguhTKkajAR1MG92Us/edit?usp=sharing
 
 #### 5.3.1 Interfaces <a name="interfaces"></a>
-Main Menu Example:
+Main Menu Example - not implemented:
 
 ![MainMenu](https://drive.google.com/uc?export=view&id=1PG7Oyxe07W6tfUmoL7jBdFJYS293GUHi)
 
@@ -234,13 +234,15 @@ The player has no way of directly interacting with the wild life, as in they can
 
 Wildlife fish will be swimming around under the ice for the player to look at. Most of these will be swimming aimlessly.
 
-If the player gets lost or does not make progress for a certain amount of time, a noticeable fish will help guide the player towards their goal.
+If the player gets lost or does not make progress for a certain amount of time, a noticeable fish will help guide the player towards their goal. - currently not implemented in build.
 
 ### 5.5 Game Procedures <a name="game-procedures"></a>
-The player wakes up, with no colours unlocked. They explore the ice and find one of a few events, finishing it will unlock a new colour. Once they’ve done this for all the events, the game is finished.
+The player wakes up, with no colours unlocked. They explore the ice and find one of a few events, interacting with the puzzles will unlock new colours. Once they’ve done this for all the events, the game is finished.
 
 ### 5.6 Scoring/winning conditions <a name="score-win-conditions"></a>
 The win condition of the game happens when the player has finished all the major events and they have unlocked all the colours. When they’ve done this, the game will trigger an ‘end scene’ event that will be a drastic encounter that makes the player lose all their colours again for a short while. Once they get them all back to a short impactful moment, the game will end.
+
+The 'end scene' as described above is not in the game as of now. 
 
 ### 5.7 Modes and other features <a name="modes"></a>
 After the game has ended the player is free to skate around on the ice.
