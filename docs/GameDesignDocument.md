@@ -123,7 +123,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 | 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 | 1.8 | 13/01/2022 | Updated Segments about "I am no man" and the controller. | Jonathan Ryytty
-| 1.9 | 13/01/2022 | Updated 2.1, 5.8, 5.9, 6 | Jonathan Ryytty
+| 1.9 | 13/01/2022 | Updated 2.1, 5.8, 5.9, 6, 7.1, 7.2, 8.2 | Jonathan Ryytty
 
 </details>
 
@@ -320,11 +320,9 @@ We will be utilizing a few versions of AI to create a natural feeling wildlife. 
 <summary> Click to expand! </summary>
 
 ### 7.1 Synopsis <a name="synopsis"></a>
-A lost ice-skater befriends a fish and restores colour and music to the world. The fish dies and the protagonist becomes sad. Later the fish is revealed to be alive and the world becomes vibrant again.
+A lost ice-skater befriends a fish and restores colour and music to the world.
 
 ### 7.2 Complete story <a name="complete-story"></a>
-This is your chance to outline the entire story. Do not just tell the story, structure it as it will unfold in the gameplay and try to follow the dramatic arcs presented in class.
-
 **Chapter 1**:
 
 The basic premise of the story is as follows: The polar ice caps have melted and the world has been flooded. A new ice age begins and the ocean is frozen yet again. Leaving only the tip of once recognizable landmarks above the heavy curtain of ice.
@@ -333,51 +331,32 @@ Lost and frozen our protagonist wakes up with no memories of events prior. As th
 
 Wandering the desolated planes of ice our protagonist crosses paths with seemingly the only other life around. A little red fish. This strange meeting does not go as planned as the red fish initially is avoidant of any interaction.
 
-. . .
-
-Note: - Below are writing prompts used to plot out key happenings in the story.
-
 **Chapter 2**:
 
 As our protagonist learns more of the world she understands that through ice-skating the world can be altered.
 
-**Chapter ?**:
+**Chapter 3**:
 
 The little red fish who now has become a friend in need dies. The death of the fish launches our protagonist back into a cycle of hopelessness as the “colours of music” fade once more.
 
 **Ending**:
 
-Suddenly powerful rhythmic thuds can be felt as the ice shakes. The thuds seem to hint at our protagonist, urging her to follow and investigate. Following the thuds to its source it becomes clear that our friend the red fish survived. This reveal makes our protagonist so happy the “colors of music” return.
+Suddenly powerful rhythmic thuds can be felt as the ice shakes. The thuds seem to hint at our protagonist, urging her to follow and investigate. Following the thuds to its source it becomes clear that our friend the red fish survived. This reveal makes our protagonist so happy the “colours of music” return.
 
 ### 7.3 Backstory <a name="backstory"></a>
-Describe any important elements of your story that do not tie directly into the gameplay. For instance, the backstory of how the dwarfs found ancient weapons and as such they dominate the region. It does not need to make it to the actual game but it is good as reference.
-
 As mentioned, the story takes place on a large frozen over sea. In this story the presence of music and colours are tied together. Meaning music has a dimension of form and colour.
 
 ### 7.4 Narrative devices <a name="narrative-devices"></a>
-Describe the various ways in which you plan to reveal the story. What are the devices you plan to use to tell the story?
-
 The story is never told explicitly but instead via exploration and interaction with the environment. Ice being see-through lends itself to telling stories under the ice.
-
-### 7.5 Subplots <a name="subplots"></a>
-Since games do not need to be linear, there might be numerous smaller stories interwoven into the main story. Describe each of these subplots and explain how they tie into the gameplay and the master plot.
-
-#### 7.5.1 Subplot #1 <a name="subplot1"></a>
-Our protagonist encounters a ginormous eye frozen solid near the surface of the ice. Later as colour is restored the eye opens and the iris starts looking around. This orca is later responsible for the loud thuds guiding our player back to the red fish.
-
-#### 7.5.2 Subplot #2 <a name="subplot2"></a>
-tbd
-
-</details>
 
 ## :earth_africa: 8- The Game World <a name="game-world"></a>
 <details>
 <summary> Click to expand! </summary>
 
 ### 8.1 Overview <a name="overview"></a>
-In a lot of ways the world is reminiscent to ours taking place in a not so distant future. The exception however is that the world is flooded by the oceans with a thick layer of ice encapsulating it. The players world exists only on the ice. The aquatic life however live freely within the ruins of the past civilization.
+In a lot of ways the world is reminiscent to ours, the story taking place in a not so distant future. The exception however is that the world is flooded by the oceans with a thick layer of ice encapsulating it. The players world exist only on the ice. The aquatic life however live freely within the ruins of the past civilization.
 
-It is a cold and desolate world for anything above the surface, with the only colors left being black and white. With time, warmth is restored to the world through music, colors and friendship as the player interacts with the world around them. Whilst the environmental setting is explicit, the majority of elements in the world are left implicit. An empty canvas onto which the player can project their own interpretation and meaning hence the games title and the game starting of as black and white but allowing the player to create music and even draw on the ice with their trails.
+It is a cold and desolate world for anything above the surface, with the only colours left being black and white. With time, warmth is restored to the world through music, colors and friendship as the player interacts with the world around them. Whilst the environmental setting is explicit, the majority of elements in the world are left implicit. An empty canvas onto which the player can project their own interpretation and meaning hence the games title and the game starting of as black and white but allowing the player to create music and even draw on the ice with their trails.
 
 ### 8.2 Key locations <a name="key-locations"></a>
 The game will feature a lot of locations, some more important than others. They can be categorized as 2 types, Essential and Atmospheric. The essential locations are the ones outlined in section 5.8 Levels. The player is required to find them in order to complete the game. The atmospheric locations can be thought of as decorations. They fill the world with variation, breaking up the monotony of the otherwise flat and boring world the player would be presented when skating from one essential location to the next. The atmospheric don't serve an interactive purpose. They are mostly a visual component which also helps the player orient themselves in the world and get a sense of direction.
@@ -385,17 +364,17 @@ The game will feature a lot of locations, some more important than others. They 
 List of implemented locations:
 
 <details>
-<summary> The lighthouse </summary>
+<summary> The Lighthouse </summary>
 
 - **Type**: Essential
 - **Number of colors**: 0-3
 - **Breadcrumb**: Snow storm, light beam
-- **Description**: The lighthouse is covered in a heavy snow storm. Only at the eye of the storm can tranquility be found. The player must endure the storm and push their way through despite its attempts to force the player out. Inside the storm the player has little chance of navigating through since they will be moved and rotated by the storm all the while the view is very limited. They are however not alone. The lighthouse is full with water with eels living inside. Whenever they release a pulse of electricity the lighthouse lights up for a couple of seconds. This will give the player the direction they need to navigate the storm. Thus, even after civilizations fall the trusty lighthouse still fulfills its purpose (with a little help from its new residents). Thematically the storm and lighthouse represent the feeling of being lost and overwhelmed yet overcoming adversity and finding a state of peace thanks to a little help. Once at the center, the player can perform some interaction to unlock a color.
+- **Description**: The lighthouse is covered in a heavy snow storm. Only at the eye of the storm can tranquility be found. The player must endure the storm and push their way through despite its attempts to force the player out. Inside the storm the player has little chance of navigating through since they will be moved and rotated by the storm all the while the view is very limited. They are however not alone. The lighthouse is full with water with eels living inside. Whenever they release a pulse of electricity the lighthouse lights up for a couple of seconds. This will give the player the direction they need to navigate the storm. Thus, even after civilizations fall the trusty lighthouse still fulfills its purpose (with a little help from its new residents). Thematically the storm and lighthouse represent the feeling of being lost and overwhelmed yet overcoming adversity and finding a state of peace thanks to a little help. Once at the center, the player can unscrew the lighthouse to unlock a trail of pulsating plants that guide them to a pair of eels. Leading the eels back to the lighthouse fully powers it.
 
 </details>
 
 <details>
-<summary> Greek Pillar </summary>
+<summary> The Greek Pillar </summary>
 
 - **Type**: Essential
 - **Number of colors**: 0-3
@@ -405,7 +384,7 @@ List of implemented locations:
 </details>
 
 <details>
-<summary> The buried city </summary>
+<summary> The Sunken City </summary>
 
 - **Type**: Essential
 - **Number of colors**: 0-3
@@ -417,7 +396,7 @@ List of implemented locations:
 List of planned locations:
 
 <details>
-<summary> The dead tree </summary>
+<summary> The Dead Tree </summary>
 
 - **Type**: Essential
 - **Number of colors**: None
@@ -427,7 +406,7 @@ List of planned locations:
 </details>
 
 <details>
-<summary> The power plant </summary>
+<summary> The Power Plant </summary>
 
 - **Type**: Essential
 - **Number of colors**: 0-3
@@ -436,9 +415,8 @@ List of planned locations:
 
 </details>
 
-
 <details>
-<summary> The new tree </summary>
+<summary> The New Tree </summary>
 
 - **Type**: Essential
 - **Number of colors**: 4
@@ -448,7 +426,7 @@ List of planned locations:
 </details>
 
 <details>
-<summary> The ice canyon </summary>
+<summary> The Ice Canyon </summary>
 
 - **Type**: Atmospheric
 - **Number of colors**: None
@@ -458,7 +436,7 @@ List of planned locations:
 </details>
 
 <details>
-<summary> The frozen waterfalls </summary>
+<summary> The Frozen Waterfalls </summary>
 
 - **Type**: Atmospheric
 - **Number of colors**: None
@@ -468,7 +446,7 @@ List of planned locations:
 </details>
 
 <details>
-<summary> The flower field </summary>
+<summary> The Flower Field </summary>
 
 - **Type**: Atmospheric
 - **Number of colors**: None
@@ -478,7 +456,7 @@ List of planned locations:
 </details>
 
 <details>
-<summary> The orca </summary>
+<summary> The Orca </summary>
 
 - **Type**: Atmospheric
 - **Number of colors**: None
@@ -495,7 +473,7 @@ List of planned locations:
 Travel will be done through skating. No fast travel.
 
 ### 8.4 Mapping <a name="mapping"></a>
-Open world, divided into five zones each containing a key location.
+Open world, divided into four zones each containing a key location.
 
 ### 8.5 Scale <a name="scale"></a>
 It will take the player a few minutes to skate the map border to border.
@@ -517,16 +495,16 @@ The game will feature different weather conditions. These range from rain and sn
 **Storm** will have similar functionality to wind however it limits the players visibility and attempts to push them out and rotate them making the storms very hard to navigate.
 
 ### 8.8 Day and night <a name="day-and-night"></a>
-TBD
+No day and night cycle.
 
 ### 8.9 Time <a name="time"></a>
 Real time.
 
 ### 8.10 Physics <a name="physics"></a>
-Real life physics (more or less).
+Real life physics(more or less).
 
 ### 8.11 Society/culture <a name="society-culture"></a>
-Because the game takes place in a near future setting to our own a lot of the societal and cultural setting is similar to our own. However, because the world is flooded this civilization has disappeared and the only remnant of humanity could be the main character. Whether or not the player is the last human alive is outside the scope of the story, which focuses on more personal issues like depression or loss. The frozen world is a catalyst to visualize these issues.
+Because the game takes place in a near future setting to our own a lot of the societal and cultural setting is similar to our own. However, because the world is flooded this civilization has disappeared and the only remnant of humanity could be the main character. Whether or not the player is the last human alive is outside the scope of the story, which focuses on more personal issues like depression and/or loss. The frozen world is a catalyst to visualize these issues.
 
 </details>
 
