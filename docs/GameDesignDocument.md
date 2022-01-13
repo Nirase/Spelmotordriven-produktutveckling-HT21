@@ -123,7 +123,8 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 | 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 | 1.8 | 13/01/2022 | Updated Segments about "I am no man" and the controller. | Jonathan Ryytty
-| 1.9 | 13/01/2022 | Updated 2.1 | Jonathan Ryytty
+| 1.9 | 13/01/2022 | Updated 2.1, 5.8 | Jonathan Ryytty
+
 </details>
 
 ## :mag_right: 2- Goals and Vision <a name="goals-vision"></a>
@@ -252,48 +253,35 @@ The game does not feature levels in the traditional sense since the game has a n
 
 Overarching gameplay loop: https://drive.google.com/file/d/1-4__o4EzDIySvH8s6Br-YFQ4dfTtT3HE/view?usp=sharing
 
-#### 5.8.1 Level 0 - The dead tree <a name="level-0"></a>
+#### 5.8.1 Level 0 - The Dead Tree <a name="level-0"></a>
 This is the area the player starts the game from and is placed at the center of the map. At the start of the game, when the player has no colors unlocked, this area is barren and the only thing the player can outline is the stem and branches of a tree. This tree and area is a central location to the game as it will change throughout the playthrough and be the final location the player needs to return to once all colors have been unlocked. This serves as a tutorial, introducing the companion fish and teaching the player how to skate and sync to the music.
 
 *[Images/sketches of the location to be added.]*
 
-#### 5.8.2 Level L - The lighthouse <a name="level-l"></a>
-The lighthouse is located at the eye of a storm. The player has to navigate through the storm to reach this place. The storm is hard to navigate through and constantly pushes the player away from the center disorienting them. The lighthouse is filled with water, inhabited by countless of eels. Every now and then they send out shocks of electricity, temporarily lighting the lighthouse. The player can use this beam of light whenever it appears to realign themselves and push through towards the center. At the center it is calm and quiet. Some interaction is to be performed here.
+#### 5.8.2 Level L - The Lighthouse <a name="level-l"></a>
+The lighthouse is located at the eye of a storm. The player has to navigate through the storm to reach this place. The storm is hard to navigate through and constantly pushes the player away from the center disorienting them. The lighthouse is filled with water, inhabited by countless of eels. Every now and then they send out shocks of electricity, temporarily lighting the lighthouse. The player can use this beam of light whenever it appears to realign themselves and push through towards the center. At the center it is calm and quiet. By following the fish the player unscrews the lighthouse from the ice, uncovering a previously inaccessible door. A path of underwater flowers then light up, guiding the player towards the eels. By escorting the eels back to the lighthouse, it fully powers up and the storm dissipates.  
 
 *[Images/sketches of the location to be added.]*
 
 Level flowchart: https://drive.google.com/file/d/1mDCbwUYssJ9XJ9M5tQRYUtp0U5y84dj2/view?usp=sharing
 
-One thing that can cause issues with this level is that there might be a lack of hints to find the eels and that the player needs to bring them to the lighthouse. 
-
-#### 5.8.3 Level P - The power plant <a name="level-p"></a>
-The plant is a submerged frozen power plant with large silos and chimneys extruding the ice. Different types of animals use this place as their playground creating music with the different parts of the plant. For instance frogs croaking into the large silos to create reverbs and echoes. The play is expected to accompany their music with their own to complete some interaction.
-
-*[Images/sketches of the location to be added.]*
-
-#### 5.8.4 Level B - The buried city <a name="level-b"></a>
-The buried city is an area of the game where a large city is buried under ice. The player can skate freely around above it and see aquatic life that has inhabited the buildings and streets. In this city different types of fish are lost and the player needs to lead them back to their shoal. The player thus explores the city and helps the animals they find.
-
-*[Images/sketches of the location to be added.]*
-
-Level flowchart: https://drive.google.com/file/d/1ZUcQ0RVCuDzP8rbtrx7SQ0J72NVOUj--/view?usp=sharing
-
-One thing that can cause issues with this level is a lack of direction and hints at how the puzzle works. To combat this, we could make use of colours that corrospond to each of the friendly fishes, that lights up in different ways based on if the player is doing the puzzle correctly or not. We could also make use of graffiti on the walls that show which fish can be next to another fish. 
-
-#### 5.8.5 Level 5 - The new tree <a name="level-5"></a>
-The new tree is the same location as the dead tree (level 0). The difference is that the player, at this stage, has unlocked all the colors and the scene has thus changed. The area is now sprawling with life and color. This is the place where the finale of the game will take place. Whilst the ending isn't finished one thought is a confrontation with the orca.
-
-*[Images/sketches of the location to be added.]*
-
-#### 5.8.6 Level P - The Greek Pillar <a name="level-P"></a>
+#### 5.8.3 Level G - The Greek Pillar aka Note Puzzle <a name="level-P"></a>
 The greek pillar is an area filled with colourful groups of fishes. The player can skate around the pillar, which has some colorful flowers on top. As the player approaches the pillar, music becomes more prominent, and the player can hear notes being played in a specific order. When they swim over the groups of fishes, they play different notes. If they play the notes in the same order as the music in the background, they complete a puzzle. 
 
 Level flowchart:
 https://drive.google.com/file/d/1_7daFsi9JBPuy-SfB0WRd9G5sH8q0pIB/view?usp=sharing
 
+#### 5.8.4 Level B - The Sunken City <a name="level-b"></a>
+The sunken city is an area of the game where a large city is buried under ice. The player can skate freely around above it and see aquatic life that has inhabited the buildings and streets. In this city dangerous sharks patrol the streets and different types of fish are trapped. The player needs to escort them out of harms way. The player thus explores the city and helps the animals they find.
 
+*[Images/sketches of the location to be added.]*
 
-#### 5.8.7 Level *[Letter]* - The *[name]* <a name="level-letter"></a>
+#### 5.8.5 Level 5 - The New Tree <a name="level-5"></a>
+The new tree is the same location as the dead tree (level 0). The difference is that the player, at this stage, has unlocked all the colors and the scene has thus changed. The area is now sprawling with life and color. This is the place where the finale of the game will take place. Whilst the ending isn't finished one thought is a confrontation with the orca.
+
+*[Images/sketches of the location to be added.]*
+
+#### 5.8.6 Level *[Letter]* - The *[name]* <a name="level-letter"></a>
 [Location still to be determined]
 
 ### 5.9 Flowchart <a name="flowchart"></a>
