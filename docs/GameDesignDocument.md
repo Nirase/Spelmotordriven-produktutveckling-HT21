@@ -123,6 +123,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 | 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 | 1.8 | 13/01/2022 | Updated Segments about "I am no man" and the controller. | Jonathan Ryytty
+| 1.9 | 13/01/2022 | Updated 2.1 | Jonathan Ryytty
 </details>
 
 ## :mag_right: 2- Goals and Vision <a name="goals-vision"></a>
@@ -136,7 +137,7 @@ We wanted to create a game that people of any gender could resonate with, to go 
 ### 2.1 Gameplay synopsis <a name="gameplay-synopsis"></a>
 We want to create a very relaxing gameplay loop. The main gameplay loop is simply ice skating without any overwhelmingly complex controls. As the player skates, music will be created through their movement, and the world will react to them based on their input. Through this we hope to create a unique experience.
 
-The game starts off black and white, in the middle of a frozen body of water. The music will be quiet and feel sad, but as the player explores, the world starts to be filled in with colour and the music starts changing. We’re going to aim for a look that reminds people of Ink and Watercolours, we don’t want it to be realistic but we want it to be something that the players can relate to, and that they feel relaxed by.
+The game starts off black and white, in the middle of a frozen body of water. The music will be quiet and feel sad, but as the player explores, the world starts to be filled in with colour and the music starts changing. We’re going to aim for a look that reminds people of solitude in a montone world, we don’t want it to be realistic but we want it to be something that the players can relate to. As the colors return to the world we want the player to feel relaxed and comfortable in the game world.
 
 </details>
 
