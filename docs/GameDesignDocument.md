@@ -168,7 +168,7 @@ We also took inspiration from The Ramp (2021). The ramp is a simple game where t
 In the first three games mentioned, the player is still actively involved in making events transpire. We aim to create a game where even though the player interacts with the world, it should not feel like the player is in control of the world. Through the use of ice, we have a constant layer between the world that the player is interacting with and the player themself. The colour mechanic is also something that these games do not have. Seeing the world gain colour we hope evokes a feeling of exploration, without the world actually having been changed itself, compared to these games where the world changes because the player is in new areas.
 
 ### 3.6 Sales expectations <a name="sales-expectations"></a>
-Our plan was to release the game on Itch or Steam, however due to time constraints we've decided not to do so. 
+Our plan was to release the game on Itch or Steam, however due to time constraints we've decided not to do so.
 
 </details>
 
@@ -202,16 +202,16 @@ The core gameplay loop is incredibly simple. The game starts off black and white
 ### 5.2 Gameplay description <a name="gameplay-description"></a>
 As the player moves through the world, they will encounter different events. The player will need to interact with these events through various means. The ways to interact with the events is the following ways:
 
-Leading a fish from one point to another. The player has to lead different fishes to an end destiniation, and doing so completes a puzzle. 
+Leading a fish from one point to another. The player has to lead different fishes to an end destiniation, and doing so completes a puzzle.
 
 The player has to move over certain fishes to play sounds to match to the background music.
-  
+
 The player has follow the pattern of fish to activate the lighthouse, then they have to escort eels to the lighthouse to complete the puzzle.
 
 ### 5.3 Controls <a name="controls"></a>
-The character moves towards where they're pointing their mouse by alternating between A and D. The controller still has to be fine tuned to make the player follow a simple rythm or at least alternate between A and D to get forward momentum. Right now the thrust is to high and the decay/friction is to low, which means that simply pressing A or D will make the character skate much further than what is desired.  
+The character moves towards where they're pointing their mouse by alternating between A and D. The controller still has to be fine tuned to make the player follow a simple rythm or at least alternate between A and D to get forward momentum. Right now the thrust is to high and the decay/friction is to low, which means that simply pressing A or D will make the character skate much further than what is desired.
 
-We ran tests where we compared different types of controllers to try to get a good controller going. We tested a total of 7 different controllers, two of them standing out as the best ones. From the test results, we made the decision to focus on a controller that's based on Rhythm. The controller still needs a lot of work to become engaging, however considering the minimal amount of active controls the game has we found that it's best to have a character controller that does require some level of engagement. 
+We ran tests where we compared different types of controllers to try to get a good controller going. We tested a total of 7 different controllers, two of them standing out as the best ones. From the test results, we made the decision to focus on a controller that's based on Rhythm. The controller still needs a lot of work to become engaging, however considering the minimal amount of active controls the game has we found that it's best to have a character controller that does require some level of engagement.
 Test results can be found here: https://docs.google.com/forms/d/1Cpn-qBux9VwBPjD6pvHw3jEIJgguhTKkajAR1MG92Us/edit?usp=sharing
 
 #### 5.3.1 Interfaces <a name="interfaces"></a>
@@ -229,7 +229,7 @@ The player only has black and white colours at the start of the game.
 The player unlocks more colours as they complete various events. These events will be filled in here as the game is developed:
 - The player can swim over specific parts of the ice to play sounds. These sounds will trigger events when played in the right order.
 - Certain fish will follow the player to a location. If the player strays too far from the goal while guiding the fish will swim back to its original location.
-- The player has to swim in specific patterns to match with the fish. For example, if there are fishes swimming in a figure 8 under the ice, the player needs to start skating in a figure 8 as well. They'll need to do so in the same area that the fish is swimming in, but they don't need to match up exactly with the fish. So if the fish is at the bottom of the 8, the player can start at the top of the 8 and then make an 8 from there. 
+- The player has to swim in specific patterns to match with the fish. For example, if there are fishes swimming in a figure 8 under the ice, the player needs to start skating in a figure 8 as well. They'll need to do so in the same area that the fish is swimming in, but they don't need to match up exactly with the fish. So if the fish is at the bottom of the 8, the player can start at the top of the 8 and then make an 8 from there.
 
 The player has no way of directly interacting with the wild life, as in they can not touch it. Any interaction they have will be distant.
 
@@ -243,7 +243,7 @@ The player wakes up, with no colours unlocked. They explore the ice and find one
 ### 5.6 Scoring/winning conditions <a name="score-win-conditions"></a>
 The win condition of the game happens when the player has finished all the major events and they have unlocked all the colours. When they’ve done this, the game will trigger an ‘end scene’ event that will be a drastic encounter that makes the player lose all their colours again for a short while. Once they get them all back to a short impactful moment, the game will end.
 
-The 'end scene' as described above is not in the game as of now. 
+The 'end scene' as described above is not in the game as of now.
 
 ### 5.7 Modes and other features <a name="modes"></a>
 After the game has ended the player is free to skate around on the ice.
@@ -259,14 +259,14 @@ This is the area the player starts the game from and is placed at the center of 
 *[Images/sketches of the location to be added.]*
 
 #### 5.8.2 Level L - The Lighthouse <a name="level-l"></a>
-The lighthouse is located at the eye of a storm. The player has to navigate through the storm to reach this place. The storm is hard to navigate through and constantly pushes the player away from the center disorienting them. The lighthouse is filled with water, inhabited by countless of eels. Every now and then they send out shocks of electricity, temporarily lighting the lighthouse. The player can use this beam of light whenever it appears to realign themselves and push through towards the center. At the center it is calm and quiet. By following the fish the player unscrews the lighthouse from the ice, uncovering a previously inaccessible door. A path of underwater flowers then light up, guiding the player towards the eels. By escorting the eels back to the lighthouse, it fully powers up and the storm dissipates.  
+The lighthouse is located at the eye of a storm. The player has to navigate through the storm to reach this place. The storm is hard to navigate through and constantly pushes the player away from the center disorienting them. The lighthouse is filled with water, inhabited by countless of eels. Every now and then they send out shocks of electricity, temporarily lighting the lighthouse. The player can use this beam of light whenever it appears to realign themselves and push through towards the center. At the center it is calm and quiet. By following the fish the player unscrews the lighthouse from the ice, uncovering a previously inaccessible door. A path of underwater flowers then light up, guiding the player towards the eels. By escorting the eels back to the lighthouse, it fully powers up and the storm dissipates.
 
 *[Images/sketches of the location to be added.]*
 
 Level flowchart: https://drive.google.com/file/d/1mDCbwUYssJ9XJ9M5tQRYUtp0U5y84dj2/view?usp=sharing
 
 #### 5.8.3 Level G - The Greek Pillar aka Note Puzzle <a name="level-P"></a>
-The greek pillar is an area filled with colourful groups of fishes. The player can skate around the pillar, which has some colorful flowers on top. As the player approaches the pillar, music becomes more prominent, and the player can hear notes being played in a specific order. When they swim over the groups of fishes, they play different notes. If they play the notes in the same order as the music in the background, they complete a puzzle. 
+The greek pillar is an area filled with colourful groups of fishes. The player can skate around the pillar, which has some colorful flowers on top. As the player approaches the pillar, music becomes more prominent, and the player can hear notes being played in a specific order. When they swim over the groups of fishes, they play different notes. If they play the notes in the same order as the music in the background, they complete a puzzle.
 
 Level flowchart:
 https://drive.google.com/file/d/1_7daFsi9JBPuy-SfB0WRd9G5sH8q0pIB/view?usp=sharing
@@ -294,6 +294,8 @@ EX) **Section A**: Has the interaction of guiding a single lost red fish back to
 **Section E**: This is the final area of the game. When all other areas have been completed the end event happens here
 
 ![WorldLayout](https://drive.google.com/uc?export=view&id=1LcCZqW5GkJ2moDL5mDXKRCWWynhtrk5-)
+
+</details>
 
 ## :family: 6- Game Characters <a name="game-characters"></a>
 <details>
@@ -349,6 +351,8 @@ As mentioned, the story takes place on a large frozen over sea. In this story th
 ### 7.4 Narrative devices <a name="narrative-devices"></a>
 The story is never told explicitly but instead via exploration and interaction with the environment. Ice being see-through lends itself to telling stories under the ice.
 
+</details>
+
 ## :earth_africa: 8- The Game World <a name="game-world"></a>
 <details>
 <summary> Click to expand! </summary>
@@ -379,7 +383,7 @@ List of implemented locations:
 - **Type**: Essential
 - **Number of colors**: 0-3
 - **Breadcrumb**: Music in the distance that plays notes in a specific order
-- **Description**: Fishes are swimming around an old pillar with flowers on top. As the player approaches the pillar they start hearing notes being played inside of the music. As the player skates over the fishes, different notes get played based on the colour of the fish. 
+- **Description**: Fishes are swimming around an old pillar with flowers on top. As the player approaches the pillar they start hearing notes being played inside of the music. As the player skates over the fishes, different notes get played based on the colour of the fish.
 
 </details>
 
@@ -557,12 +561,12 @@ We are using a preexisting game engine to make the development process easier. W
 
 We will also be developing our own spline tool to make it easier for us to draw patterns for our pattern recognition, trails, camera path and fish behavior.
 
-The spline tool lets us create an easy to adjust curve within unity that we can use for aspects such as Pattern Recognition and making fishes swim in a specific pattern. We can also use it to easy populate the curve with objects. An example where we use both the populating function and the pattern following one is in the Lighthouse, where we have two circles that we populate with wind walls using the spline tool. The wind walls then follow the spline, always pointing forward. Doing this manually would have been much more work. 
+The spline tool lets us create an easy to adjust curve within unity that we can use for aspects such as Pattern Recognition and making fishes swim in a specific pattern. We can also use it to easy populate the curve with objects. An example where we use both the populating function and the pattern following one is in the Lighthouse, where we have two circles that we populate with wind walls using the spline tool. The wind walls then follow the spline, always pointing forward. Doing this manually would have been much more work.
 
-Spline tool used to create a circle: 
+Spline tool used to create a circle:
 https://drive.google.com/file/d/1--34tAOb52R86YAVO3imOQH-jvQTdMNP/view?usp=sharing
 
-Fishes follow the spline tool and automatically look forward: 
+Fishes follow the spline tool and automatically look forward:
 https://drive.google.com/file/d/1EBqZvrrZmNvq1w2DfZlldIxgNW6d8Nct/view?usp=sharing
 
 ### 10.2 Development platform and tools <a name="development-platform-and-tools"></a>
