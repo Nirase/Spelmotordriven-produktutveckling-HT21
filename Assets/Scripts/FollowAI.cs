@@ -37,7 +37,7 @@ public class FollowAI : MonoBehaviour
         Vector3 startToPlayer = playerPos - start.position;
 
         // Follow player
-        if (startToPlayer.magnitude <= detectionDistance && !following && !fleeing)
+        if (startToPlayer.magnitude <= detectionDistance && !following && !fleeing && !destinationReached)
         {
             agent.destination = playerPos;
             following = true;

@@ -69,7 +69,7 @@ public class GoatWolfCabbagePuzzle : MonoBehaviour
             Debug.Log("Cabbage exit");
         }
         // Goat
-        if(d_goat.magnitude < distance  && !list.Contains(goat)){
+        if(d_goat.magnitude < distance && !list.Contains(goat)){
             list.Add(goat);
             Debug.Log("Goat enter");
         }
