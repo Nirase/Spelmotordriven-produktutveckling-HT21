@@ -123,7 +123,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 | 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 | 1.8 | 13/01/2022 | Updated Segments about "I am no man" and the controller. | Jonathan Ryytty
-| 1.9 | 13/01/2022 | Updated 2.1, 5.8 | Jonathan Ryytty
+| 1.9 | 13/01/2022 | Updated 2.1, 5.8, 5.9, 6 | Jonathan Ryytty
 
 </details>
 
@@ -285,8 +285,6 @@ The new tree is the same location as the dead tree (level 0). The difference is 
 [Location still to be determined]
 
 ### 5.9 Flowchart <a name="flowchart"></a>
-Create a flowchart showing all the areas and screens that will need to be created.
-
 Below is the basic outline of how we imagine the game world. The world is open, meaning that each section of the map is accessible from the get-go. Each area has a subset of meaningful interactions.
 
 The following is an example of how such an event might be structured:
@@ -297,18 +295,12 @@ EX) **Section A**: Has the interaction of guiding a single lost red fish back to
 
 ![WorldLayout](https://drive.google.com/uc?export=view&id=1LcCZqW5GkJ2moDL5mDXKRCWWynhtrk5-)
 
-### 5.10 Editor <a name="editor"></a>
-
-</details>
-
 ## :family: 6- Game Characters <a name="game-characters"></a>
 <details>
 <summary> Click to expand! </summary>
 
-This is where you describe any game characters and their attributes.
-
 ### 6.1 Character design <a name="character-design"></a>
-The character is a woman who wakes up alone on the ice. We’re going for a watercolour and ink feel on everything, so they will have clear defined lines, and when colours are all in the world again they  will be colourful.
+The character is a woman who wakes up alone on the ice. We’re going for a lifeless feel on everything, so they will have clear defined lines, and when colours restored to the world again they will be colourful.
 
 ### 6.2 Types <a name="types"></a>
 
@@ -316,12 +308,9 @@ The character is a woman who wakes up alone on the ice. We’re going for a wate
 Our player character has no attributes that they need to keep track of. It’ll simply be just a character that you can move around freely.
 
 #### 6.2.2 NPCs (non-player characters) <a name="non-player-characters"></a>
-If your game involves character types, you will need to treat each one as an object, defining its properties and functionality.
-
 Our game has no NPCs that the player talks to interacts with, but there will be a large amount of NPC animals. Each unique animal will get a subsection here that explains their purpose:
 
 ##### 6.2.2.1 Behavior
-If the artificial intelligence is an important component of your project since the NPCs have a set of complex intertwined systems, you should open a subsection or whole section only for it.
 We will be utilizing a few versions of AI to create a natural feeling wildlife. Most of the fish will be controlled through Boids, so that they appear to be moving around naturally. Some of the other fishes will use pathfinding and behaviour trees to make sure that they’re more noticeable, but still feel natural.
 
 </details>
