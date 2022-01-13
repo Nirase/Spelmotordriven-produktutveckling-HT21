@@ -123,7 +123,7 @@ Include what, when and who changed the GDD for future reference and knowing exac
 | 1.6 | 29/11/2021 | Updated Legal Analysis, Controls, removed irrelevant paragraphs. Added elaboration on the spline tool. Added Greek Pillar descriptions | Mattias Smedman
 | 1.7 | 30/11/2021 | Updated Spline tool explanation to have images, added test results for controllers, expanded on pattern recognition in rules | Mattias Smedman
 | 1.8 | 13/01/2022 | Updated Segments about "I am no man" and the controller. | Jonathan Ryytty
-| 1.9 | 13/01/2022 | Updated 2.1, 5.8, 5.9, 6, 7.1, 7.2, 8.2 | Jonathan Ryytty
+| 1.9 | 13/01/2022 | Updated 2.1, 5.8, 5.9, 6, 7.1, 7.2, 8.2, 10| Jonathan Ryytty
 
 </details>
 
@@ -512,12 +512,10 @@ Because the game takes place in a near future setting to our own a lot of the so
 <details>
 <summary> Click to expand! </summary>
 
-Any type of digital asset that you will be using should be placed here.
-
 ### 9.1 Interface assets <a name="interface-assets"></a>
 
 ### 9.2 Environments <a name="environments"></a>
-These are references for assets that will be produced/ purchased:
+These are references for assets that will be produced/purchased:
 
 https://assetstore.unity.com/packages/3d/environments/landscapes/stylized-ice-formations-163302
 
@@ -534,7 +532,6 @@ Purchased:
 https://assetstore.unity.com/packages/3d/animations/female-speed-skater-134446
 
 ### 9.5 Music and sound effects <a name="music-and-sound-effects"></a>
-List all of the media that will need to be produced. The specifics of your game will dictate what categories you need to include. Be detailed with this list, and create a file naming convention up front. This can avoid a lot of confusion later on.
 
 **Elvins Theme**: <br/>
 https://drive.google.com/file/d/1WGvEP0Pn1RtlSUsIFNBEHG80pqUs2S6H/view?usp=sharing
@@ -554,7 +551,6 @@ https://drive.google.com/file/d/1Y84VaUGPoFpLW8fQPkE5IOqFUwH0_8uB/view?usp=shari
 <summary> Click to expand! </summary>
 
 #### 10.1.1 New technology <a name="new-technology"></a>
-Is there any new technology that you plan on developing for this game? If so, describe it in detail.
 
 #### 10.1.2 Major software development tasks <a name="major-software-development-tasks"></a>
 We are using a preexisting game engine to make the development process easier. We will be developing through Unity.
@@ -570,49 +566,9 @@ Fishes follow the spline tool and automatically look forward:
 https://drive.google.com/file/d/1EBqZvrrZmNvq1w2DfZlldIxgNW6d8Nct/view?usp=sharing
 
 ### 10.2 Development platform and tools <a name="development-platform-and-tools"></a>
-Describe the development platform, as well as any software tools and hardware that are required to produce the game.
 
 #### 10.2.1 Software <a name="software"></a>
 - Github - Used as version control and as a way for us to organize all our work.
 - Blender - Used to create 3D Models.
 - Unity - Used as a game engine for the entire process.
-
-#### 10.3.2 Required materials <a name="required-materials"></a>
-
-### 10.4 Game engine <a name="game-engine"></a>
-
-#### 10.4.3 Collision detection <a name="collision-detection"></a>
-If your game involves collision detection, how does it work?
-
-### 10.5 Interface technical specs <a name="interface-technical-specs"></a>
-This is where you describe how your interface is designed from a technical perspective. What tools do you plan to use, and how will it function?
-
-### 10.6 Controls' technical specs <a name="controls-technical-specs"></a>
-This is where you describe how your controls work from a technical perspective. Are you planning on supporting any unusual input devices that would require specialized programming?
-
-### 10.7 Lighting models <a name="lighting-models"></a>
-Lighting can be a substantial part of a game. Describe how it works and the features that you require.
-
-#### 10.7.1 Modes <a name="modes"></a>
-
-#### 10.7.2 Models <a name="models"></a>
-
-#### 10.7.3 Light sources <a name="light-sources"></a>
-
-### 10.8 Rendering system <a name="rendering-system"></a>
-
-#### 10.8.1 Camera <a name="camera"></a>
-
-### 10.10 System parameters <a name="system-parameters"></a>
-
-#### 10.10.1 Max players <a name="max-players"></a>
-1
-
-#### 10.10.7 Saving games <a name="saving-games"></a>
-The save system will save the player transform, fish transforms, colors unlocked and interactions completed.
-
-Two save systems are currently used. Unity's PlayerPrefs and a custom script converting data to a binary file.
-
-#### 10.10.8 Loading games <a name="loading-games"></a>
-Loading is done through Unity's PlayerPrefs and the binary file.
 </details>
